@@ -29,6 +29,8 @@ from google import genai
 from google.genai import types
 from pydantic import BaseModel, Field
 
+from gemini_utils import get_available_models, log_token_usage
+
 CORE_ROOT = Path(__file__).resolve().parent.parent
 SFX_DIR = CORE_ROOT / "shared_assets" / "sfx"
 MEME_MAP_PATH = CORE_ROOT / "shared_assets" / "meme_map.json"
@@ -102,6 +104,7 @@ it pairs best with. Be concrete and specific.
                 temperature=0.25,
             ),
         )
+        log_token_usage("SfxIndexer", model_name, resp)
         return SfxSemanticProfile.model_validate_json(resp.text)
     finally:
         try:
@@ -111,14 +114,17 @@ it pairs best with. Be concrete and specific.
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Auto-index shared_assets/sfx/ with Gemini audio listening + exact peak_sec")
-    parser.add_argument("--force", action="store_true", help="Re-index all SFX with Gemini even if already profiled")
-    parser.add_argument("--peaks-only", action="store_true", help="Only measure duration_sec and peak_sec without calling Gemini")
+    parser = argparse.ArgumentParser(description="Index shared_assets/sfx/ (peaks-only by default; pass --listen for Gemini audio profiling)")
+    parser.add_argument("--listen", action="store_true", help="Upload unprofiled SFX to Gemini to generate sounds_like/use_when metadata")
+    parser.add_argument("--force", action="store_true", help="Re-index all SFX with Gemini even if already profiled (implies --listen)")
+    parser.add_argument("--peaks-only", action="store_true", help="Explicit peaks-only mode (default when --listen/--force are omitted)")
     args = parser.parse_args()
+
+    use_gemini = (args.listen or args.force) and not args.peaks_only
 
     load_dotenv(CORE_ROOT / ".env")
     api_key = os.getenv("GEMINI_API_KEY", "").strip()
-    if not args.peaks_only and not api_key:
+    if use_gemini and not api_key:
         raise SystemExit("GEMINI_API_KEY missing in clip_factory/.env")
 
     SFX_DIR.mkdir(parents=True, exist_ok=True)
@@ -132,14 +138,14 @@ def main() -> None:
 
     client = None
     model_name = "gemini-2.5-flash"
-    if not args.peaks_only:
+    if use_gemini:
         client = genai.Client(api_key=api_key)
-        avail = {m.name.replace("models/", "") for m in client.models.list()}
+        avail = get_available_models(client)
         model_name = next(
             (m for m in ("gemini-3.8-flash", "gemini-2.5-flash") if m in avail),
             "gemini-2.5-flash",
         )
-    print(f"[SFX Indexer] Scanning {len(audio_files)} audio file(s)...")
+    print(f"[SFX Indexer] Scanning {len(audio_files)} audio file(s) (gemini={use_gemini})...")
 
     updated_sfx: dict[str, dict] = {}
     for p in audio_files:
@@ -156,8 +162,10 @@ def main() -> None:
             print(f"  [Peak-Synced] {tag}: dur={dur}s, peak={peak}s")
             continue
 
-        if args.peaks_only or client is None:
-            updated_sfx[tag] = {"filename": p.name, "duration_sec": dur, "peak_sec": peak}
+        if not use_gemini or client is None:
+            merged = dict(prev) if isinstance(prev, dict) else {}
+            merged.update({"filename": p.name, "duration_sec": dur, "peak_sec": peak})
+            updated_sfx[tag] = merged
             continue
 
         print(f"  [Listening] {p.name} (dur={dur}s, peak={peak}s)...")

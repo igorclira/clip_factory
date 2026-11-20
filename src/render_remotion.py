@@ -86,8 +86,13 @@ def main() -> None:
         # Build audio chain: optional vocal isolation -> slow/fast atempo -> -14 LUFS loudness leveling
         af_parts: list[str] = []
         if seg.get("isolateVocals"):
-            # Isolate human speech band (260Hz-3600Hz) so NPC/streamer complaints stay clear over BGM
-            af_parts.append("pan=mono|c0=0.5*c0+0.5*c1,highpass=f=260,lowpass=f=3600,acompressor=threshold=-20dB:ratio=3:attack=5:release=60")
+            has_bgm = bool(seg.get("bgmFile")) or bool((props.get("soundPlan") or {}).get("music", {}).get("file"))
+            print(
+                f"  [Warn] {seg['id']}: isolateVocals bandpass (260-3600Hz) is NOT Content-ID safe "
+                f"(bgm_present={has_bgm}, videoVolume={seg.get('videoVolume', 1.0)})."
+            )
+            if not has_bgm or float(seg.get("videoVolume", 1.0)) > 0.3:
+                af_parts.append("pan=mono|c0=0.5*c0+0.5*c1,highpass=f=260,lowpass=f=3600,acompressor=threshold=-20dB:ratio=3:attack=5:release=60")
         if abs(rate - 1.0) > 1e-3:
             af_parts.extend(build_atempo_filters(rate))
         af_parts.append("loudnorm=I=-14:TP=-1.5:LRA=11")

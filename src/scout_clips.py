@@ -768,6 +768,35 @@ def generate_review_sheet(
                     <button type="button" class="tag-btn" onclick="stampMarker({idx}, 'END')">End ]</button>
                     <button type="button" class="tag-btn zoom" onclick="stampMarker({idx}, 'ZOOM')">+ Zoom</button>
                     <button type="button" class="tag-btn meme" onclick="stampMarker({idx}, 'MEME')">+ Meme/SFX</button>
+                    <select id="meme-trig-{idx}" title="Meme trigger" style="font-size:11px;padding:2px 4px;background:#1a1d26;color:#e5e7eb;border:1px solid #374151;border-radius:4px;">
+                      <option value="fail">fail</option>
+                      <option value="crash">crash</option>
+                      <option value="anticlimax">anticlimax</option>
+                      <option value="overkill">overkill</option>
+                      <option value="chase">chase</option>
+                      <option value="flex">flex</option>
+                      <option value="awkward_silence">awkward_silence</option>
+                      <option value="betrayal">betrayal</option>
+                      <option value="escape">escape</option>
+                      <option value="kill">kill</option>
+                      <option value="near_miss">near_miss</option>
+                      <option value="cliffhanger">cliffhanger</option>
+                    </select>
+                    <select id="meme-hum-{idx}" title="Humor type" style="font-size:11px;padding:2px 4px;background:#1a1d26;color:#e5e7eb;border:1px solid #374151;border-radius:4px;">
+                      <option value="reaction">reaction</option>
+                      <option value="irony">irony</option>
+                      <option value="escalation">escalation</option>
+                      <option value="anticlimax">anticlimax</option>
+                      <option value="absurd">absurd</option>
+                      <option value="none">none</option>
+                    </select>
+                    <select id="meme-eng-{idx}" title="Energy 1-5" style="font-size:11px;padding:2px 4px;background:#1a1d26;color:#e5e7eb;border:1px solid #374151;border-radius:4px;">
+                      <option value="1">E1</option>
+                      <option value="2">E2</option>
+                      <option value="3" selected>E3</option>
+                      <option value="4">E4</option>
+                      <option value="5">E5</option>
+                    </select>
                     <span class="vol-wrap">
                       <button type="button" class="mini" id="mute-{idx}" onclick="toggleMute({idx})" title="Mute / Unmute">🔊</button>
                       <input type="range" class="vol-slider" id="vol-{idx}" min="0" max="1" step="0.05" value="1" oninput="setVol({idx}, this.value)" title="Volume" />
@@ -963,8 +992,15 @@ def generate_review_sheet(
       if (!v) return;
       const t = Number(v.currentTime.toFixed(1));
       if (!MARKERS[i]) MARKERS[i] = [];
-      MARKERS[i].push({{ type: kind, sec: t }});
       const noteEl = document.querySelector(`.note-input[data-idx="${{i}}"]`);
+      if (kind === 'MEME') {{
+        const trigger = document.getElementById(`meme-trig-${{i}}`)?.value || 'fail';
+        const humor_type = document.getElementById(`meme-hum-${{i}}`)?.value || 'reaction';
+        const energy = Number(document.getElementById(`meme-eng-${{i}}`)?.value || 3);
+        MARKERS[i].push({{ type: 'MEME', sec: t, trigger, humor_type, energy, note: (noteEl?.value || '').trim() }});
+      }} else {{
+        MARKERS[i].push({{ type: kind, sec: t }});
+      }}
       const tag = `${{kind}}@${{fmtTime(t)}}`;
       noteEl.value = noteEl.value ? `${{noteEl.value}}, ${{tag}}` : tag;
       const cb = document.querySelector(`.pick-cb[data-idx="${{i}}"]`);

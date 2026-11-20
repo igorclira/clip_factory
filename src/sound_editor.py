@@ -29,6 +29,8 @@ from google import genai
 from google.genai import types
 from pydantic import BaseModel, Field
 
+from gemini_utils import get_available_models, log_token_usage
+
 CORE_ROOT = Path(__file__).resolve().parent.parent
 SHARED_DIR = CORE_ROOT / "shared_assets"
 SOUND_LIB_PATH = SHARED_DIR / "sound_library.json"
@@ -206,6 +208,32 @@ def extract_clip_events(props: dict[str, Any]) -> tuple[float, list[dict[str, An
                     "text": cap.get("text"),
                 })
 
+        for fr in seg.get("freezes") or []:
+            events.append({
+                "t": round(cursor + float(fr["atSec"]), 2),
+                "type": "freeze",
+                "detail": f"Freeze frame ({fr.get('durationSec', 1.5)}s) in @{seg.get('author')}",
+            })
+
+        for si in seg.get("silences") or []:
+            s_start = round(cursor + float(si["startSec"]), 2)
+            s_end = round(cursor + float(si["endSec"]), 2)
+            events.append({
+                "t": s_start,
+                "type": "silence",
+                "detail": f"AudioVacuum silence ({s_start:.2f}-{s_end:.2f}s) in @{seg.get('author')}",
+            })
+
+        for bt in seg.get("beatTags") or []:
+            events.append({
+                "t": round(cursor + float(bt.get("atSec", 0.0)), 2),
+                "type": "beat_tag",
+                "detail": (
+                    f"[{bt.get('trigger', '')}/{bt.get('humor_type', 'none')}/E{bt.get('energy', 3)}] "
+                    f"{bt.get('note', '')} (@{seg.get('author')})"
+                ),
+            })
+
         if seg.get("bgmFile"):
             events.append({
                 "t": round(cursor, 2),
@@ -322,6 +350,7 @@ def call_gemini_resilient(client: genai.Client, models: list[str], prompt: str) 
                         temperature=0.35,
                     ),
                 )
+                log_token_usage("SoundEditor", m, resp)
                 return SoundPlan.model_validate_json(resp.text)
             except Exception as exc:
                 last_err = exc
@@ -335,6 +364,68 @@ def call_gemini_resilient(client: genai.Client, models: list[str], prompt: str) 
     raise RuntimeError(f"SoundEditor failed across all models: {last_err}")
 
 
+def build_compact_sounds(
+    sound_lib: list[dict[str, Any]],
+    montage_mode: MontageModeType = "funny",
+    disabled_sounds: set[str] | None = None,
+    allow_gta_native: bool = False,
+) -> list[dict[str, Any]]:
+    """Return curated semantic roster filtered by mode, bans, and length (playback capped via max_duration_s)."""
+    disabled_sounds = disabled_sounds or set()
+
+    def _mode_compatible(sound_mode: str) -> bool:
+        if montage_mode == "hybrid":
+            return True
+        return sound_mode in (montage_mode, "both")
+
+    fields = (
+        "id",
+        "file",
+        "category",
+        "meaning",
+        "trigger_moments",
+        "humor_type",
+        "montage_mode",
+        "energy",
+        "placement",
+        "copyright_risk",
+        "freshness",
+        "dedupe_group",
+        "length_s",
+        "align_mode",
+    )
+    out: list[dict[str, Any]] = []
+    for s in sound_lib:
+        if not s.get("curated_semantic"):
+            continue
+        if not _mode_compatible(s.get("montage_mode", "both")):
+            continue
+        if not allow_gta_native and s.get("gta_native"):
+            continue
+        if s.get("id") in disabled_sounds or s["file"] in disabled_sounds:
+            continue
+        is_meme = s.get("category") == "meme"
+        is_long_ok = s.get("placement") in ("bed", "end_card", "before_moment")
+        ok_len = (not is_meme) or is_long_ok or float(s.get("length_s") or 0) <= 12.0
+        if not ok_len:
+            continue
+        out.append({k: s.get(k) for k in fields})
+    return out
+
+
+def compute_hybrid_turn_t(segment_summaries: list[dict[str, Any]] | None, total_duration: float) -> float:
+    """Return the comedic turn timestamp for hybrid mode: latest fail/anticlimax/cliffhanger beat_tag, else last 30s."""
+    turn_triggers = {"fail", "anticlimax", "cliffhanger"}
+    candidates: list[float] = []
+    for seg in segment_summaries or []:
+        for bt in seg.get("beat_tags") or []:
+            if str(bt.get("trigger", "")).strip().lower() in turn_triggers:
+                candidates.append(float(bt.get("t", 0.0)))
+    if candidates:
+        return max(candidates)
+    return max(0.0, total_duration - 30.0)
+
+
 def enforce_rules_and_align(
     raw_plan: SoundPlan,
     sound_by_file: dict[str, dict[str, Any]],
@@ -345,6 +436,7 @@ def enforce_rules_and_align(
     banned_pairs: set[tuple[str, str]] | None = None,
     disabled_sounds: set[str] | None = None,
     allow_gta_native: bool = False,
+    segment_summaries: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
     """Validate against sound_library/music_library & enforce mode-aware rules, dedupe groups, copyright caps & alignment."""
     banned_pairs = banned_pairs or set()
@@ -356,6 +448,7 @@ def enforce_rules_and_align(
         music_dict["file"] = ""
     music_dict["gain_db"] = max(-28.0, min(-8.0, float(music_dict["gain_db"])))
     music_dict["duck_under_game_audio_db"] = max(-18.0, min(-4.0, float(music_dict["duck_under_game_audio_db"])))
+    cut_points: list[dict[str, float]] = list(music_dict.get("cut_points") or [])
 
     # Mode-aware meme caps (funny: max 3 per 30s capped at 4; action: max 1 per 30s capped at 2; hybrid: max 2)
     if montage_mode == "action":
@@ -364,6 +457,8 @@ def enforce_rules_and_align(
         max_memes = 2
     else:
         max_memes = min(4, max(3, round(3.0 * total_duration / 30.0)))
+
+    hybrid_turn_t = compute_hybrid_turn_t(segment_summaries, total_duration) if montage_mode == "hybrid" else 0.0
 
     # Sort candidate events chronologically
     sorted_events = sorted(raw_plan.events, key=lambda e: e.t)
@@ -379,6 +474,7 @@ def enforce_rules_and_align(
             sound_by_alias[k.strip().lower()] = m
 
     accepted: list[dict[str, Any]] = []
+    game_duck_windows: list[dict[str, float]] = []
     used_memes_in_video: set[str] = set()
     used_dedupe_groups: set[str] = set()
     last_meme_t = -999.0
@@ -415,8 +511,11 @@ def enforce_rules_and_align(
         t = round(max(0.0, min(total_duration - 0.1, float(ev.t))), 3)
         cat = meta["category"]
 
-        # Rule #8 & #3: Meme variety, dedupe_group, and mode-aware density
+        # Rule #8, #3 & Hybrid turn gating
         if cat == "meme":
+            if montage_mode == "hybrid" and t < hybrid_turn_t - 0.05:
+                print(f"  [Guardrail Hybrid] Skipped meme '{resolved_file}' at {t}s (before turn_t={hybrid_turn_t:.2f}s)")
+                continue
             if resolved_file in recently_used_memes:
                 print(f"  [Guardrail R8] Skipped '{resolved_file}' (used in last 3 videos)")
                 continue
@@ -447,11 +546,19 @@ def enforce_rules_and_align(
         align_mode = meta.get("align_mode", "peak")
         length_s = float(meta.get("length_s") or 1.0)
 
+        if placement in ("bed", "end_card", "before_moment"):
+            max_duration_s = round(min(length_s, 10.0), 3)
+        elif cat == "meme":
+            max_duration_s = round(min(length_s, 2.4), 3)
+        else:
+            max_duration_s = round(min(length_s, 4.0), 3)
+
         effective_t = t
         if placement == "after_impact":
             effective_t = min(total_duration - 0.1, t + 0.25)
-        elif placement == "before_moment" and align_mode == "onset":
-            effective_t = max(0.0, t - 0.45)
+        elif placement == "before_moment":
+            lead = min(3.0, max(0.4, length_s if align_mode != "onset" else max(length_s, 0.45)))
+            effective_t = max(0.0, t - lead)
 
         if align_mode == "onset":
             onset_sec = float(meta.get("onset_sec") or 0.0)
@@ -467,7 +574,7 @@ def enforce_rules_and_align(
             play_at_s = 0.0
             trim_start_s = round(min(max(0.0, -raw_play), max(0.0, length_s - 0.25)), 3)
 
-        if cat == "meme" and (total_duration - play_at_s) < min(0.9, length_s * 0.55):
+        if cat == "meme" and (total_duration - play_at_s) < min(0.9, max_duration_s * 0.55):
             print(f"  [Guardrail Tail] Skipped meme '{resolved_file}' at {play_at_s}s (only {total_duration - play_at_s:.2f}s left before video end)")
             continue
 
@@ -475,6 +582,7 @@ def enforce_rules_and_align(
             "t": t,
             "play_at_s": play_at_s,
             "trim_start_s": trim_start_s,
+            "max_duration_s": max_duration_s,
             "file": resolved_file,
             "sound_id": sound_id,
             "category": cat,
@@ -492,11 +600,29 @@ def enforce_rules_and_align(
                 used_dedupe_groups.add(dedupe_group)
             last_meme_t = t
             meme_count += 1
+            game_duck_windows.append({
+                "start_s": round(play_at_s, 3),
+                "end_s": round(min(total_duration, play_at_s + max_duration_s), 3),
+                "db": -10,
+            })
+            if placement in ("after_impact", "under_freeze_frame", "end_card"):
+                c_start = round(max(0.0, t - 0.35), 3)
+                c_end = round(t, 3)
+                has_overlap = any(
+                    not (c_end < float(cp["start_s"]) or c_start > float(cp["end_s"]))
+                    for cp in cut_points
+                )
+                if not has_overlap and c_end > c_start:
+                    cut_points.append({"start_s": c_start, "end_s": c_end})
+
+    cut_points.sort(key=lambda c: c["start_s"])
+    music_dict["cut_points"] = cut_points
 
     return {
         "montage_mode": montage_mode,
         "music": music_dict,
         "events": accepted,
+        "game_duck_windows": game_duck_windows,
         "final_mix": {
             "target_lufs": -14.0,
             "true_peak_db": -1.0,
@@ -543,7 +669,9 @@ def main() -> None:
     music_by_file = {item["file"]: item for item in music_lib}
 
     rules_path = project_dir / "config" / "sound_rules.md"
-    sound_rules_md = rules_path.read_text(encoding="utf-8") if rules_path.exists() else ""
+    if not rules_path.is_file():
+        raise SystemExit(f"Missing required sound rules file: {rules_path}")
+    sound_rules_md = rules_path.read_text(encoding="utf-8")
 
     banned_pairs, disabled_sounds, boosted_pairs = load_feedback_constraints(project_dir)
 
@@ -567,42 +695,12 @@ def main() -> None:
         "hook_0_to_2s": [e for e in clip_events if e["t"] <= 2.2] + [s for s in speech_windows if s["start_s"] <= 2.2],
     }
 
-    # Build a high-signal semantic catalog from curated_semantic entries (preferring punchy <=3.5s files)
-    def _mode_compatible(sound_mode: str) -> bool:
-        if montage_mode == "hybrid":
-            return True
-        return sound_mode in (montage_mode, "both")
-
-    compact_sounds = [
-        {
-            k: s.get(k)
-            for k in (
-                "id",
-                "file",
-                "category",
-                "meaning",
-                "trigger_moments",
-                "humor_type",
-                "montage_mode",
-                "energy",
-                "placement",
-                "copyright_risk",
-                "freshness",
-                "dedupe_group",
-                "length_s",
-                "align_mode",
-            )
-        }
-        for s in sound_lib
-        if (
-            s.get("curated_semantic")
-            and _mode_compatible(s.get("montage_mode", "both"))
-            and (args.allow_gta_native or not s.get("gta_native"))
-            and s.get("id") not in disabled_sounds
-            and s["file"] not in disabled_sounds
-            and (s["category"] != "meme" or float(s.get("length_s") or 0) <= 3.5)
-        )
-    ]
+    compact_sounds = build_compact_sounds(
+        sound_lib,
+        montage_mode=montage_mode,
+        disabled_sounds=disabled_sounds,
+        allow_gta_native=args.allow_gta_native,
+    )
 
     prompt = f"""
 You are the Sound Editor for `{channel_id}` (9:16 TikTok & YouTube Shorts). Video editing is already handled. Your only job is sound: SFX, punchy mainstream pop-culture memes/reactions, and music.
@@ -655,7 +753,7 @@ You are the Sound Editor for `{channel_id}` (9:16 TikTok & YouTube Shorts). Vide
 """
 
     client = genai.Client(api_key=api_key)
-    avail = {m.name.replace("models/", "") for m in client.models.list()}
+    avail = get_available_models(client)
     models = ([args.model] if args.model else []) + [
         m for m in ("gemini-3.8-flash", "gemini-3.1-pro-preview", "gemini-3.5-flash-lite") if m in avail and m != args.model
     ]
@@ -671,6 +769,7 @@ You are the Sound Editor for `{channel_id}` (9:16 TikTok & YouTube Shorts). Vide
         banned_pairs=banned_pairs,
         disabled_sounds=disabled_sounds,
         allow_gta_native=args.allow_gta_native,
+        segment_summaries=segment_summaries,
     )
 
     out_plan_path = args.out_plan or (project_dir / "workspace" / "03_analysis" / f"sound_plan_{channel_id}_{run_date}.json")
@@ -697,7 +796,10 @@ You are the Sound Editor for `{channel_id}` (9:16 TikTok & YouTube Shorts). Vide
     print(f"\nDone! Sound plan saved -> {out_plan_path}")
     print(f"  Music:  {final_plan['music']['file']} (gain={final_plan['music']['gain_db']}dB, cuts={len(final_plan['music']['cut_points'])})")
     print(f"  Events: {len(final_plan['events'])} rule-checked events ({sum(1 for e in final_plan['events'] if e['category']=='meme')} memes)")
+    for ev in final_plan["events"]:
+        print(f"    - {ev['play_at_s']:5.2f}s | {ev['category']:10s} | {ev['sound_id']} ({ev['placement']}, {ev['trigger'] or '-'})")
     print(f"  Injected `soundPlan` into {props_path.name}")
+    print(f"  Rate these in {project_dir / 'feedback' / 'placements.csv'}")
 
 
 if __name__ == "__main__":

@@ -29,6 +29,8 @@ from google import genai
 from google.genai import types
 from pydantic import BaseModel, Field
 
+from gemini_utils import get_available_models, log_token_usage
+
 CORE_ROOT = Path(__file__).resolve().parent.parent
 
 
@@ -368,6 +370,67 @@ def _attach_karaoke_words(
     return cap
 
 
+def merge_user_meme_markers(plan: MontagePlan, clips: list[dict[str, Any]]) -> None:
+    """Merge user-stamped MEME markers from review_sheet.html into segment beat_tags (preferring user fields within 0.4s)."""
+    markers_by_clip: dict[str, list[dict[str, Any]]] = {}
+    for c in clips:
+        key = str(c.get("local_file") or c.get("clip_id") or "")
+        if key:
+            markers_by_clip[key] = list(c.get("markers") or [])
+
+    valid_triggers = {
+        "fail", "near_miss", "anticlimax", "overkill", "chase", "flex",
+        "awkward_silence", "betrayal", "escape", "crash", "kill", "cliffhanger",
+    }
+    valid_humors = {"irony", "escalation", "anticlimax", "reaction", "absurd", "none"}
+
+    for seg in plan.segments:
+        raw_markers = markers_by_clip.get(seg.source_file) or markers_by_clip.get(seg.clip_id) or []
+        rate = float(seg.playbackRate or 1.0) or 1.0
+        out_dur = max(0.0, (float(seg.endSec) - float(seg.startSec)) / rate)
+
+        for mk in raw_markers:
+            if str(mk.get("type", "")).upper() != "MEME":
+                continue
+            try:
+                src_sec = float(mk["sec"])
+            except (KeyError, TypeError, ValueError):
+                continue
+            at_sec = round((src_sec - float(seg.startSec)) / rate, 2)
+            if at_sec < 0.0 or at_sec > out_dur:
+                continue
+
+            trig = str(mk.get("trigger") or "fail").strip().lower()
+            if trig not in valid_triggers:
+                trig = "fail"
+            hum = str(mk.get("humor_type") or "reaction").strip().lower()
+            if hum not in valid_humors:
+                hum = "reaction"
+            try:
+                eng = max(1, min(5, int(mk.get("energy") or 3)))
+            except (TypeError, ValueError):
+                eng = 3
+            note = str(mk.get("note") or "User-stamped comedic beat").strip()
+
+            new_tag = BeatTag(
+                atSec=at_sec,
+                trigger=trig,  # type: ignore[arg-type]
+                humor_type=hum,  # type: ignore[arg-type]
+                energy=eng,
+                placement_hint="on_impact",
+                note=note,
+            )
+            matched_idx = next(
+                (idx for idx, existing in enumerate(seg.beat_tags) if abs(existing.atSec - at_sec) <= 0.4),
+                None,
+            )
+            if matched_idx is not None:
+                seg.beat_tags[matched_idx] = new_tag
+            else:
+                seg.beat_tags.append(new_tag)
+        seg.beat_tags.sort(key=lambda bt: bt.atSec)
+
+
 def plan_to_remotion_props(
     plan: MontagePlan,
     sfx_map: dict[str, Any],
@@ -411,6 +474,11 @@ def plan_to_remotion_props(
             editorial_only = [c for c in captions if c.get("role") == "editorial"]
             captions = sorted(auto_caps + editorial_only, key=lambda x: x["startSec"])
 
+        has_dialogue = any(c.get("role") in ("streamer", "npc") for c in captions)
+        video_vol = 1.0
+        if seg.isolate_vocals:
+            video_vol = 0.55 if has_dialogue else 0.25
+
         seg_dict: dict[str, Any] = {
             "id": f"seg_{idx:02d}_{sanitize_filename(seg.author)}",
             "videoFile": seg.source_file,
@@ -421,7 +489,7 @@ def plan_to_remotion_props(
             "cropZoom": seg.cropZoom,
             "streamerCaptionY": seg.streamerCaptionY,
             "isolateVocals": seg.isolate_vocals,
-            "videoVolume": 1.0,
+            "videoVolume": video_vol,
             "comedyBeatSummary": seg.comedy_beat_summary,
             "beatTags": [bt.model_dump() for bt in seg.beat_tags],
             "zooms": [z.model_dump() for z in seg.zooms],
@@ -490,7 +558,7 @@ def main() -> None:
         )
 
     client = genai.Client(api_key=api_key)
-    avail = {m.name.replace("models/", "") for m in client.models.list()}
+    avail = get_available_models(client)
     model_name = args.model or next(
         (m for m in ("gemini-3.8-flash", "gemini-3.1-pro-preview", "gemini-3.5-flash-lite") if m in avail),
         "gemini-3.8-flash",
@@ -564,11 +632,11 @@ CHANNEL STYLE GUIDE:
 {few_shot_block}
 STRICT v7 PRODUCTION & COMEDY CONSTITUTION:
 1. **62 to 85 Seconds Flexible Runtime:** Pick the strongest 4-5 clips whose trimmed segments sum to 62-75s (up to ~85s when setups/payoffs need breathing room). Drop the viewer into action at 0.0s, hold reaction beats 0.6s-2.0s AFTER the punchline registers — NEVER cut on a cliffhanger!
-2. **MANDATORY MULTIMODAL VIDEO + AUDIO SPEAKER DIARIZATION:**
-   - Watch the streamer's facecam mouth movement AND read any in-game subtitles alongside the audio.
+2. **MANDATORY MULTIMODAL VIDEO + AUDIO SPEAKER DIARIZATION (STRICT TOP vs. BOTTOM SPLIT):**
+   - Watch the streamer's facecam mouth movement AND read any in-game subtitles alongside the audio timbre (close-mic streamer voice vs. spatial/in-game audio).
    - NEVER use audio-only guessing and NEVER cross a speaker boundary inside a single caption chunk.
-   - `streamer`: TOP zone near streamer's mouth (`streamerCaptionY`, default `27`, adjust around baked TikTok banners). Include `words` array matching Whisper timestamps for yellow karaoke highlighting.
-   - `npc`: BOTTOM zone (funny NPC / bystander dialogue ONLY).
+   - `streamer` (**TOP zone** near streamer's mouth, white + yellow karaoke, `streamerCaptionY` default `27`): ONLY real-life streamer/commentator reactions spoken into their microphone.
+   - `npc` (**BOTTOM zone**, electric cyan + mint subtitle pill with quotes): ALL in-game voices — NPCs, cops, bystanders, radio, and in-game player-character voice lines. Never tag an in-game character line as `streamer`!
    - `editorial`: Punchy deadpan callouts (`"INSTANT REGRET"`, `"DOWN GOES GRANDMA"`), max 1-2 per clip only when adding ironic contrast.
 3. **VARIED CAMERA CHOREOGRAPHY (NEVER HOMOGENIZE ZOOMS):**
    - Match zoom `mode` and `scale` to each clip's comedic emotion: `aggressive_punch` (`1.75-2.05` + `ImpactShake`) for brutal hits/mauls; split segment with `playbackRate: 0.58-0.68` + `slow_creep` (`1.45-1.70`) for stunned slow-mo disbelief; `snap_hold` (`1.45-1.75`) for sudden punchlines; `smooth` (`1.20-1.40`) for subtle reveals.
@@ -598,6 +666,7 @@ STRICT v7 PRODUCTION & COMEDY CONSTITUTION:
                         temperature=0.35,
                     ),
                 )
+                log_token_usage("Director", m, resp)
                 break
             except Exception as exc:
                 last_err = exc
@@ -605,6 +674,7 @@ STRICT v7 PRODUCTION & COMEDY CONSTITUTION:
         if resp is None:
             raise RuntimeError(f"All Gemini models failed: {last_err}")
         plan = MontagePlan.model_validate_json(resp.text)
+        merge_user_meme_markers(plan, ready_clips)
 
         plan_path = analysis_dir / f"edit_plan_{channel_id}_{run_date}.json"
         plan_path.write_text(plan.model_dump_json(indent=2), encoding="utf-8")

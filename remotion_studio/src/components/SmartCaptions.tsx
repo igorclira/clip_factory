@@ -42,7 +42,7 @@ export const SmartCaptions: React.FC<Props> = ({ captions, theme, streamerCaptio
               : '#A855F7'
             : '#FFFFFF'; // Crisp pure white base for streamer speech (top zone)
 
-        const activeWordColor = isNpc ? '#FFFFFF' : '#FFE600'; // Neon yellow active word highlight for streamer
+        const activeWordColor = isNpc ? '#4ADE80' : '#FFE600'; // Neon mint-green for NPC active word (never white), neon yellow for streamer
 
         const fontSize = isNpc ? 44 : isEditorial ? 54 : 60;
         const rot = active.rotateDeg ?? (hasCoords ? -6 : 0);
@@ -118,12 +118,23 @@ export const SmartCaptions: React.FC<Props> = ({ captions, theme, streamerCaptio
           }
         }
 
+        const npcPillStyle: React.CSSProperties = isNpc
+          ? {
+              backgroundColor: 'rgba(4, 16, 26, 0.72)',
+              border: '2px solid rgba(0, 240, 255, 0.55)',
+              borderRadius: 16,
+              padding: '8px 20px',
+              boxShadow: '0 6px 20px rgba(0, 0, 0, 0.45)',
+            }
+          : {};
+
         return (
           <div key={`${active.startSec}-${active.role}-${i}`} style={{ ...posStyle, pointerEvents: 'none', zIndex: 90 }}>
             {words ? (
               <div
                 style={{
                   ...sharedTextStyle,
+                  ...npcPillStyle,
                   display: 'flex',
                   flexWrap: 'wrap',
                   justifyContent: 'center',
@@ -168,6 +179,7 @@ export const SmartCaptions: React.FC<Props> = ({ captions, theme, streamerCaptio
               <div
                 style={{
                   ...sharedTextStyle,
+                  ...npcPillStyle,
                   color: baseColor,
                 }}
               >

@@ -111,9 +111,19 @@ export interface SoundPlanEvent {
   trim_start_s?: number;
   max_duration_s?: number;
   file: string;
+  sound_id?: string;
   category: string;
+  placement?: string;
+  trigger?: string;
+  copyright_risk?: string;
   gain_db: number;
   reason?: string;
+}
+
+export interface GameDuckWindow {
+  start_s: number;
+  end_s: number;
+  db?: number;
 }
 
 export interface SoundPlanFinalMix {
@@ -122,14 +132,17 @@ export interface SoundPlanFinalMix {
 }
 
 export interface SoundPlanProps {
+  montage_mode?: 'funny' | 'action' | 'hybrid';
   music: SoundPlanMusic;
   events: SoundPlanEvent[];
+  game_duck_windows?: GameDuckWindow[];
   final_mix?: SoundPlanFinalMix;
 }
 
 export type MontageProps = {
   channelId: string;
   theme: ThemeType;
+  montageMode?: 'funny' | 'action' | 'hybrid';
   fps: number;
   segments: SegmentProps[];
   soundPlan?: SoundPlanProps;

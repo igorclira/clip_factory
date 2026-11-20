@@ -16,7 +16,7 @@ import { wipe } from '@remotion/transitions/wipe';
 import { CreatorCredit } from './components/CreatorCredit';
 import { SmartCaptions } from './components/SmartCaptions';
 import { DespairOverlay, TargetSpotlights } from './components/VisualShenanigans';
-import { MontageProps, SegmentProps, ThemeType } from './types';
+import { GameDuckWindow, MontageProps, SegmentProps, ThemeType } from './types';
 
 export const TRANSITION_FRAMES = 8;
 
@@ -33,11 +33,13 @@ const PIPELINE_LIMITS = {
   MAX_SFX_PER_CLIP: 2,
 };
 
-const SegmentView: React.FC<{ seg: SegmentProps; theme: ThemeType; isFirst: boolean }> = ({
-  seg,
-  theme,
-  isFirst,
-}) => {
+const SegmentView: React.FC<{
+  seg: SegmentProps;
+  theme: ThemeType;
+  isFirst: boolean;
+  segGlobalStartSec: number;
+  gameDuckWindows?: GameDuckWindow[];
+}> = ({ seg, theme, isFirst, segGlobalStartSec, gameDuckWindows }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const nowSec = frame / fps;
@@ -122,10 +124,14 @@ const SegmentView: React.FC<{ seg: SegmentProps; theme: ThemeType; isFirst: bool
       : videoFilter;
 
   // 5. CHM AudioVacuum (mute video audio to 0 during silence windows or DespairFreeze)
+  //    + Game audio ducking (-10 dB) under meme bites so punchlines cut through cleanly
   const silences = seg.silences || [];
   const inSilence =
     silences.some((s) => nowSec >= s.startSec && nowSec <= s.endSec) || Boolean(activeFreeze);
   const baseVol = seg.videoVolume ?? 1.0;
+  const globalNow = segGlobalStartSec + nowSec;
+  const duckWin = (gameDuckWindows || []).find((w) => globalNow >= w.start_s && globalNow <= w.end_s);
+  const duckLin = duckWin ? Math.pow(10, (duckWin.db ?? -10) / 20) : 1;
 
   const startFrame = Math.round(seg.startSec * fps);
   const endFrame = Math.round(seg.endSec * fps);
@@ -145,7 +151,7 @@ const SegmentView: React.FC<{ seg: SegmentProps; theme: ThemeType; isFirst: bool
           src={staticFile(`clips/${seg.videoFile}`)}
           startFrom={startFrame}
           endAt={endFrame}
-          volume={() => (inSilence ? 0 : baseVol)}
+          volume={() => (inSilence ? 0 : baseVol * duckLin)}
           style={{
             width: '100%',
             height: '100%',
@@ -253,7 +259,13 @@ export const MontageVideo: React.FC<MontageProps> = ({ theme, fps, segments, sou
                 />
               ) : null}
               <TransitionSeries.Sequence durationInFrames={frames}>
-                <SegmentView seg={seg} theme={theme} isFirst={idx === 0} />
+                <SegmentView
+                  seg={seg}
+                  theme={theme}
+                  isFirst={idx === 0}
+                  segGlobalStartSec={segWindows[idx]?.startSec ?? 0}
+                  gameDuckWindows={soundPlan?.game_duck_windows}
+                />
               </TransitionSeries.Sequence>
             </React.Fragment>
           );

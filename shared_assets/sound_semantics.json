@@ -2,7 +2,12 @@
   "meme_vine_boom_og.mp3": {
     "id": "vine_boom",
     "meaning": "Deep cinematic thud that says the joke, reveal, or fail just landed. Punctuation, not decoration.",
-    "trigger_moments": ["fail", "anticlimax", "crash", "overkill"],
+    "trigger_moments": [
+      "fail",
+      "anticlimax",
+      "crash",
+      "overkill"
+    ],
     "humor_type": "reaction",
     "montage_mode": "both",
     "energy": 4,
@@ -14,7 +19,11 @@
   "bruh.mp3": {
     "id": "bruh",
     "meaning": "Deadpan disbelief. The sound of watching someone do something obviously stupid and having no other comment.",
-    "trigger_moments": ["fail", "anticlimax", "awkward_silence"],
+    "trigger_moments": [
+      "fail",
+      "anticlimax",
+      "awkward_silence"
+    ],
     "humor_type": "reaction",
     "montage_mode": "funny",
     "energy": 2,
@@ -26,7 +35,11 @@
   "meme_bruh_og.mp3": {
     "id": "bruh_og",
     "meaning": "Original deadpan 'Bruh' reaction for foolish plays, missed shots, or instant anti-climax.",
-    "trigger_moments": ["fail", "anticlimax", "awkward_silence"],
+    "trigger_moments": [
+      "fail",
+      "anticlimax",
+      "awkward_silence"
+    ],
     "humor_type": "reaction",
     "montage_mode": "funny",
     "energy": 2,
@@ -38,7 +51,12 @@
   "emotional_damage_meme.mp3": {
     "id": "emotional_damage",
     "meaning": "A brutal but funny outcome — not just pain, but humiliation. The line is the punchline after the hit.",
-    "trigger_moments": ["fail", "betrayal", "overkill", "anticlimax"],
+    "trigger_moments": [
+      "fail",
+      "betrayal",
+      "overkill",
+      "anticlimax"
+    ],
     "humor_type": "reaction",
     "montage_mode": "funny",
     "energy": 3,
@@ -50,7 +68,11 @@
   "meme_sad_violin_short.mp3": {
     "id": "sad_violin",
     "meaning": "Fake tragedy for a tiny or self-caused loss. Melodrama that is obviously too big for the moment.",
-    "trigger_moments": ["fail", "anticlimax", "awkward_silence"],
+    "trigger_moments": [
+      "fail",
+      "anticlimax",
+      "awkward_silence"
+    ],
     "humor_type": "irony",
     "montage_mode": "funny",
     "energy": 2,
@@ -62,7 +84,10 @@
   "windows_error_meme.wav": {
     "id": "windows_xp_error",
     "meaning": "A plan, gadget, or perfect setup has visibly failed. System error energy for human mistakes.",
-    "trigger_moments": ["fail", "anticlimax"],
+    "trigger_moments": [
+      "fail",
+      "anticlimax"
+    ],
     "humor_type": "anticlimax",
     "montage_mode": "funny",
     "energy": 2,
@@ -74,7 +99,12 @@
   "meme_windows_xp_shutdown.mp3": {
     "id": "windows_xp_shutdown",
     "meaning": "Brain or character instantly powered off after a shock, knockout, or total freeze-up.",
-    "trigger_moments": ["fail", "kill", "anticlimax", "awkward_silence"],
+    "trigger_moments": [
+      "fail",
+      "kill",
+      "anticlimax",
+      "awkward_silence"
+    ],
     "humor_type": "anticlimax",
     "montage_mode": "funny",
     "energy": 2,
@@ -86,7 +116,11 @@
   "meme_mgs_alert.mp3": {
     "id": "metal_gear_alert",
     "meaning": "You've been spotted. The exclamation-point moment when stealth or a quiet plan dies instantly.",
-    "trigger_moments": ["chase", "near_miss", "betrayal"],
+    "trigger_moments": [
+      "chase",
+      "near_miss",
+      "betrayal"
+    ],
     "humor_type": "escalation",
     "montage_mode": "both",
     "energy": 4,
@@ -98,7 +132,11 @@
   "meme_directed_by_2s.mp3": {
     "id": "directed_by_robert_b_weide",
     "meaning": "End-credit button for an awkward self-inflicted fail. Tells the viewer the joke is over.",
-    "trigger_moments": ["fail", "awkward_silence", "anticlimax"],
+    "trigger_moments": [
+      "fail",
+      "awkward_silence",
+      "anticlimax"
+    ],
     "humor_type": "irony",
     "montage_mode": "funny",
     "energy": 2,
@@ -110,7 +148,12 @@
   "meme_oh_hell_no_2s.mp3": {
     "id": "oh_hell_nah",
     "meaning": "Immediate refusal. Something appeared or went wrong and the only correct move is to leave, now.",
-    "trigger_moments": ["escape", "chase", "fail", "near_miss"],
+    "trigger_moments": [
+      "escape",
+      "chase",
+      "fail",
+      "near_miss"
+    ],
     "humor_type": "reaction",
     "montage_mode": "funny",
     "energy": 4,
@@ -122,7 +165,11 @@
   "meme_spongebob_fail.mp3": {
     "id": "spongebob_fail",
     "meaning": "Cartoon failure cue: the attempt is over and it was a little pathetic, not epic.",
-    "trigger_moments": ["fail", "anticlimax", "crash"],
+    "trigger_moments": [
+      "fail",
+      "anticlimax",
+      "crash"
+    ],
     "humor_type": "anticlimax",
     "montage_mode": "funny",
     "energy": 2,
@@ -134,7 +181,11 @@
   "a_few_moments_later_sponge_bob_sfx_fun.mp3": {
     "id": "a_few_moments_later",
     "meaning": "SpongeBob time-skip narrator. Jumps past waiting or a confident setup straight into a worse situation.",
-    "trigger_moments": ["anticlimax", "fail", "chase"],
+    "trigger_moments": [
+      "anticlimax",
+      "fail",
+      "chase"
+    ],
     "humor_type": "irony",
     "montage_mode": "funny",
     "energy": 2,
@@ -146,7 +197,11 @@
   "among_us_role_reveal_sound.mp3": {
     "id": "among_us_role_reveal",
     "meaning": "A hidden identity or betrayal is about to be shown. This person was the problem the whole time.",
-    "trigger_moments": ["betrayal", "flex", "cliffhanger"],
+    "trigger_moments": [
+      "betrayal",
+      "flex",
+      "cliffhanger"
+    ],
     "humor_type": "escalation",
     "montage_mode": "both",
     "energy": 3,
@@ -158,7 +213,12 @@
   "wow_anime_meme.mp3": {
     "id": "anime_wow",
     "meaning": "Over-the-top amazement, often ironic. Use sincerely on a nasty clip, or sarcastically on a tiny flex.",
-    "trigger_moments": ["flex", "overkill", "kill", "near_miss"],
+    "trigger_moments": [
+      "flex",
+      "overkill",
+      "kill",
+      "near_miss"
+    ],
     "humor_type": "reaction",
     "montage_mode": "both",
     "energy": 4,
@@ -170,7 +230,11 @@
   "discord_notification.mp3": {
     "id": "discord_notification",
     "meaning": "A ping that breaks the mood. Comic interruption, someone just saw that, or awkward silence broken.",
-    "trigger_moments": ["awkward_silence", "anticlimax", "fail"],
+    "trigger_moments": [
+      "awkward_silence",
+      "anticlimax",
+      "fail"
+    ],
     "humor_type": "anticlimax",
     "montage_mode": "funny",
     "energy": 2,
@@ -182,7 +246,12 @@
   "tuco_get_out.mp3": {
     "id": "tuco_get_out",
     "meaning": "Angry ejection. Someone (or the player) is done with this situation and wants the other person gone immediately.",
-    "trigger_moments": ["betrayal", "awkward_silence", "fail", "escape"],
+    "trigger_moments": [
+      "betrayal",
+      "awkward_silence",
+      "fail",
+      "escape"
+    ],
     "humor_type": "reaction",
     "montage_mode": "funny",
     "energy": 5,
@@ -194,7 +263,11 @@
   "meme_roblox_oof.mp3": {
     "id": "roblox_oof",
     "meaning": "Mild, almost cute death or pain. Soft fail, not a tragedy — stubbed-toe energy for a knockout or tumble.",
-    "trigger_moments": ["fail", "crash", "kill"],
+    "trigger_moments": [
+      "fail",
+      "crash",
+      "kill"
+    ],
     "humor_type": "anticlimax",
     "montage_mode": "funny",
     "energy": 2,
@@ -206,7 +279,11 @@
   "the_price_is_right_losing_horn.mp3": {
     "id": "price_is_right_losing_horn",
     "meaning": "Game-show you-lost cue. Public, cartoonish failure after a gamble or a confident plan.",
-    "trigger_moments": ["fail", "anticlimax", "flex"],
+    "trigger_moments": [
+      "fail",
+      "anticlimax",
+      "flex"
+    ],
     "humor_type": "anticlimax",
     "montage_mode": "funny",
     "energy": 3,
@@ -218,7 +295,12 @@
   "vinyl_scratch_stop.wav": {
     "id": "record_scratch",
     "meaning": "Hard stop. The story freezes so we can comment on how we got here — the 'yep, that's me' cut.",
-    "trigger_moments": ["fail", "awkward_silence", "cliffhanger", "anticlimax"],
+    "trigger_moments": [
+      "fail",
+      "awkward_silence",
+      "cliffhanger",
+      "anticlimax"
+    ],
     "humor_type": "anticlimax",
     "montage_mode": "funny",
     "energy": 3,
@@ -230,7 +312,11 @@
   "tape_stop_slowdown.wav": {
     "id": "tape_stop",
     "meaning": "Sudden pitch-down power-loss stop when momentum dies or a confident play goes instantly wrong.",
-    "trigger_moments": ["fail", "anticlimax", "cliffhanger"],
+    "trigger_moments": [
+      "fail",
+      "anticlimax",
+      "cliffhanger"
+    ],
     "humor_type": "anticlimax",
     "montage_mode": "both",
     "energy": 3,
@@ -242,7 +328,12 @@
   "wilhelm_scream.mp3": {
     "id": "wilhelm_scream",
     "meaning": "Classic movie death yell. Makes a fall, explosion launch, or NPC ragdoll feel like a blockbuster stunt.",
-    "trigger_moments": ["crash", "kill", "fail", "overkill"],
+    "trigger_moments": [
+      "crash",
+      "kill",
+      "fail",
+      "overkill"
+    ],
     "humor_type": "absurd",
     "montage_mode": "both",
     "energy": 4,
@@ -254,7 +345,11 @@
   "meme_fbi_open_up.mp3": {
     "id": "fbi_open_up",
     "meaning": "Sudden raid energy. The authorities (or chaos) are at the door and there is no talking your way out.",
-    "trigger_moments": ["chase", "betrayal", "overkill"],
+    "trigger_moments": [
+      "chase",
+      "betrayal",
+      "overkill"
+    ],
     "humor_type": "escalation",
     "montage_mode": "both",
     "energy": 5,
@@ -266,7 +361,12 @@
   "illuminati_confirmed_meme.mp3": {
     "id": "illuminati_confirmed",
     "meaning": "Fake conspiracy reveal. A coincidence, perfect timing, or suspiciously lucky shot treated as a secret plot.",
-    "trigger_moments": ["flex", "kill", "near_miss", "betrayal"],
+    "trigger_moments": [
+      "flex",
+      "kill",
+      "near_miss",
+      "betrayal"
+    ],
     "humor_type": "absurd",
     "montage_mode": "funny",
     "energy": 3,
@@ -278,7 +378,10 @@
   "sad_trombone_fail.wav": {
     "id": "sad_trombone",
     "meaning": "Old-school fail button. Short, obvious, cheesy — best for small disappointments, not huge wrecks.",
-    "trigger_moments": ["fail", "anticlimax"],
+    "trigger_moments": [
+      "fail",
+      "anticlimax"
+    ],
     "humor_type": "anticlimax",
     "montage_mode": "funny",
     "energy": 2,
@@ -290,7 +393,10 @@
   "womp_womp_womp.mp3": {
     "id": "womp_womp",
     "meaning": "Short sarcastic deflation after a hope, flex, or near-success dies.",
-    "trigger_moments": ["fail", "anticlimax"],
+    "trigger_moments": [
+      "fail",
+      "anticlimax"
+    ],
     "humor_type": "anticlimax",
     "montage_mode": "funny",
     "energy": 2,
@@ -302,7 +408,11 @@
   "awkward_cricket.mp3": {
     "id": "cricket_chirps",
     "meaning": "Painful silence. Nobody has a response; the joke failed, the flex flopped, or the room is empty.",
-    "trigger_moments": ["awkward_silence", "anticlimax", "fail"],
+    "trigger_moments": [
+      "awkward_silence",
+      "anticlimax",
+      "fail"
+    ],
     "humor_type": "anticlimax",
     "montage_mode": "funny",
     "energy": 1,
@@ -314,7 +424,11 @@
   "meme_no_god_please_no_2s.mp3": {
     "id": "no_god_please_no",
     "meaning": "Over-the-top pleading at a disaster the character can no longer stop. Comic despair.",
-    "trigger_moments": ["fail", "crash", "betrayal"],
+    "trigger_moments": [
+      "fail",
+      "crash",
+      "betrayal"
+    ],
     "humor_type": "escalation",
     "montage_mode": "funny",
     "energy": 4,
@@ -326,7 +440,11 @@
   "meme_why_are_you_running_2s.mp3": {
     "id": "why_are_you_running",
     "meaning": "Mocking a panicked escape. The chase is funny because the runner looks ridiculously scared.",
-    "trigger_moments": ["escape", "chase", "fail"],
+    "trigger_moments": [
+      "escape",
+      "chase",
+      "fail"
+    ],
     "humor_type": "absurd",
     "montage_mode": "funny",
     "energy": 3,
@@ -338,7 +456,10 @@
   "run_vine.mp3": {
     "id": "run_vine",
     "meaning": "Sprint button. Someone has decided to flee and the edit should suddenly feel like a panic montage.",
-    "trigger_moments": ["escape", "chase"],
+    "trigger_moments": [
+      "escape",
+      "chase"
+    ],
     "humor_type": "escalation",
     "montage_mode": "both",
     "energy": 5,
@@ -350,7 +471,12 @@
   "metal_pipe_clang.mp3": {
     "id": "metal_pipe_clang",
     "meaning": "Heavy, cartoon-physics punch. The go-to impact for a body hitting metal, a bad landing, or chaotic contact.",
-    "trigger_moments": ["crash", "fail", "kill", "overkill"],
+    "trigger_moments": [
+      "crash",
+      "fail",
+      "kill",
+      "overkill"
+    ],
     "humor_type": "absurd",
     "montage_mode": "both",
     "energy": 5,
@@ -362,7 +488,11 @@
   "baby_laughing_meme.mp3": {
     "id": "baby_laughing",
     "meaning": "Innocent laughter at someone else's pain. The universe (or editor) is delighted by the fail.",
-    "trigger_moments": ["fail", "crash", "anticlimax"],
+    "trigger_moments": [
+      "fail",
+      "crash",
+      "anticlimax"
+    ],
     "humor_type": "irony",
     "montage_mode": "funny",
     "energy": 2,
@@ -374,7 +504,11 @@
   "the_simpsons_nelson_s_ha_ha.mp3": {
     "id": "nelson_ha_ha",
     "meaning": "Point-and-laugh schadenfreude for instant karma, missed shots, or petty self-own fails.",
-    "trigger_moments": ["fail", "anticlimax", "betrayal"],
+    "trigger_moments": [
+      "fail",
+      "anticlimax",
+      "betrayal"
+    ],
     "humor_type": "irony",
     "montage_mode": "funny",
     "energy": 3,
@@ -386,7 +520,12 @@
   "shocked_crowd_gasp.wav": {
     "id": "crowd_gasp",
     "meaning": "Live-audience inhale for a near-miss, a nasty crash, or a 'they did not just do that' beat.",
-    "trigger_moments": ["near_miss", "crash", "overkill", "kill"],
+    "trigger_moments": [
+      "near_miss",
+      "crash",
+      "overkill",
+      "kill"
+    ],
     "humor_type": "reaction",
     "montage_mode": "both",
     "energy": 3,
@@ -398,7 +537,11 @@
   "meme_law_and_order_dundun.mp3": {
     "id": "law_and_order_dun_dun",
     "meaning": "Investigative button. Something incriminating or blatantly guilty just happened.",
-    "trigger_moments": ["betrayal", "awkward_silence", "cliffhanger"],
+    "trigger_moments": [
+      "betrayal",
+      "awkward_silence",
+      "cliffhanger"
+    ],
     "humor_type": "irony",
     "montage_mode": "funny",
     "energy": 3,
@@ -410,7 +553,12 @@
   "meme_nani.mp3": {
     "id": "nani",
     "meaning": "Anime shock: a short, sharp 'what?!' when the situation flips or an impossible hit lands.",
-    "trigger_moments": ["near_miss", "betrayal", "overkill", "fail"],
+    "trigger_moments": [
+      "near_miss",
+      "betrayal",
+      "overkill",
+      "fail"
+    ],
     "humor_type": "reaction",
     "montage_mode": "funny",
     "energy": 4,
@@ -422,7 +570,12 @@
   "meme_huh_cat.mp3": {
     "id": "huh_cat",
     "meaning": "Rapid 'Huh?' cat beat for pure confusion, bizarre glitches, or nonsensical NPC AI behavior.",
-    "trigger_moments": ["awkward_silence", "anticlimax", "near_miss", "fail"],
+    "trigger_moments": [
+      "awkward_silence",
+      "anticlimax",
+      "near_miss",
+      "fail"
+    ],
     "humor_type": "absurd",
     "montage_mode": "funny",
     "energy": 2,
@@ -434,7 +587,12 @@
   "another_one_dj_khaled.mp3": {
     "id": "another_one",
     "meaning": "DJ Khaled button for a streak. Use when a second crash, kill, or fail lands right after the first.",
-    "trigger_moments": ["overkill", "flex", "kill", "crash"],
+    "trigger_moments": [
+      "overkill",
+      "flex",
+      "kill",
+      "crash"
+    ],
     "humor_type": "escalation",
     "montage_mode": "both",
     "energy": 4,
@@ -446,7 +604,12 @@
   "meme_at_this_moment_2s.mp3": {
     "id": "it_was_at_this_moment",
     "meaning": "Narration that the character has just realized they are cooked. Turning point from confidence to regret.",
-    "trigger_moments": ["fail", "cliffhanger", "chase", "anticlimax"],
+    "trigger_moments": [
+      "fail",
+      "cliffhanger",
+      "chase",
+      "anticlimax"
+    ],
     "humor_type": "irony",
     "montage_mode": "funny",
     "energy": 3,
@@ -458,7 +621,11 @@
   "meme_avengers_sting_2s.mp3": {
     "id": "avengers_sting",
     "meaning": "Heroic blockbuster reveal sting — great for superhero skins, absurdly epic entrances, or ironic flexes.",
-    "trigger_moments": ["flex", "overkill", "escape"],
+    "trigger_moments": [
+      "flex",
+      "overkill",
+      "escape"
+    ],
     "humor_type": "absurd",
     "montage_mode": "both",
     "energy": 5,
@@ -470,7 +637,12 @@
   "meme_he_need_some_milk.mp3": {
     "id": "he_need_some_milk",
     "meaning": "Iconic street-commentary reaction after someone takes a brutal ragdoll, knockout, or vehicle slam.",
-    "trigger_moments": ["crash", "kill", "overkill", "fail"],
+    "trigger_moments": [
+      "crash",
+      "kill",
+      "overkill",
+      "fail"
+    ],
     "humor_type": "reaction",
     "montage_mode": "funny",
     "energy": 4,
@@ -482,7 +654,12 @@
   "my_leg_spongebob_fish_clear.mp3": {
     "id": "spongebob_my_leg",
     "meaning": "SpongeBob 'MY LEG!' scream on brutal ragdoll impacts, crashes, falls, or mauls.",
-    "trigger_moments": ["crash", "fail", "kill", "overkill"],
+    "trigger_moments": [
+      "crash",
+      "fail",
+      "kill",
+      "overkill"
+    ],
     "humor_type": "absurd",
     "montage_mode": "funny",
     "energy": 4,
@@ -494,7 +671,12 @@
   "tom_scream.mp3": {
     "id": "tom_scream",
     "meaning": "Classic Tom & Jerry agonizing scream for sudden launches, explosions, or comedic pain.",
-    "trigger_moments": ["crash", "kill", "overkill", "fail"],
+    "trigger_moments": [
+      "crash",
+      "kill",
+      "overkill",
+      "fail"
+    ],
     "humor_type": "absurd",
     "montage_mode": "funny",
     "energy": 5,
@@ -506,7 +688,12 @@
   "knuckles_oh_no.mp3": {
     "id": "knuckles_oh_no",
     "meaning": "Punchy 'Oh no' right as a bad plan goes sideways or disaster visibly starts.",
-    "trigger_moments": ["fail", "near_miss", "crash", "cliffhanger"],
+    "trigger_moments": [
+      "fail",
+      "near_miss",
+      "crash",
+      "cliffhanger"
+    ],
     "humor_type": "reaction",
     "montage_mode": "funny",
     "energy": 3,
@@ -518,7 +705,12 @@
   "lil_jon_whaaat.mp3": {
     "id": "lil_jon_what",
     "meaning": "Loud stunned 'WHAAAT?!' reaction for ridiculous NPC lines, glitches, or absurd plot twists.",
-    "trigger_moments": ["awkward_silence", "overkill", "betrayal", "fail"],
+    "trigger_moments": [
+      "awkward_silence",
+      "overkill",
+      "betrayal",
+      "fail"
+    ],
     "humor_type": "reaction",
     "montage_mode": "funny",
     "energy": 4,
@@ -530,7 +722,12 @@
   "meme_what_the_hell_2s.mp3": {
     "id": "what_the_hell",
     "meaning": "Stunned disbelief exclamation when something completely unhinged or inexplicable happens on screen.",
-    "trigger_moments": ["fail", "betrayal", "awkward_silence", "overkill"],
+    "trigger_moments": [
+      "fail",
+      "betrayal",
+      "awkward_silence",
+      "overkill"
+    ],
     "humor_type": "reaction",
     "montage_mode": "funny",
     "energy": 4,
@@ -542,7 +739,12 @@
   "meme_wait_a_minute_2s.mp3": {
     "id": "wait_a_minute",
     "meaning": "Double-take realization when something doesn't add up or a suspicious detail appears.",
-    "trigger_moments": ["betrayal", "cliffhanger", "awkward_silence", "near_miss"],
+    "trigger_moments": [
+      "betrayal",
+      "cliffhanger",
+      "awkward_silence",
+      "near_miss"
+    ],
     "humor_type": "reaction",
     "montage_mode": "funny",
     "energy": 3,
@@ -554,7 +756,11 @@
   "talking_ben_no.mp3": {
     "id": "talking_ben_no",
     "meaning": "Deadpan flat 'No.' refusal right after a terrible idea or doomed request.",
-    "trigger_moments": ["fail", "anticlimax", "awkward_silence"],
+    "trigger_moments": [
+      "fail",
+      "anticlimax",
+      "awkward_silence"
+    ],
     "humor_type": "anticlimax",
     "montage_mode": "funny",
     "energy": 2,
@@ -566,7 +772,12 @@
   "gah_dayum.mp3": {
     "id": "gah_dayum",
     "meaning": "Explosive 'GAH DAYUM!' exclamation for massive hits, brutal ragdolls, or savage comebacks.",
-    "trigger_moments": ["crash", "overkill", "kill", "flex"],
+    "trigger_moments": [
+      "crash",
+      "overkill",
+      "kill",
+      "flex"
+    ],
     "humor_type": "reaction",
     "montage_mode": "both",
     "energy": 5,
@@ -578,7 +789,12 @@
   "meme_taco_bell_bong.mp3": {
     "id": "taco_bell_bong",
     "meaning": "Heavy resonant Taco Bell gong on sudden knockouts, headshots, or brutal comedic hits.",
-    "trigger_moments": ["crash", "kill", "overkill", "fail"],
+    "trigger_moments": [
+      "crash",
+      "kill",
+      "overkill",
+      "fail"
+    ],
     "humor_type": "absurd",
     "montage_mode": "funny",
     "energy": 4,
@@ -590,7 +806,11 @@
   "meme_cartoon_bonk.mp3": {
     "id": "cartoon_bonk",
     "meaning": "Crisp cartoon 'BONK' on melee slaps, head knocks, or goofy low-stakes collisions.",
-    "trigger_moments": ["crash", "fail", "kill"],
+    "trigger_moments": [
+      "crash",
+      "fail",
+      "kill"
+    ],
     "humor_type": "absurd",
     "montage_mode": "funny",
     "energy": 3,
@@ -602,7 +822,10 @@
   "meme_cartoon_slip.mp3": {
     "id": "cartoon_slip",
     "meaning": "Classic cartoon slip whistle when characters wipe out, trip, or lose traction.",
-    "trigger_moments": ["fail", "crash"],
+    "trigger_moments": [
+      "fail",
+      "crash"
+    ],
     "humor_type": "absurd",
     "montage_mode": "funny",
     "energy": 3,
@@ -614,7 +837,12 @@
   "hl_scientist_scream.mp3": {
     "id": "hl_scientist_scream",
     "meaning": "Panicked Half-Life scientist shriek when an NPC or player gets ambushed or blown up.",
-    "trigger_moments": ["crash", "chase", "kill", "overkill"],
+    "trigger_moments": [
+      "crash",
+      "chase",
+      "kill",
+      "overkill"
+    ],
     "humor_type": "absurd",
     "montage_mode": "funny",
     "energy": 4,
@@ -626,7 +854,12 @@
   "hl_scientist_stahp.mp3": {
     "id": "hl_scientist_stahp",
     "meaning": "Desperate 'STAHP!' plea when chaos or friendly fire won't stop.",
-    "trigger_moments": ["overkill", "betrayal", "fail", "chase"],
+    "trigger_moments": [
+      "overkill",
+      "betrayal",
+      "fail",
+      "chase"
+    ],
     "humor_type": "absurd",
     "montage_mode": "funny",
     "energy": 4,
@@ -638,7 +871,11 @@
   "dj_airhorn.mp3": {
     "id": "mlg_airhorn",
     "meaning": "Classic montage exclamation mark. Loud, slightly trashy hype for a clip that wants MLG energy.",
-    "trigger_moments": ["kill", "flex", "overkill"],
+    "trigger_moments": [
+      "kill",
+      "flex",
+      "overkill"
+    ],
     "humor_type": "none",
     "montage_mode": "action",
     "energy": 5,
@@ -650,7 +887,11 @@
   "hitmarker_blip.wav": {
     "id": "hitmarker",
     "meaning": "FPS confirmation click. Makes a shot, ram, or precise connection feel like a ranked-game hit.",
-    "trigger_moments": ["kill", "near_miss", "flex"],
+    "trigger_moments": [
+      "kill",
+      "near_miss",
+      "flex"
+    ],
     "humor_type": "none",
     "montage_mode": "action",
     "energy": 3,
@@ -662,7 +903,12 @@
   "sub_drop_bass.wav": {
     "id": "cinematic_bass_drop",
     "meaning": "The downbeat after a build. Body of a slow-mo kill, opening hook, landing, or door kick.",
-    "trigger_moments": ["kill", "overkill", "crash", "flex"],
+    "trigger_moments": [
+      "kill",
+      "overkill",
+      "crash",
+      "flex"
+    ],
     "humor_type": "none",
     "montage_mode": "both",
     "energy": 5,
@@ -674,7 +920,12 @@
   "riser_whoosh.wav": {
     "id": "cinematic_riser",
     "meaning": "Tension build into a hit. Tells the viewer a big moment is 1-2 seconds away and to lean in.",
-    "trigger_moments": ["kill", "chase", "cliffhanger", "overkill"],
+    "trigger_moments": [
+      "kill",
+      "chase",
+      "cliffhanger",
+      "overkill"
+    ],
     "humor_type": "none",
     "montage_mode": "both",
     "energy": 4,
@@ -686,7 +937,12 @@
   "reverse_cymbal_swell.wav": {
     "id": "reverse_cymbal_swell",
     "meaning": "Clean metallic tension swell leading directly into a cut, reveal, or punchline impact.",
-    "trigger_moments": ["cliffhanger", "flex", "chase", "overkill"],
+    "trigger_moments": [
+      "cliffhanger",
+      "flex",
+      "chase",
+      "overkill"
+    ],
     "humor_type": "none",
     "montage_mode": "both",
     "energy": 4,
@@ -698,7 +954,11 @@
   "brass_impact_slam.wav": {
     "id": "cinematic_impact",
     "meaning": "Clean, heavy brass slam for collisions, body shots, and massive landings. Serious cousin of vine boom.",
-    "trigger_moments": ["crash", "kill", "overkill"],
+    "trigger_moments": [
+      "crash",
+      "kill",
+      "overkill"
+    ],
     "humor_type": "none",
     "montage_mode": "action",
     "energy": 5,
@@ -710,7 +970,12 @@
   "hero_brass_impact.wav": {
     "id": "hero_brass_impact",
     "meaning": "Blockbuster horn impact for huge reveals, wrecks, or heroic entrances.",
-    "trigger_moments": ["overkill", "crash", "flex", "cliffhanger"],
+    "trigger_moments": [
+      "overkill",
+      "crash",
+      "flex",
+      "cliffhanger"
+    ],
     "humor_type": "none",
     "montage_mode": "action",
     "energy": 5,
@@ -722,7 +987,12 @@
   "whip_swoosh.wav": {
     "id": "transition_whoosh",
     "meaning": "Standard crisp cut glue. Carries one shot into the next so a montage stays kinetic.",
-    "trigger_moments": ["chase", "kill", "escape", "flex"],
+    "trigger_moments": [
+      "chase",
+      "kill",
+      "escape",
+      "flex"
+    ],
     "humor_type": "none",
     "montage_mode": "both",
     "energy": 3,
@@ -734,7 +1004,12 @@
   "dark_dagger_swoosh.wav": {
     "id": "dark_whoosh",
     "meaning": "Deeper, darker transition whoosh for tense cuts, chases, or ominous shifts.",
-    "trigger_moments": ["chase", "cliffhanger", "kill", "escape"],
+    "trigger_moments": [
+      "chase",
+      "cliffhanger",
+      "kill",
+      "escape"
+    ],
     "humor_type": "none",
     "montage_mode": "both",
     "energy": 3,
@@ -746,7 +1021,12 @@
   "whoosh_wind.mp3": {
     "id": "slow_mo_whoosh",
     "meaning": "Air movement for a speed-ramp into slow motion or fast scene wipe.",
-    "trigger_moments": ["kill", "near_miss", "crash", "flex"],
+    "trigger_moments": [
+      "kill",
+      "near_miss",
+      "crash",
+      "flex"
+    ],
     "humor_type": "none",
     "montage_mode": "both",
     "energy": 3,
@@ -758,7 +1038,11 @@
   "capcut_explosion_sound.mp3": {
     "id": "explosion_boom",
     "meaning": "Full cinematic blast when something actually detonates, ignites, or goes up in a fireball.",
-    "trigger_moments": ["crash", "overkill", "kill"],
+    "trigger_moments": [
+      "crash",
+      "overkill",
+      "kill"
+    ],
     "humor_type": "none",
     "montage_mode": "action",
     "energy": 5,
@@ -770,7 +1054,12 @@
   "heartbeat_sub_pulse.wav": {
     "id": "tense_heartbeat",
     "meaning": "Low-energy tension pulse under stealth, a hide, or a held breath right before a move.",
-    "trigger_moments": ["chase", "cliffhanger", "near_miss", "escape"],
+    "trigger_moments": [
+      "chase",
+      "cliffhanger",
+      "near_miss",
+      "escape"
+    ],
     "humor_type": "none",
     "montage_mode": "both",
     "energy": 2,
@@ -782,7 +1071,12 @@
   "fast_rewind.wav": {
     "id": "tape_rewind",
     "meaning": "Replay or flashback cue. Signals we are about to see that moment again, slower or from another angle.",
-    "trigger_moments": ["kill", "crash", "near_miss", "fail"],
+    "trigger_moments": [
+      "kill",
+      "crash",
+      "near_miss",
+      "fail"
+    ],
     "humor_type": "none",
     "montage_mode": "both",
     "energy": 3,
@@ -794,7 +1088,11 @@
   "whip.mp3": {
     "id": "whip_crack",
     "meaning": "Sharp comic or stylish punctuation on a snap zoom, head-turn, or quick swipe cut.",
-    "trigger_moments": ["flex", "kill", "near_miss"],
+    "trigger_moments": [
+      "flex",
+      "kill",
+      "near_miss"
+    ],
     "humor_type": "none",
     "montage_mode": "both",
     "energy": 3,
@@ -806,7 +1104,12 @@
   "yay_cheer_meme.wav": {
     "id": "crowd_cheer",
     "meaning": "Approval cheer. Makes a stunt, win, or flex feel public and oversized — sincere in action, ironic in comedy.",
-    "trigger_moments": ["flex", "kill", "overkill", "escape"],
+    "trigger_moments": [
+      "flex",
+      "kill",
+      "overkill",
+      "escape"
+    ],
     "humor_type": "irony",
     "montage_mode": "both",
     "energy": 4,
@@ -818,7 +1121,11 @@
   "cs_holy_shit.mp3": {
     "id": "holy_shit_ut",
     "meaning": "Announcer awe for a spectacular multi-kill or stunt. Save it for the biggest highlight of the short.",
-    "trigger_moments": ["overkill", "kill", "crash"],
+    "trigger_moments": [
+      "overkill",
+      "kill",
+      "crash"
+    ],
     "humor_type": "reaction",
     "montage_mode": "action",
     "energy": 5,
@@ -830,7 +1137,12 @@
   "pistol_cock_metallic.wav": {
     "id": "gun_cock",
     "meaning": "Short mechanical threat. Pre-hit tense click before a turn, reveal, or 'we're doing this' cut.",
-    "trigger_moments": ["kill", "chase", "cliffhanger", "flex"],
+    "trigger_moments": [
+      "kill",
+      "chase",
+      "cliffhanger",
+      "flex"
+    ],
     "humor_type": "none",
     "montage_mode": "action",
     "energy": 3,
@@ -842,7 +1154,12 @@
   "fah_perfect_sync.mp3": {
     "id": "faah",
     "meaning": "Raw, distorted vocal burst of shock, pain, or disbelief. Modern fail punctuation — louder and messier than bruh.",
-    "trigger_moments": ["fail", "crash", "kill", "overkill"],
+    "trigger_moments": [
+      "fail",
+      "crash",
+      "kill",
+      "overkill"
+    ],
     "humor_type": "reaction",
     "montage_mode": "funny",
     "energy": 5,
@@ -854,7 +1171,10 @@
   "rizz_sound_effect.mp3": {
     "id": "rizz_sound",
     "meaning": "Smooth-charisma chime. Marks a confident walk, clean pull-up, or effortless social or vehicle flex.",
-    "trigger_moments": ["flex", "escape"],
+    "trigger_moments": [
+      "flex",
+      "escape"
+    ],
     "humor_type": "reaction",
     "montage_mode": "both",
     "energy": 3,
@@ -866,7 +1186,12 @@
   "prowler_sound_effect.mp3": {
     "id": "prowler_sound",
     "meaning": "Spider-Verse Prowler cue: dark, glitchy, villain-entrance energy. Someone dangerous just arrived.",
-    "trigger_moments": ["chase", "flex", "cliffhanger", "overkill"],
+    "trigger_moments": [
+      "chase",
+      "flex",
+      "cliffhanger",
+      "overkill"
+    ],
     "humor_type": "escalation",
     "montage_mode": "both",
     "energy": 5,
@@ -878,7 +1203,12 @@
   "chicken_on_tree_screaming.mp3": {
     "id": "chicken_tree_scream",
     "meaning": "Long panicked almost-human scream when a situation is so doomed or chaotic the edit itself wants to scream.",
-    "trigger_moments": ["fail", "crash", "chase", "escape"],
+    "trigger_moments": [
+      "fail",
+      "crash",
+      "chase",
+      "escape"
+    ],
     "humor_type": "absurd",
     "montage_mode": "funny",
     "energy": 4,
@@ -890,7 +1220,11 @@
   "du_bist_gut_genug.mp3": {
     "id": "du_bist_gut_genug",
     "meaning": "Sweet, sincere German 'you are good enough' line. The joke is earnest comfort laid over ridiculous chaos.",
-    "trigger_moments": ["fail", "anticlimax", "awkward_silence"],
+    "trigger_moments": [
+      "fail",
+      "anticlimax",
+      "awkward_silence"
+    ],
     "humor_type": "irony",
     "montage_mode": "funny",
     "energy": 1,
@@ -902,7 +1236,11 @@
   "rizzbot_laugh.mp3": {
     "id": "rizzbot_laugh",
     "meaning": "Robotic, slightly unhinged chuckle with fake swagger. Good for awkward flexes or failed rizz moments.",
-    "trigger_moments": ["flex", "fail", "awkward_silence"],
+    "trigger_moments": [
+      "flex",
+      "fail",
+      "awkward_silence"
+    ],
     "humor_type": "irony",
     "montage_mode": "funny",
     "energy": 3,
@@ -914,7 +1252,11 @@
   "bad_to_the_bone_riff.mp3": {
     "id": "bad_to_the_bone",
     "meaning": "Swagger walk-up guitar riff. Often ironic: character thinks they look terrifying right before a fail or flex.",
-    "trigger_moments": ["flex", "chase", "escape"],
+    "trigger_moments": [
+      "flex",
+      "chase",
+      "escape"
+    ],
     "humor_type": "irony",
     "montage_mode": "both",
     "energy": 3,
@@ -926,7 +1268,11 @@
   "meme_gta_wasted.mp3": {
     "id": "gta_wasted",
     "meaning": "Classic GTA Wasted death boom (soft-banned by default to avoid cliché slop unless explicitly requested).",
-    "trigger_moments": ["fail", "kill", "crash"],
+    "trigger_moments": [
+      "fail",
+      "kill",
+      "crash"
+    ],
     "humor_type": "anticlimax",
     "montage_mode": "funny",
     "energy": 3,
@@ -939,7 +1285,11 @@
   "meme_cj_ah_shit_2s.mp3": {
     "id": "cj_ah_shit",
     "meaning": "CJ 'Ah shit, here we go again' (soft-banned by default as GTA-native unless explicitly requested).",
-    "trigger_moments": ["chase", "fail", "cliffhanger"],
+    "trigger_moments": [
+      "chase",
+      "fail",
+      "cliffhanger"
+    ],
     "humor_type": "irony",
     "montage_mode": "funny",
     "energy": 2,
@@ -952,7 +1302,10 @@
   "meme_mission_failed_2s.mp3": {
     "id": "mission_failed",
     "meaning": "Call of Duty 'Mission failed, we'll get em next time' after a clean heist or plan collapses.",
-    "trigger_moments": ["fail", "anticlimax"],
+    "trigger_moments": [
+      "fail",
+      "anticlimax"
+    ],
     "humor_type": "irony",
     "montage_mode": "funny",
     "energy": 2,
@@ -960,5 +1313,773 @@
     "copyright_risk": "medium",
     "freshness": "evergreen",
     "dedupe_group": "sad_fail"
+  },
+  "curb_your_enthusiasm.mp3": {
+    "id": "curb_your_enthusiasm",
+    "meaning": "Awkward, self-inflicted social disaster. The situation is embarrassing and everybody can see it.",
+    "trigger_moments": [
+      "fail",
+      "awkward_silence",
+      "anticlimax",
+      "betrayal"
+    ],
+    "humor_type": "irony",
+    "montage_mode": "funny",
+    "energy": 2,
+    "placement": "bed",
+    "copyright_risk": "high",
+    "freshness": "evergreen",
+    "dedupe_group": "curb_end"
+  },
+  "to_be_continued.mp3": {
+    "id": "to_be_continued",
+    "meaning": "Fake cliffhanger: freeze right before impact so the crash is implied, not shown. Classic JoJo Roundabout button.",
+    "trigger_moments": [
+      "cliffhanger",
+      "crash",
+      "near_miss"
+    ],
+    "humor_type": "anticlimax",
+    "montage_mode": "funny",
+    "energy": 3,
+    "placement": "under_freeze_frame",
+    "copyright_risk": "high",
+    "freshness": "evergreen",
+    "dedupe_group": "cliffhanger_sting"
+  },
+  "oh_no_no_no_laugh.mp3": {
+    "id": "oh_no_no_no_laugh",
+    "meaning": "You can already see the doom coming, and the laugh is the audience watching someone accelerate into it.",
+    "trigger_moments": [
+      "fail",
+      "crash",
+      "chase"
+    ],
+    "humor_type": "escalation",
+    "montage_mode": "funny",
+    "energy": 3,
+    "placement": "before_moment",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "doom_laugh"
+  },
+  "coffin_dance.mp3": {
+    "id": "coffin_dance",
+    "meaning": "Ceremonial they're-gone joke. Used after a spectacular death, wreck, or total loss — not for a minor bump.",
+    "trigger_moments": [
+      "fail",
+      "crash",
+      "kill"
+    ],
+    "humor_type": "absurd",
+    "montage_mode": "funny",
+    "energy": 3,
+    "placement": "after_impact",
+    "copyright_risk": "high",
+    "freshness": "evergreen",
+    "dedupe_group": "ceremonial_death"
+  },
+  "john_cena_intro.mp3": {
+    "id": "john_cena_intro",
+    "meaning": "An over-the-top reveal of a person, vehicle, or threat that suddenly appears like a wrestler entrance.",
+    "trigger_moments": [
+      "flex",
+      "overkill",
+      "chase"
+    ],
+    "humor_type": "absurd",
+    "montage_mode": "both",
+    "energy": 5,
+    "placement": "before_moment",
+    "copyright_risk": "high",
+    "freshness": "evergreen",
+    "dedupe_group": "hero_reveal"
+  },
+  "ight_imma_head_out.mp3": {
+    "id": "ight_imma_head_out",
+    "meaning": "Quiet exit. The situation got weird or hopeless, so the character just walks away without a speech.",
+    "trigger_moments": [
+      "escape",
+      "awkward_silence",
+      "anticlimax",
+      "betrayal"
+    ],
+    "humor_type": "anticlimax",
+    "montage_mode": "funny",
+    "energy": 1,
+    "placement": "after_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "quiet_exit"
+  },
+  "its_a_trap.mp3": {
+    "id": "its_a_trap",
+    "meaning": "Admiral Ackbar warning: the obvious bait, ambush, or too-good-to-be-true opening has been recognized — usually too late.",
+    "trigger_moments": [
+      "betrayal",
+      "chase",
+      "near_miss",
+      "cliffhanger"
+    ],
+    "humor_type": "reaction",
+    "montage_mode": "both",
+    "energy": 4,
+    "placement": "on_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "suspense_reveal"
+  },
+  "hello_darkness.mp3": {
+    "id": "hello_darkness",
+    "meaning": "Mock-depression after a total loss. The character has accepted their fate and is sitting in it.",
+    "trigger_moments": [
+      "fail",
+      "anticlimax",
+      "awkward_silence"
+    ],
+    "humor_type": "irony",
+    "montage_mode": "funny",
+    "energy": 1,
+    "placement": "bed",
+    "copyright_risk": "high",
+    "freshness": "evergreen",
+    "dedupe_group": "sad_fail"
+  },
+  "ba_dum_tss.mp3": {
+    "id": "ba_dum_tss",
+    "meaning": "Rimshot for a punchline or dad-joke moment. Use when the visual itself is the joke, not when the moment is raw action.",
+    "trigger_moments": [
+      "fail",
+      "anticlimax",
+      "awkward_silence"
+    ],
+    "humor_type": "irony",
+    "montage_mode": "funny",
+    "energy": 2,
+    "placement": "after_impact",
+    "copyright_risk": "low",
+    "freshness": "evergreen",
+    "dedupe_group": "rimshot"
+  },
+  "owen_wilson_wow.mp3": {
+    "id": "owen_wilson_wow",
+    "meaning": "Soft, dazed wonder. A calmer cousin of Anime Wow — good for surreal, pretty, or stupid-lucky moments.",
+    "trigger_moments": [
+      "flex",
+      "near_miss",
+      "kill",
+      "anticlimax"
+    ],
+    "humor_type": "reaction",
+    "montage_mode": "funny",
+    "energy": 2,
+    "placement": "after_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "wow_reaction"
+  },
+  "sheesh.mp3": {
+    "id": "sheesh",
+    "meaning": "Impressed, slightly overloaded reaction to a flex, a nasty clip, or an unnecessarily expensive move.",
+    "trigger_moments": [
+      "flex",
+      "overkill",
+      "kill"
+    ],
+    "humor_type": "reaction",
+    "montage_mode": "both",
+    "energy": 3,
+    "placement": "after_impact",
+    "copyright_risk": "low",
+    "freshness": "evergreen",
+    "dedupe_group": "wow_reaction"
+  },
+  "well_be_right_back.mp3": {
+    "id": "well_be_right_back",
+    "meaning": "Fake commercial-break bumper after something too brutal or chaotic to sit with. A comedy cutaway, then return.",
+    "trigger_moments": [
+      "fail",
+      "crash",
+      "overkill",
+      "kill"
+    ],
+    "humor_type": "anticlimax",
+    "montage_mode": "funny",
+    "energy": 3,
+    "placement": "after_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "narrator_skip"
+  },
+  "evil_laugh.mp3": {
+    "id": "evil_laugh",
+    "meaning": "Villain gloating. Use when the player does something needlessly cruel, smug, or cartoon-evil — or when an NPC gets the upper hand.",
+    "trigger_moments": [
+      "flex",
+      "overkill",
+      "betrayal",
+      "kill"
+    ],
+    "humor_type": "absurd",
+    "montage_mode": "funny",
+    "energy": 4,
+    "placement": "after_impact",
+    "copyright_risk": "low",
+    "freshness": "evergreen",
+    "dedupe_group": "laugh_mock"
+  },
+  "among_us_emergency_meeting.mp3": {
+    "id": "among_us_emergency_meeting",
+    "meaning": "Someone is calling a timeout to accuse, panic, or reset the plan. Instant we-need-to-talk energy.",
+    "trigger_moments": [
+      "betrayal",
+      "awkward_silence",
+      "fail"
+    ],
+    "humor_type": "escalation",
+    "montage_mode": "funny",
+    "energy": 3,
+    "placement": "on_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "raid_chaos"
+  },
+  "omae_wa_mou_shindeiru.mp3": {
+    "id": "omae_wa_mou_shindeiru",
+    "meaning": "You are already dead. The opponent has lost and just doesn't know it yet — perfect for a delayed knockout or a trap that already sprung.",
+    "trigger_moments": [
+      "overkill",
+      "kill",
+      "flex",
+      "cliffhanger"
+    ],
+    "humor_type": "irony",
+    "montage_mode": "both",
+    "energy": 3,
+    "placement": "before_moment",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "suspense_reveal"
+  },
+  "za_warudo.mp3": {
+    "id": "za_warudo",
+    "meaning": "JoJo time-stop cue. Freeze the world for a stylish pose, a perfect shot, or a joke that happens between frames.",
+    "trigger_moments": [
+      "flex",
+      "kill",
+      "cliffhanger",
+      "near_miss"
+    ],
+    "humor_type": "absurd",
+    "montage_mode": "both",
+    "energy": 4,
+    "placement": "under_freeze_frame",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "time_stop"
+  },
+  "dramatic_chipmunk.mp3": {
+    "id": "dramatic_chipmunk",
+    "meaning": "Cheesy zoom-in stinger for a sudden serious face. Turns a blank look into a fake thriller reveal.",
+    "trigger_moments": [
+      "awkward_silence",
+      "cliffhanger",
+      "betrayal"
+    ],
+    "humor_type": "absurd",
+    "montage_mode": "funny",
+    "energy": 3,
+    "placement": "under_freeze_frame",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "suspense_reveal"
+  },
+  "over_9000.mp3": {
+    "id": "over_9000",
+    "meaning": "Power-level joke. The speed, wanted intensity, damage, or shot is absurdly above what the moment called for.",
+    "trigger_moments": [
+      "overkill",
+      "flex",
+      "chase"
+    ],
+    "humor_type": "absurd",
+    "montage_mode": "both",
+    "energy": 5,
+    "placement": "on_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "wow_reaction"
+  },
+  "its_time_to_stop.mp3": {
+    "id": "its_time_to_stop",
+    "meaning": "A command to cease. The bit, the rampage, or the bad idea has gone on long enough.",
+    "trigger_moments": [
+      "overkill",
+      "fail",
+      "chase"
+    ],
+    "humor_type": "irony",
+    "montage_mode": "funny",
+    "energy": 3,
+    "placement": "after_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "nope_refusal"
+  },
+  "leeroy_jenkins.mp3": {
+    "id": "leeroy_jenkins",
+    "meaning": "A teammate (or you) throws the plan and charges in screaming. Chaos that was not agreed upon.",
+    "trigger_moments": [
+      "overkill",
+      "chase",
+      "fail",
+      "flex"
+    ],
+    "humor_type": "absurd",
+    "montage_mode": "both",
+    "energy": 5,
+    "placement": "before_moment",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "raid_chaos"
+  },
+  "rickroll_sting.mp3": {
+    "id": "rickroll_sting",
+    "meaning": "Bait-and-switch button. The edit promised one ending and delivered a troll instead — or someone got played.",
+    "trigger_moments": [
+      "betrayal",
+      "anticlimax",
+      "fail"
+    ],
+    "humor_type": "irony",
+    "montage_mode": "funny",
+    "energy": 3,
+    "placement": "end_card",
+    "copyright_risk": "high",
+    "freshness": "evergreen",
+    "dedupe_group": "troll_bait"
+  },
+  "shooting_stars.mp3": {
+    "id": "shooting_stars",
+    "meaning": "Dreamy, ironic walk-away or slow zoom-out. Often used when a character casually leaves a disaster they caused.",
+    "trigger_moments": [
+      "escape",
+      "flex",
+      "anticlimax"
+    ],
+    "humor_type": "irony",
+    "montage_mode": "funny",
+    "energy": 2,
+    "placement": "bed",
+    "copyright_risk": "high",
+    "freshness": "evergreen",
+    "dedupe_group": "walkaway_irony"
+  },
+  "oh_brother_this_guy_stinks.mp3": {
+    "id": "oh_brother_this_guy_stinks",
+    "meaning": "SpongeBob-line contempt. The other person (or your own play) is embarrassing and not impressing anyone.",
+    "trigger_moments": [
+      "fail",
+      "awkward_silence",
+      "anticlimax",
+      "flex"
+    ],
+    "humor_type": "irony",
+    "montage_mode": "funny",
+    "energy": 2,
+    "placement": "after_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "humiliation"
+  },
+  "we_got_him.mp3": {
+    "id": "we_got_him",
+    "meaning": "Mock news-footage catch phrase. The target is finally caught, or you ironically got him with a cheap shot.",
+    "trigger_moments": [
+      "kill",
+      "chase",
+      "flex",
+      "overkill"
+    ],
+    "humor_type": "irony",
+    "montage_mode": "both",
+    "energy": 3,
+    "placement": "after_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "crime_sting"
+  },
+  "i_cant_believe_youve_done_this.mp3": {
+    "id": "i_cant_believe_youve_done_this",
+    "meaning": "Wounded betrayal, usually comic. A teammate, an NPC, or physics itself has committed an unforced foul.",
+    "trigger_moments": [
+      "betrayal",
+      "fail",
+      "awkward_silence"
+    ],
+    "humor_type": "reaction",
+    "montage_mode": "funny",
+    "energy": 2,
+    "placement": "after_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "regret_narration"
+  },
+  "jeopardy_thinking.mp3": {
+    "id": "jeopardy_thinking",
+    "meaning": "Waiting-for-an-answer tension. Use under a pause, a bad decision being considered, or a stalled engine.",
+    "trigger_moments": [
+      "awkward_silence",
+      "anticlimax",
+      "cliffhanger"
+    ],
+    "humor_type": "irony",
+    "montage_mode": "funny",
+    "energy": 1,
+    "placement": "bed",
+    "copyright_risk": "high",
+    "freshness": "evergreen",
+    "dedupe_group": "awkward_silence"
+  },
+  "spongebob_boowomp.mp3": {
+    "id": "spongebob_boowomp",
+    "meaning": "Tiny sad deflation after a hope, a flex, or a near-success dies. Shorter and softer than a full fail sting.",
+    "trigger_moments": [
+      "fail",
+      "anticlimax"
+    ],
+    "humor_type": "anticlimax",
+    "montage_mode": "funny",
+    "energy": 1,
+    "placement": "after_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "sad_fail"
+  },
+  "gotta_go_fast.mp3": {
+    "id": "gotta_go_fast",
+    "meaning": "Sonic-style speed joke. The edit (or the vehicle) is now moving at cartoon speed, often slightly out of control.",
+    "trigger_moments": [
+      "chase",
+      "escape",
+      "flex"
+    ],
+    "humor_type": "escalation",
+    "montage_mode": "both",
+    "energy": 5,
+    "placement": "on_impact",
+    "copyright_risk": "high",
+    "freshness": "evergreen",
+    "dedupe_group": "chase_sprint"
+  },
+  "phonk_stinger.mp3": {
+    "id": "phonk_stinger",
+    "meaning": "Short cowbell-and-bass phonk hit for swagger walks, drift entries, and car pulls. Not a full song bed.",
+    "trigger_moments": [
+      "flex",
+      "chase",
+      "escape",
+      "kill"
+    ],
+    "humor_type": "none",
+    "montage_mode": "action",
+    "energy": 5,
+    "placement": "on_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "phonk_hype"
+  },
+  "inception_braam.mp3": {
+    "id": "inception_braam",
+    "meaning": "Trailer horn. Makes a wide shot, a reveal, or a huge wreck feel like a blockbuster title card.",
+    "trigger_moments": [
+      "overkill",
+      "crash",
+      "flex",
+      "cliffhanger"
+    ],
+    "humor_type": "none",
+    "montage_mode": "action",
+    "energy": 5,
+    "placement": "on_impact",
+    "copyright_risk": "high",
+    "freshness": "evergreen",
+    "dedupe_group": "trailer_horn"
+  },
+  "cs_awp_shot.mp3": {
+    "id": "cs_awp_shot",
+    "meaning": "The iconic sniper crack that means deleted. Use on a single, decisive, long-range or perfectly timed takedown.",
+    "trigger_moments": [
+      "kill",
+      "flex",
+      "overkill"
+    ],
+    "humor_type": "none",
+    "montage_mode": "action",
+    "energy": 5,
+    "placement": "on_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "sniper_delete"
+  },
+  "wombo_combo.mp3": {
+    "id": "wombo_combo",
+    "meaning": "MLG commentator pile-on. Use when hits chain together — a combo of rams, shots, or explosions, not a single tap.",
+    "trigger_moments": [
+      "overkill",
+      "kill",
+      "flex"
+    ],
+    "humor_type": "escalation",
+    "montage_mode": "action",
+    "energy": 5,
+    "placement": "on_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "announcer_hype"
+  },
+  "oh_baby_a_triple.mp3": {
+    "id": "oh_baby_a_triple",
+    "meaning": "Celebration of a three-piece. Reserve it for a literal or clearly readable triple — three cars, three takedowns, three jumps.",
+    "trigger_moments": [
+      "overkill",
+      "kill",
+      "flex"
+    ],
+    "humor_type": "escalation",
+    "montage_mode": "action",
+    "energy": 5,
+    "placement": "on_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "streak_call"
+  },
+  "damn_son_whered_you_find_this.mp3": {
+    "id": "damn_son_whered_you_find_this",
+    "meaning": "MLG hype-vocal for a filthy clip. The editor is bragging on the player's behalf.",
+    "trigger_moments": [
+      "flex",
+      "kill",
+      "overkill",
+      "near_miss"
+    ],
+    "humor_type": "reaction",
+    "montage_mode": "action",
+    "energy": 4,
+    "placement": "after_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "announcer_hype"
+  },
+  "finish_him.mp3": {
+    "id": "finish_him",
+    "meaning": "Mortal Kombat cue that a weakened target is about to take the last, theatrical hit.",
+    "trigger_moments": [
+      "overkill",
+      "kill",
+      "flex"
+    ],
+    "humor_type": "escalation",
+    "montage_mode": "action",
+    "energy": 4,
+    "placement": "before_moment",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "announcer_hype"
+  },
+  "killing_spree.mp3": {
+    "id": "killing_spree",
+    "meaning": "Streak announcer. Use only when several successful hits land close together, so the streak is readable.",
+    "trigger_moments": [
+      "kill",
+      "overkill",
+      "chase"
+    ],
+    "humor_type": "escalation",
+    "montage_mode": "action",
+    "energy": 4,
+    "placement": "after_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "streak_call"
+  },
+  "headshot_announcer.mp3": {
+    "id": "headshot_announcer",
+    "meaning": "Precision-kill call. Marks a clean, almost unfairly accurate shot or a perfectly placed ram.",
+    "trigger_moments": [
+      "kill",
+      "flex"
+    ],
+    "humor_type": "none",
+    "montage_mode": "action",
+    "energy": 4,
+    "placement": "on_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "announcer_hype"
+  },
+  "mlg_wow.mp3": {
+    "id": "mlg_wow",
+    "meaning": "The distorted WOW remix from old montages. Hype-plus-irony for a clip that is showing off on purpose.",
+    "trigger_moments": [
+      "flex",
+      "kill",
+      "near_miss",
+      "overkill"
+    ],
+    "humor_type": "reaction",
+    "montage_mode": "both",
+    "energy": 4,
+    "placement": "on_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "wow_reaction"
+  },
+  "deja_vu_initial_d.mp3": {
+    "id": "deja_vu_initial_d",
+    "meaning": "The eurobeat cue for a serious, stylish car chase or mountain-pass drift. Instant this-is-a-race energy.",
+    "trigger_moments": [
+      "chase",
+      "flex",
+      "escape"
+    ],
+    "humor_type": "none",
+    "montage_mode": "action",
+    "energy": 5,
+    "placement": "bed",
+    "copyright_risk": "high",
+    "freshness": "evergreen",
+    "dedupe_group": "chase_sprint"
+  },
+  "yara_yara_phonk.mp3": {
+    "id": "yara_yara_phonk",
+    "meaning": "A loud trending phonk hook used for aggressive walks, bike pulls, and night-drive edits. High-energy swagger, not a punchline.",
+    "trigger_moments": [
+      "flex",
+      "chase",
+      "escape"
+    ],
+    "humor_type": "none",
+    "montage_mode": "action",
+    "energy": 5,
+    "placement": "bed",
+    "copyright_risk": "high",
+    "freshness": "trending_2025_2026",
+    "dedupe_group": "phonk_hype"
+  },
+  "brother_eww.mp3": {
+    "id": "brother_eww",
+    "meaning": "Disgust reaction. Something looked, sounded, or played gross — a messy crash, a cringe flex, a nasty ragdoll.",
+    "trigger_moments": [
+      "fail",
+      "crash",
+      "awkward_silence"
+    ],
+    "humor_type": "reaction",
+    "montage_mode": "funny",
+    "energy": 3,
+    "placement": "after_impact",
+    "copyright_risk": "low",
+    "freshness": "trending_2025_2026",
+    "dedupe_group": "disgust"
+  },
+  "tung_tung_tung_sahur.mp3": {
+    "id": "tung_tung_tung_sahur",
+    "meaning": "Italian-brainrot chant used as absurdist punctuation. Best as a weird button on an already silly moment, not on serious action.",
+    "trigger_moments": [
+      "fail",
+      "overkill",
+      "anticlimax"
+    ],
+    "humor_type": "absurd",
+    "montage_mode": "funny",
+    "energy": 4,
+    "placement": "after_impact",
+    "copyright_risk": "medium",
+    "freshness": "trending_2025_2026",
+    "dedupe_group": "absurd_brainrot"
+  },
+  "bomboclat.mp3": {
+    "id": "bomboclat",
+    "meaning": "A sharp shock or disbelief shout. Use for you-have-to-be-kidding-me reveals and sudden, loud fails.",
+    "trigger_moments": [
+      "fail",
+      "crash",
+      "near_miss",
+      "betrayal"
+    ],
+    "humor_type": "reaction",
+    "montage_mode": "funny",
+    "energy": 4,
+    "placement": "on_impact",
+    "copyright_risk": "low",
+    "freshness": "trending_2025_2026",
+    "dedupe_group": "confused_shock"
+  },
+  "syfm_shut_your_mouth.mp3": {
+    "id": "syfm_shut_your_mouth",
+    "meaning": "A hard be-quiet or that's-enough snap. Use when a teammate is yapping, a flex is undeserved, or the bit should end.",
+    "trigger_moments": [
+      "awkward_silence",
+      "flex",
+      "betrayal",
+      "fail"
+    ],
+    "humor_type": "reaction",
+    "montage_mode": "funny",
+    "energy": 4,
+    "placement": "on_impact",
+    "copyright_risk": "medium",
+    "freshness": "trending_2025_2026",
+    "dedupe_group": "nope_refusal"
+  },
+  "airpods_low_battery.mp3": {
+    "id": "airpods_low_battery",
+    "meaning": "A tiny chime that ruins the mood. Perfect comic interruption when a tense or stylish moment suddenly dies.",
+    "trigger_moments": [
+      "anticlimax",
+      "awkward_silence",
+      "fail"
+    ],
+    "humor_type": "anticlimax",
+    "montage_mode": "funny",
+    "energy": 1,
+    "placement": "on_impact",
+    "copyright_risk": "medium",
+    "freshness": "trending_2025_2026",
+    "dedupe_group": "ui_interrupt"
+  },
+  "helicopter_helicopter.mp3": {
+    "id": "helicopter_helicopter",
+    "meaning": "Absurdist chant that currently travels with chaotic edits. Best when a literal helicopter appears, or when the scene is already nonsense.",
+    "trigger_moments": [
+      "chase",
+      "overkill",
+      "escape",
+      "fail"
+    ],
+    "humor_type": "absurd",
+    "montage_mode": "funny",
+    "energy": 4,
+    "placement": "bed",
+    "copyright_risk": "medium",
+    "freshness": "trending_2025_2026",
+    "dedupe_group": "absurd_brainrot"
+  },
+  "man_from_the_fog_whistle.mp3": {
+    "id": "man_from_the_fog_whistle",
+    "meaning": "Unsettling horror whistle. Signals a threat slowly approaching, a jump-scare setup, or something-is-watching energy.",
+    "trigger_moments": [
+      "cliffhanger",
+      "chase",
+      "near_miss"
+    ],
+    "humor_type": "escalation",
+    "montage_mode": "both",
+    "energy": 3,
+    "placement": "before_moment",
+    "copyright_risk": "medium",
+    "freshness": "trending_2025_2026",
+    "dedupe_group": "villain_entrance"
   }
 }
