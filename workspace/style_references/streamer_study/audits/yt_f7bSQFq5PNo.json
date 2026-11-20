@@ -1,0 +1,31 @@
+{
+  "id": "yt_f7bSQFq5PNo",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=f7bSQFq5PNo",
+  "title": "Caseoh Is Insanely Bad At Crafting In Minecraft 💀😭",
+  "author": "ibohclips",
+  "views": 136345886,
+  "duration_sec": 60.0,
+  "query": "caseoh funny moments edit shorts",
+  "audit": {
+    "masterpiece_score": 8,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "CaseOh / Minecraft",
+    "editing_archetype": "Fast Multi-Clip Montage",
+    "framing_9x16": "Classic 50/50 vertical stack: Top half dedicated to streamer facecam with dark blurred background letterboxing; bottom half focused directly on the gameplay HUD, crafting grid, furnace, and inventory.",
+    "subtitle_craft": "Centered on the dividing line between facecam and game. Features a dual approach: single-to-two word punchy spoken dialogue captions in heavy white sans-serif with thick black outline, combined with bracketed action callouts (*CRAFTS*, *SEARCHES*, *FINDS*, *EMBARRASSED*, *PANICKS*) that guide the viewer through silent gameplay sequences without lagging or lingering.",
+    "zoom_and_camera_work": "Dynamic punch-ins targeting specific comedic points: snaps from 1.0x to 1.35x directly onto the 3x3 crafting grid during recipe confusion, instant snap to full-screen facecam when CaseOh screams or facepalms, and tight cropping into the furnace/inventory output to build anticipation.",
+    "sfx_and_music_craft": "Playful, lighthearted rhythmic background music underscoring the montage, punctuated by crisp wooden Minecraft block placement and crafting SFX. Comedic stingers, pop-in swooshes for PNG armor overlays, and sudden unmuted mic clipping on CaseOh's screaming triumphs create sharp dynamic contrast.",
+    "comedic_timing_and_cuts": "Aggressive jump-cutting trims all dead space between recipe attempts, turning a 10-minute struggle into a rapid-fire sequence of trial, error, and embarrassment. Pacing accelerates into frantic edits during the netherite craft, pauses briefly on CaseOh's blank realization, then culminates in the triumphant enchanting setup payoff.",
+    "standout_techniques": [
+      "Contextual action tags (*CRAFTS*, *PANICKS*) to maintain narrative pacing during wordless gameplay actions",
+      "Semi-transparent meme reaction overlay (faded despondent face over crafting grid) visualising mental collapse",
+      "Animated floating PNG inventory items (armor, sword, pickaxe) sliding onto screen to illustrate his running internal monologue",
+      "Top-of-head thought bubble graphic (SpongeBob meme) synced to prolonged silence and confusion"
+    ],
+    "anti_patterns_to_avoid": [
+      "Slight typo in on-screen captions ('*EMBARASSED*' instead of 'EMBARRASSED')",
+      "Placing action captions directly over the crafting cursor, occasionally obscuring fine mouse movements"
+    ]
+  }
+}

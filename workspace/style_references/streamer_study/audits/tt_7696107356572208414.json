@@ -1,0 +1,31 @@
+{
+  "id": "tt_7696107356572208414",
+  "platform": "tiktok",
+  "url": "",
+  "title": "TikTok Streamer Edit (tt_7696107356572208414)",
+  "author": "tiktok_creator",
+  "views": 100000,
+  "duration_sec": 35.0,
+  "local_file": "C:\\Users\\PC\\.gemini\\antigravity\\scratch\\clip_factory\\workspace\\style_references\\streamer_study\\tiktok_clips\\tt_7696107356572208414.mp4",
+  "audit": {
+    "masterpiece_score": 8,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "Backrooms Co-op Gameplay",
+    "editing_archetype": "Fast Multi-Clip Montage / Countdown Countdown Ranking",
+    "framing_9x16": "Full vertical crop gameplay with persistent top-left numbered ranking overlay (1 to 4) tracking clips in reverse order.",
+    "subtitle_craft": "Bouncing, centered, bold white and yellow karaoke-style captions with word-by-word chunking, scaling up on high-energy screams and comedic gasps.",
+    "zoom_and_camera_work": "Subtle context-aware push-ins on monster jump scares and character panic reactions to emphasize comedic timing without losing spatial clarity.",
+    "sfx_and_music_craft": "Heavy comedic SFX placement on screams, quick audio ducking, and raw horror game ambient sounds contrasting with sudden comedic panic.",
+    "comedic_timing_and_cuts": "Fast cuts jumping between escalating funny moments in reverse ranked order, building anticipation to the final top pick.",
+    "standout_techniques": [
+      "Reverse countdown ranking list overlay to structure disparate gameplay clips into a cohesive narrative",
+      "Dynamic word-by-word subtitle scaling on high-pitch screams",
+      "Rapid transition jumps between funny jump-scare setups and punchlines",
+      "Clean removal of dead air between comedic beats"
+    ],
+    "anti_patterns_to_avoid": [
+      "Over-cluttering the screen with too many overlapping UI elements",
+      "Abrupt audio clipping during transition cuts"
+    ]
+  }
+}

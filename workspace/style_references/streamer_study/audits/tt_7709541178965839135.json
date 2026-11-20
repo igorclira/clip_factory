@@ -1,0 +1,31 @@
+{
+  "id": "tt_7709541178965839135",
+  "platform": "tiktok",
+  "url": "",
+  "title": "TikTok Streamer Edit (tt_7709541178965839135)",
+  "author": "tiktok_creator",
+  "views": 100000,
+  "duration_sec": 35.0,
+  "local_file": "C:\\Users\\PC\\.gemini\\antigravity\\scratch\\clip_factory\\workspace\\style_references\\streamer_study\\tiktok_clips\\tt_7709541178965839135.mp4",
+  "audit": {
+    "masterpiece_score": 5,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "GTA V Roleplay / Streamer Reaction",
+    "editing_archetype": "Facecam + Gameplay Split-Screen Reaction",
+    "framing_9x16": "Stacked vertical split: streamer facecam in a fixed box at the top 35%, gameplay taking up the bottom 65% with clean horizontal alignment.",
+    "subtitle_craft": "Standard white centered subtitles with black borders positioned in the lower middle of the gameplay section. Simple sentence chunking without aggressive scale pops on emphasis.",
+    "zoom_and_camera_work": "Static framing on both the facecam and gameplay with no dynamic camera zooms or punch-ins during the clip.",
+    "sfx_and_music_craft": "Relies entirely on the natural game audio and streamer's live voiceover commentary without added sound effects or background music tracks.",
+    "comedic_timing_and_cuts": "Allows the in-game roleplay interaction to play out in real-time from start to finish, capturing the full escalation and comedic payoff naturally.",
+    "standout_techniques": [
+      "Clean stacked 9:16 layout keeping facecam and gameplay clearly separated",
+      "Real-time audio sync between streamer commentary and game events",
+      "Uncut comedic sequence letting the joke build naturally"
+    ],
+    "anti_patterns_to_avoid": [
+      "Lack of dynamic zooming or camera movement makes the edit feel static",
+      "Absence of custom sound effects or background music misses an opportunity to enhance comedic moments",
+      "Basic subtitle styling without word-by-word highlighting or punchy color pops"
+    ]
+  }
+}

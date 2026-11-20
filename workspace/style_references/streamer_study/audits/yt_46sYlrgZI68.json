@@ -1,0 +1,30 @@
+{
+  "id": "yt_46sYlrgZI68",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=46sYlrgZI68",
+  "title": "CaseOh Reacts To His School Test 😭 #caseoh #meme",
+  "author": "MoreClipsForYou",
+  "views": 51093847,
+  "duration_sec": 56.0,
+  "query": "caseoh funny moments edit shorts",
+  "audit": {
+    "masterpiece_score": 7,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "CaseOh reacting to TikTok (Mr. Smith Grades)",
+    "editing_archetype": "Split-Screen Reaction with Running Gag SFX",
+    "framing_9x16": "Vertical split layout: top 38% dedicated to CaseOh's facecam cropped horizontally, bottom 62% showcasing the full TikTok paper-grading video. Both subjects remain completely legible and aligned without overlapping UI elements.",
+    "subtitle_craft": "Centered on the dividing line between facecam and content. Clean white bold font with black outline. Rapid 1-3 word cadence matching speech bursts ('Was there a / bite / taken out of the / piece of paper'). Includes bracketed meta-sound captions like '*earthquake*' during desk slams.",
+    "zoom_and_camera_work": "Static framing during passive viewing to preserve clarity of the drawn test answers, paired with aggressive screen shake (seismic vibration effect) whenever CaseOh slams his desk, amplifying the running community joke about his physical impact.",
+    "sfx_and_music_craft": "Raw stream audio and original TikTok pen sounds kept pristine. Heavy cinematic bass drop / impact thud triggered precisely on CaseOh's hand slams (0:20 and 0:40), perfectly synchronized with the screen shake and '*earthquake*' caption.",
+    "comedic_timing_and_cuts": "Maintains continuous playback of the paper being graded while cutting dead air. Highlights CaseOh's progressive disbelief (first the missing bite mark, then the misspelled 'Lettuce', then the apple, ending on the massive bite out of the cupcake paper).",
+    "standout_techniques": [
+      "Meta-captioning environmental streamer habits (*earthquake*) to lean into inside community lore",
+      "Bass-drop impact SFX layered under physical streamer desk hits to magnify comedic rage",
+      "Optimal split-screen ratio (38/62) ensuring vertical document readability without clipping the streamer's expressive head movements"
+    ],
+    "anti_patterns_to_avoid": [
+      "Over-censoring harmless words (e.g. asterisks in 'Le**uce' to avoid TikTok shadowbans looks amateurish)",
+      "Intro hook title card ('CaseOh's School Test') left on screen slightly too long into the first 3 seconds"
+    ]
+  }
+}

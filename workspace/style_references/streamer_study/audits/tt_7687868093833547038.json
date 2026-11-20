@@ -1,0 +1,30 @@
+{
+  "id": "tt_7687868093833547038",
+  "platform": "tiktok",
+  "url": "",
+  "title": "TikTok Streamer Edit (tt_7687868093833547038)",
+  "author": "tiktok_creator",
+  "views": 100000,
+  "duration_sec": 35.0,
+  "local_file": "C:\\Users\\PC\\.gemini\\antigravity\\scratch\\clip_factory\\workspace\\style_references\\streamer_study\\tiktok_clips\\tt_7687868093833547038.mp4",
+  "audit": {
+    "masterpiece_score": 3,
+    "is_raw_reupload_or_slop": true,
+    "streamer_or_game": "CaseOh / Indie Horror Store Game",
+    "editing_archetype": "Meme Music Speedup / Unfinished Clip",
+    "framing_9x16": "Uncropped 16:9 horizontal landscape stream footage posted directly without vertical re-framing or facecam stacking, leaving massive empty letterboxing on mobile feeds.",
+    "subtitle_craft": "Minimalist centered subtitles (white text with purple background highlight boxes) that appear for the first 10 seconds ('Spam the kitty?', 'NO!') and are completely abandoned for the remaining 25 seconds of the clip.",
+    "zoom_and_camera_work": "Completely static camera work; no digital zooms, punch-ins on CaseOh's screaming reaction, or focus zooms on the duplicating glowing cats.",
+    "sfx_and_music_craft": "Adds a sped-up meme vocal track ('ooh ee ee aa' vocal stutter loop) as the cat spam triggers glowing duplicates and explosions, but completely unbalances the mix against the streamer's raw audio.",
+    "comedic_timing_and_cuts": "Relies entirely on the built-in game easter egg and CaseOh's natural panic reaction. The edit lingers awkwardly after the explosion until the 35s mark with dead air and no payoff.",
+    "standout_techniques": [
+      "Using high-tempo gibberish/sped-up vocal loops to match sudden visual game glitches or spam triggers",
+      "Selecting naturally funny stream moments driven by chat bait ('spam the kitty')"
+    ],
+    "anti_patterns_to_avoid": [
+      "Abandoning subtitle tracks midway through a clip (subtitles completely stop after 0:13)",
+      "Failing to reframe 16:9 horizontal gameplay to 9:16 vertical with facecam punch-ins for mobile short-form feeds",
+      "Lingering on dead air after the climax explosion without a punchy out-point cut"
+    ]
+  }
+}

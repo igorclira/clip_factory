@@ -1,0 +1,31 @@
+{
+  "id": "tt_7285448543433772321",
+  "platform": "tiktok",
+  "url": "",
+  "title": "TikTok Streamer Edit (tt_7285448543433772321)",
+  "author": "tiktok_creator",
+  "views": 100000,
+  "duration_sec": 35.0,
+  "local_file": "C:\\Users\\PC\\.gemini\\antigravity\\scratch\\clip_factory\\workspace\\style_references\\streamer_study\\tiktok_clips\\tt_7285448543433772321.mp4",
+  "audit": {
+    "masterpiece_score": 5,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "GreekGodx",
+    "editing_archetype": "Reaction Split-Screen Clip",
+    "framing_9x16": "Vertical stacked split-screen layout with a reaction facecam at the bottom and a browser/video playback window at the top, bordered by solid black letterboxing and a top caption banner.",
+    "subtitle_craft": "Minimalist or absent subtitles, relying almost entirely on the raw audio track of the streamer speaking and laughing.",
+    "zoom_and_camera_work": "Static framing with no active digital zooms or pan-and-scan camera work, relying on the inherent visual content of the browser window and facecam.",
+    "sfx_and_music_craft": "Minimal SFX usage, depending heavily on the organic comedy of the streamer's interaction with a door stopper sound video and natural laughter.",
+    "comedic_timing_and_cuts": "Straightforward linear clip progression from setup (explaining the door stopper) to payoff (demonstrating it on stream), letting the comedic reaction play out fully without abrupt cuts.",
+    "standout_techniques": [
+      "Stacked vertical layout keeping both reaction facecam and source video visible simultaneously",
+      "Clean title hook banner at the very top ('BRO TRIED TO PROVE HE DIDNT FART 😂')",
+      "Allowing natural comedic pauses and laughing fits to breathe without over-editing"
+    ],
+    "anti_patterns_to_avoid": [
+      "Lack of dynamic subtitles for viewer accessibility",
+      "Static unmoving frame layout without punch-ins or visual emphasis during key comedic moments",
+      "Excessive empty black space in the 9:16 canvas"
+    ]
+  }
+}

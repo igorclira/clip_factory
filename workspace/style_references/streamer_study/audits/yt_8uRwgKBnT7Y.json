@@ -1,0 +1,30 @@
+{
+  "id": "yt_8uRwgKBnT7Y",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=8uRwgKBnT7Y",
+  "title": "CaseOh Never Cussed In His Life But… 😂😳",
+  "author": "Smiley Clips",
+  "views": 47310633,
+  "duration_sec": 40.0,
+  "query": "caseoh funny moments edit shorts",
+  "audit": {
+    "masterpiece_score": 6,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "CaseOh / Egging On",
+    "editing_archetype": "Dramatic Monologue Build",
+    "framing_9x16": "Begins with a 50/50 vertical split (facecam on top, gameplay on bottom) during the egg failure. Once the gameplay fails at 00:10, it cuts to a dedicated full 9:16 vertical crop of CaseOh's facecam to focus entirely on his deadpan facial expression during the rant.",
+    "subtitle_craft": "Single-word centered subtitles in yellow with heavy black stroke. Incorporates bracketed narrative descriptors (*blown away*, *egg broke*, *without hesitation*) in yellow with asterisks to guide emotional beats without cluttering speech.",
+    "zoom_and_camera_work": "Restrained jump-cuts and micro-zooms on key words. Alternates between normal exposure, high-contrast monochrome (B&W), and a brief red saturation pulse when he says 'angry' (00:11.5) to punctuate the absurdity of his calm delivery.",
+    "sfx_and_music_craft": "Replaces in-game silence with an ominous, low-frequency horror/epic synth pad that slowly swells underneath his monologue. Ends on a heavy sub-bass cinematic boom and choir chord as he finishes his sentence, emphasizing the mock-apocalyptic scale of his speech.",
+    "comedic_timing_and_cuts": "The contrast between the calm, formal vocabulary ('proficiency', 'singularity', 'observable universe') and the absurd visual description does the heavy lifting. The editor lets CaseOh speak without cutting up his sentences or rushing the punchline, cutting only after a beat of deadpan silence at the end.",
+    "standout_techniques": [
+      "State shift via color grading: flashing monochrome or deep red for 10-15 frames on emotionally intense words ('angry', 'singularity') rather than relying on aggressive digital camera shakes.",
+      "BGM layering beneath unhinged stream monologues: using a low atmospheric cinematic drone to heighten deadpan humor through tonal irony.",
+      "Split to single transition: dropping the gameplay half entirely the instant the fail state occurs to lock viewer attention onto the streamer's reaction."
+    ],
+    "anti_patterns_to_avoid": [
+      "AI narrator intro hook ('When Caseoh lost his mind...'): delays getting to the streamer content and screams clip-farm formatting.",
+      "1-word centered captions can occasionally feel twitchy during fast, articulate speech—2-3 word phrasing reads smoother during monologues."
+    ]
+  }
+}

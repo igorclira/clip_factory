@@ -1,0 +1,29 @@
+{
+  "id": "tt_7258582915594997019",
+  "platform": "tiktok",
+  "url": "",
+  "title": "TikTok Streamer Edit (tt_7258582915594997019)",
+  "author": "tiktok_creator",
+  "views": 100000,
+  "duration_sec": 35.0,
+  "local_file": "C:\\Users\\PC\\.gemini\\antigravity\\scratch\\clip_factory\\workspace\\style_references\\streamer_study\\tiktok_clips\\tt_7258582915594997019.mp4",
+  "audit": {
+    "masterpiece_score": 7,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "Streamer discussing headphones and hair receding line",
+    "editing_archetype": "Facecam Punch-In Comedy",
+    "framing_9x16": "Full vertical crop centered on the streamer's facecam with a top context banner",
+    "subtitle_craft": "Centered white bold sans-serif captions with black outlines chunked 1-3 words at a time, featuring custom italicized comedic brackets like *painful regret*",
+    "zoom_and_camera_work": "Subtle stable framing on the facecam with a sudden comedic reveal cut down to his bald spot when removing headphones",
+    "sfx_and_music_craft": "Minimalist audio relying purely on comedic deadpan silence broken by the visual reveal and text punchline",
+    "comedic_timing_and_cuts": "Classic setup-to-punchline structure: builds suspense about headphone indentation leading directly to the humiliating reveal",
+    "standout_techniques": [
+      "Using italicized bracketed sound effects/action text like *painful regret* instead of standard speech",
+      "Precise comedic timing on the physical removal of headphones to expose the bald spot",
+      "Top hook header text to frame the context immediately before the video starts speaking"
+    ],
+    "anti_patterns_to_avoid": [
+      "Leaving dead air without visual cuts during slow setup phases"
+    ]
+  }
+}

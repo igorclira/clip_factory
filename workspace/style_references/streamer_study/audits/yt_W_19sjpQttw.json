@@ -1,0 +1,30 @@
+{
+  "id": "yt_W_19sjpQttw",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=W_19sjpQttw",
+  "title": "Bill Nye The Science Guy Shows Kai Cenat A Science Experiment! 🔥😂",
+  "author": "Succesful Celebrity",
+  "views": 121886587,
+  "duration_sec": 26.0,
+  "query": "kai cenat funny moments edit shorts",
+  "audit": {
+    "masterpiece_score": 7,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "Kai Cenat ft. Bill Nye",
+    "editing_archetype": "Dynamic Reaction Cut & Split-Screen Payoff",
+    "framing_9x16": "Converts a horizontal 16:9 IRL stream into 9:16 by alternating tight portrait crops of Bill Nye and Kai Cenat during dialogue, cutting to wide 2-shots for context, and deploying a stacked vertical split (faces on top, experiment blocks on the bottom) right at the payoff so viewers can see the ice melt and Kai's shock simultaneously.",
+    "subtitle_craft": "Centered, high-contrast bold sans-serif text with black outline and yellow fill. Uses 1-2 word rapid chunking synced tightly to cadence. Incorporates parenthetical action cues like '*FEELING*', '*POINTS*', and '*DAP*' to emphasize physical comedy without visual clutter.",
+    "zoom_and_camera_work": "Aggressive punch-ins (1.3x - 1.6x) focused tightly on expressive faces when reactions peak (e.g., Kai's disbelief or Bill's smug explanation). When Bill says 'SCIENCE!', the editor punches into Kai with a meme green tint filter.",
+    "sfx_and_music_craft": "Includes subtle suspense risers during the setup, punchy bass impact / bell ding when pointing, a cartoonish chime as the ice rapidly dissolves, and an exaggerated crisp slap SFX when they dap at the climax.",
+    "comedic_timing_and_cuts": "Tight conversational pacing with dead air trimmed. The setup builds anticipation on an intuitive assumption ('warm melts faster'), flips expectations immediately as the cold block melts ice instantly, and allows Kai's unscripted shock to breathe before Bill's punchline ('It's science!') and an upbeat celebratory dap exit.",
+    "standout_techniques": [
+      "Stacked vertical split-screen utilized specifically during the reveal so viewers track both physical demonstration and facecam shock",
+      "Color tint visual punch (meme green wash) timed exactly to streamer revelation/speech",
+      "Action/sound subtitles (*FEELING*, *DAP*) to reinforce tactile stream moments"
+    ],
+    "anti_patterns_to_avoid": [
+      "Over-zoomed cuts that accidentally crop out hand gestures during a physical science experiment",
+      "Excessive sound effects that drown out iconic guest delivery (e.g., Bill Nye's catchphrase)"
+    ]
+  }
+}

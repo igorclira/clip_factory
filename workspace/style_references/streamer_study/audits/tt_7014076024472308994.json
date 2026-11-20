@@ -1,0 +1,31 @@
+{
+  "id": "tt_7014076024472308994",
+  "platform": "tiktok",
+  "url": "",
+  "title": "TikTok Streamer Edit (tt_7014076024472308994)",
+  "author": "tiktok_creator",
+  "views": 100000,
+  "duration_sec": 35.0,
+  "local_file": "C:\\Users\\PC\\.gemini\\antigravity\\scratch\\clip_factory\\workspace\\style_references\\streamer_study\\tiktok_clips\\tt_7014076024472308994.mp4",
+  "audit": {
+    "masterpiece_score": 7,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "Mikaylah",
+    "editing_archetype": "Facecam Punch-In Comedy",
+    "framing_9x16": "Centered vertical crop on the streamer's webcam feed with a consistent background setting, utilizing quick scale-ins to emphasize facial expressions and reactions.",
+    "subtitle_craft": "Bold white center-aligned sans-serif captions with yellow keyword highlighting and distinct text pop-ups matching comedic beats, disappearing instantly when dialogue stops.",
+    "zoom_and_camera_work": "Subtle push-ins during hesitation and sharp, exaggerated zoom-ins on the eyes and mouth during comedic realizations or panic.",
+    "sfx_and_music_craft": "Minimal background music allowing dialogue to shine, punctuated by classic cartoon and comedic sound effects like lightbulb pops and suspenseful drumrolls.",
+    "comedic_timing_and_cuts": "Well-paced comedic buildup through hesitant reading, holding just long enough on the realization before cutting to panic and defeat.",
+    "standout_techniques": [
+      "Dynamic zoom-ins timed precisely to facial expressions",
+      "On-screen pop-up overlays for chat messages with interactive reading elements",
+      "Strategic use of suspenseful audio cues before punchlines",
+      "Clean subtitle sync highlighting key words for comedic misinterpretation"
+    ],
+    "anti_patterns_to_avoid": [
+      "Overusing repetitive sound effects during minor movements",
+      "Excessive scaling that slightly degrades video resolution"
+    ]
+  }
+}

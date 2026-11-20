@@ -1,0 +1,31 @@
+{
+  "id": "yt_FK3fmBnSP8Q",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=FK3fmBnSP8Q",
+  "title": "lethal company negotiation",
+  "author": "TheRussianBadger",
+  "views": 40760981,
+  "duration_sec": 60.0,
+  "query": "lethal company funny moments shorts",
+  "audit": {
+    "masterpiece_score": 10,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "TheRussianBadger / Lethal Company",
+    "editing_archetype": "3D Animated Parody Skit & Deadpan Subtitles",
+    "framing_9x16": "Full vertical 9:16 crop of custom Source Filmmaker 3D animation, centering characters and monsters dynamically to ensure complete visual clarity.",
+    "subtitle_craft": "Bold white sans-serif uppercase typography centered on screen, word-by-word highlighting or single-line pacing synchronized precisely to voice delivery, with emphasis scaling on comedic beats.",
+    "zoom_and_camera_work": "Purposeful animated virtual camera framing, pushing in on character gestures and panning to reveal monsters approaching in the background for comedic timing.",
+    "sfx_and_music_craft": "Minimalist sound design relying on crisp in-game audio cues, impact thuds for physical hits, and sudden deadpan pauses to emphasize the comedic absurdity of negotiating with monsters.",
+    "comedic_timing_and_cuts": "Immaculate comedic timing structured around deadpan dialogue delivery, escalating absurdity from insect neurons to billion-neuron humans, and abrupt punchline cuts.",
+    "standout_techniques": [
+      "Using custom 3D animated machinima to recreate improvised multiplayer voice chat moments",
+      "Precise word-level subtitle pacing that mirrors the cadence of deadpan delivery",
+      "Visual comedic reveals by panning the camera to show dangerous monsters creeping up behind oblivious characters",
+      "Punctuation of dialogue beats with sudden physical actions and sound effects"
+    ],
+    "anti_patterns_to_avoid": [
+      "Relying on cluttered multiple facecam overlays that distract from the main action",
+      "Overusing obnoxious meme sound effects that drown out witty dialogue"
+    ]
+  }
+}

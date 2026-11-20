@@ -1,0 +1,573 @@
+{
+  "_comment": "Rich Semantic SFX & Meme Catalog. Auto-indexed by src/index_sfx.py (Gemini listens to each new audio file + FFmpeg measures exact peak_sec for frame-accurate Remotion alignment).",
+  "sfx": {
+    "arcade_bell_ding": {
+      "filename": "arcade_bell_ding.wav",
+      "sounds_like": "Crisp single vintage desk/boxing bell ring ding",
+      "use_when": "Instant karma knockouts, clean punchline deliveries, or comedic realization beats",
+      "pair_with": "Editorial caption pop or FreezeCue",
+      "duration_sec": 1.835,
+      "peak_sec": 0.114
+    },
+    "brass_impact_slam": {
+      "filename": "brass_impact_slam.wav",
+      "sounds_like": "Deep cinematic Inception-style Braam brass impact slam",
+      "use_when": "Catastrophic raid mechanics (e.g., Naxxramas dance fail, 40-man wipe) or massive explosions",
+      "pair_with": "SilenceCue (-0.35s) + ShakeCue + FreezeCue",
+      "duration_sec": 3.31,
+      "peak_sec": 0.441
+    },
+    "bubble_pop": {
+      "filename": "bubble_pop.wav",
+      "sounds_like": "Crisp viral YouTube/TikTok UI pop-up bubble sound",
+      "use_when": "Popping in editorial callout captions, meme icons, or rapid UI highlights",
+      "pair_with": "Editorial caption pop or SpotlightCue",
+      "duration_sec": 0.813,
+      "peak_sec": 0.243
+    },
+    "comedy_spring_boing": {
+      "filename": "comedy_spring_boing.wav",
+      "sounds_like": "Cartoon mechanical spring bounce boing",
+      "use_when": "Physics anomalies, players bouncing off terrain hitboxes, or trampoline car glitches",
+      "pair_with": "Editorial callout caption on bounce apex",
+      "duration_sec": 1.167,
+      "peak_sec": 0.61
+    },
+    "comic_thud": {
+      "filename": "comic_thud.wav",
+      "sounds_like": "Classic cartoon banana-peel slip and slapstick fall impact",
+      "use_when": "Anticlimactic flop, ragdoll faceplant, or hilarious misstep",
+      "pair_with": "Editorial callout caption",
+      "duration_sec": 1.227,
+      "peak_sec": 0.34
+    },
+    "correct_ding_meme": {
+      "filename": "correct_ding_meme.wav",
+      "sounds_like": "Crisp viral game-show correct answer positive bell (Meme Redesign)",
+      "use_when": "500 IQ read, smart cooldown usage, or ironic 'called it' moment",
+      "pair_with": "Editorial callout caption",
+      "duration_sec": 3.327,
+      "peak_sec": 1.477
+    },
+    "crt_glitch_pop": {
+      "filename": "crt_glitch_pop.wav",
+      "sounds_like": "Short digital data burst and CRT static glitch pop",
+      "use_when": "TV-static transition wipes between contrasting clips or visual reset cuts",
+      "pair_with": "Hard scene transition cut",
+      "duration_sec": 2.334,
+      "peak_sec": 1.365
+    },
+    "dark_dagger_swoosh": {
+      "filename": "dark_dagger_swoosh.wav",
+      "sounds_like": "Dark eerie distorted stealth blade whoosh",
+      "use_when": "Rogue opens from stealth or an enemy jet/threat ambushes from outside camera view",
+      "pair_with": "ZoomCue (mode: snap) + SpotlightCue alert (!)",
+      "duration_sec": 4.059,
+      "peak_sec": 1.705
+    },
+    "dramatic_hit": {
+      "filename": "dramatic_hit.wav",
+      "sounds_like": "Dark cinematic low impact boom hit",
+      "use_when": "Dramatic plot twist, sudden ambush, or heavy combat turn",
+      "pair_with": "ShakeCue or ZoomCue",
+      "duration_sec": 4.303,
+      "peak_sec": 0.401
+    },
+    "dun_dun_dun_meme": {
+      "filename": "dun_dun_dun_meme.wav",
+      "sounds_like": "Classic viral 'Dun Dun Dunn!' dramatic orchestral stinger (Meme Redesign)",
+      "use_when": "Revealing an approaching elite patrol, stealth rogue, or incoming rocket",
+      "pair_with": "ZoomCue (mode: snap) + SpotlightCue alert (!)",
+      "duration_sec": 4.392,
+      "peak_sec": 0.893
+    },
+    "fast_rewind": {
+      "filename": "fast_rewind.wav",
+      "sounds_like": "High-speed vinyl music rewind zip",
+      "use_when": "Instant replay cutbacks ('wait, look at that again') or double-take edits",
+      "pair_with": "ImpactSlowMo replay",
+      "duration_sec": 2.018,
+      "peak_sec": 0.647
+    },
+    "grizzly_bear_roar": {
+      "filename": "grizzly_bear_roar.wav",
+      "sounds_like": "Real vicious wild grizzly bear roar and aggressive low growl",
+      "use_when": "Wild animal ambush, bear cage breach, or ferocious beast attack",
+      "pair_with": "ShakeCue + ZoomCue (mode: snap) on charging bear",
+      "duration_sec": 1.231,
+      "peak_sec": 0.25
+    },
+    "heartbeat_sub_pulse": {
+      "filename": "heartbeat_sub_pulse.wav",
+      "sounds_like": "Eerie cinematic tension heartbeat pulse and suspense riser",
+      "use_when": "Stalking sequences, low-HP kiting, escort runs, or tense pre-wipe buildup",
+      "pair_with": "Gradual ZoomCue into health bar or approaching threat",
+      "duration_sec": 11.745,
+      "peak_sec": 0.184
+    },
+    "heavy_door_latch": {
+      "filename": "heavy_door_latch.wav",
+      "sounds_like": "Heavy wooden dungeon door slam and solid latch shut",
+      "use_when": "Players trap themselves inside geometry, close an escort door, or get boxed in by cage mechanics",
+      "pair_with": "ZoomCue on closed door/trap + editorial callout",
+      "duration_sec": 2.003,
+      "peak_sec": 0.014
+    },
+    "hero_brass_impact": {
+      "filename": "hero_brass_impact.wav",
+      "sounds_like": "Triumphant orchestral success fanfare hit",
+      "use_when": "Clutch 1-HP survival, epic save, or impossible stunt landing",
+      "pair_with": "ImpactSlowMo or celebratory caption",
+      "duration_sec": 3.468,
+      "peak_sec": 2.163
+    },
+    "hitmarker_blip": {
+      "filename": "hitmarker_blip.wav",
+      "sounds_like": "Short crisp FPS metallic/tech hitmarker click blip",
+      "use_when": "RPG snipes, one-shot crits, headshots, or mid-air vehicle projectile contacts",
+      "pair_with": "ShakeCue (+1 frame) + SpotlightCue on target",
+      "duration_sec": 0.919,
+      "peak_sec": 0.0
+    },
+    "hl_button_click": {
+      "filename": "hl_button_click.mp3",
+      "duration_sec": 1.045,
+      "peak_sec": 0.05
+    },
+    "hl_crowbar_hit": {
+      "filename": "hl_crowbar_hit.mp3",
+      "duration_sec": 0.7,
+      "peak_sec": 0.036
+    },
+    "hl_death_flatline": {
+      "filename": "hl_death_flatline.mp3",
+      "duration_sec": 6.403,
+      "peak_sec": 0.318
+    },
+    "hl_hev_warning": {
+      "filename": "hl_hev_warning.mp3",
+      "duration_sec": 1.137,
+      "peak_sec": 0.483
+    },
+    "hl_scientist_scream": {
+      "filename": "hl_scientist_scream.mp3",
+      "duration_sec": 2.251,
+      "peak_sec": 0.461,
+      "sounds_like": "Half-Life scientist terrified comic scream 'Aaaah!'",
+      "use_when": "[MAINSTREAM VOICE BLIP] Violent mauling, animal attack, panicked NPC scream"
+    },
+    "hl_scientist_stahp": {
+      "filename": "hl_scientist_stahp.mp3",
+      "duration_sec": 0.611,
+      "peak_sec": 0.281,
+      "sounds_like": "Half-Life scientist screaming 'STAHP!'",
+      "use_when": "[MAINSTREAM VOICE BLIP] Sudden interruption, getting hit or robbed unexpectedly"
+    },
+    "hud_lock_beep": {
+      "filename": "hud_lock_beep.wav",
+      "sounds_like": "Ultra-short digital camera autofocus electronic lock beep",
+      "use_when": "Highlighting an overlooked cooldown, unused health pot, or enemy unit (-10 frames before payoff)",
+      "pair_with": "SpotlightCue (circle/arrow) + ZoomCue on HUD element",
+      "duration_sec": 0.412,
+      "peak_sec": 0.081
+    },
+    "huh_meme": {
+      "filename": "huh_meme.wav",
+      "sounds_like": "Viral shocked 'HUH?!' vocal reaction (Meme Redesign)",
+      "use_when": "Impossible physics glitch, inexplicable one-shot, or confused NPC behavior",
+      "pair_with": "ZoomCue (mode: snap) + FreezeCue",
+      "duration_sec": 3.333,
+      "peak_sec": 0.118
+    },
+    "jackpot_loot": {
+      "filename": "jackpot_loot.wav",
+      "sounds_like": "Casino jackpot coin win melody",
+      "use_when": "Rare WoW BoE/epic world drop, winning a greed roll, or GTA heist payout",
+      "pair_with": "ZoomCue on loot popup + celebratory caption",
+      "duration_sec": 4.733,
+      "peak_sec": 0.337
+    },
+    "meme_avengers_flute": {
+      "filename": "meme_avengers_flute.mp3",
+      "duration_sec": 7.592,
+      "peak_sec": 2.406
+    },
+    "meme_avengers_sting": {
+      "filename": "meme_avengers_sting.mp3",
+      "duration_sec": 4.693,
+      "peak_sec": 1.424
+    },
+    "meme_bruh_og": {
+      "filename": "meme_bruh_og.mp3",
+      "duration_sec": 0.817,
+      "peak_sec": 0.143
+    },
+    "meme_cartoon_bonk": {
+      "filename": "meme_cartoon_bonk.mp3",
+      "duration_sec": 1.624,
+      "peak_sec": 0.069
+    },
+    "meme_cartoon_slip": {
+      "filename": "meme_cartoon_slip.mp3",
+      "duration_sec": 0.198,
+      "peak_sec": 0.155
+    },
+    "meme_gta_wasted": {
+      "filename": "meme_gta_wasted.mp3",
+      "duration_sec": 7.758,
+      "peak_sec": 2.474
+    },
+    "meme_huh_cat": {
+      "filename": "meme_huh_cat.mp3",
+      "duration_sec": 0.302,
+      "peak_sec": 0.121
+    },
+    "meme_law_and_order_dundun": {
+      "filename": "meme_law_and_order_dundun.mp3",
+      "duration_sec": 1.306,
+      "peak_sec": 0.132
+    },
+    "meme_metal_pipe_og": {
+      "filename": "meme_metal_pipe_og.mp3",
+      "duration_sec": 3.174,
+      "peak_sec": 0.052
+    },
+    "meme_mgs_alert": {
+      "filename": "meme_mgs_alert.mp3",
+      "duration_sec": 1.567,
+      "peak_sec": 0.453
+    },
+    "meme_minecraft_hit": {
+      "filename": "meme_minecraft_hit.mp3",
+      "duration_sec": 0.906,
+      "peak_sec": 0.332
+    },
+    "meme_roblox_oof": {
+      "filename": "meme_roblox_oof.mp3",
+      "duration_sec": 1.0,
+      "peak_sec": 0.585
+    },
+    "meme_sad_violin_short": {
+      "filename": "meme_sad_violin_short.mp3",
+      "duration_sec": 4.551,
+      "peak_sec": 2.173
+    },
+    "meme_spongebob_fail": {
+      "filename": "meme_spongebob_fail.mp3",
+      "duration_sec": 3.384,
+      "peak_sec": 0.249
+    },
+    "meme_taco_bell_bong": {
+      "filename": "meme_taco_bell_bong.mp3",
+      "duration_sec": 1.882,
+      "peak_sec": 0.259
+    },
+    "meme_vine_boom_og": {
+      "filename": "meme_vine_boom_og.mp3",
+      "duration_sec": 1.255,
+      "peak_sec": 0.354
+    },
+    "meme_windows_xp_shutdown": {
+      "filename": "meme_windows_xp_shutdown.mp3",
+      "duration_sec": 3.24,
+      "peak_sec": 1.107
+    },
+    "metal_pipe_impact": {
+      "filename": "metal_pipe_impact.wav",
+      "sounds_like": "Hollow resonant metal pipe clatter and tonal echo impact",
+      "use_when": "Motorcycles hitting obstacles, players ragdolling off car hoods, or absurd blunt collisions",
+      "pair_with": "ShakeCue + ImpactSlowMo replay",
+      "duration_sec": 3.546,
+      "peak_sec": 1.083
+    },
+    "pistol_cock_metallic": {
+      "filename": "pistol_cock_metallic.wav",
+      "sounds_like": "Unmistakable sharp metallic handgun slide rack and pistol cock",
+      "use_when": "NPC or player suddenly pulls a handgun/weapon (e.g., NPC pulling a pistol on KingVicss)",
+      "pair_with": "SilenceCue (-0.35s AudioVacuum) + ZoomCue (mode: snap) on weapon + SpotlightCue alert (!)",
+      "duration_sec": 5.917,
+      "peak_sec": 4.686
+    },
+    "quack_meme": {
+      "filename": "quack_meme.wav",
+      "sounds_like": "Short goofy viral cartoon duck quack (Meme Redesign)",
+      "use_when": "Censoring a swear word, silly fail, or goofy ragdoll bonk",
+      "pair_with": "Editorial caption pop",
+      "duration_sec": 0.288,
+      "peak_sec": 0.081
+    },
+    "retro_8bit_death": {
+      "filename": "retro_8bit_death.wav",
+      "sounds_like": "Classic retro 8-bit video game death fall fail tone",
+      "use_when": "Exact instant a WoW Hardcore character dies / turns into a ghost or mission fails",
+      "pair_with": "FreezeCue (DespairFreeze monochrome) + editorial callout",
+      "duration_sec": 1.222,
+      "peak_sec": 1.114
+    },
+    "reverse_cymbal_swell": {
+      "filename": "reverse_cymbal_swell.wav",
+      "sounds_like": "Fast 1.6-second cinematic reverse cymbal crescendo swell",
+      "use_when": "Pre-impact tension builder immediately before a vehicular crash, projectile hit, or boss slam",
+      "pair_with": "sub_drop_bass or brass_impact_slam on Frame 0",
+      "duration_sec": 1.6,
+      "peak_sec": 1.511
+    },
+    "riser_whoosh": {
+      "filename": "riser_whoosh.wav",
+      "sounds_like": "Fast studio trailer riser whoosh transition",
+      "use_when": "High-energy buildup into a scene cut, stunt launch, or punchline",
+      "pair_with": "Hard cut or sub_drop_bass",
+      "duration_sec": 3.594,
+      "peak_sec": 2.718
+    },
+    "rubber_toy_squeak": {
+      "filename": "rubber_toy_squeak.wav",
+      "sounds_like": "Funny rubber duck toy compress squeak",
+      "use_when": "Minor head-bumps, failed jumps, bonks, or petty slapstick damage",
+      "pair_with": "Editorial callout caption on bonk frame",
+      "duration_sec": 4.938,
+      "peak_sec": 4.491
+    },
+    "sad_trombone_fail": {
+      "filename": "sad_trombone_fail.wav",
+      "sounds_like": "Classic wah-wah-wah-waaah fail trumpet/trombone",
+      "use_when": "Embarrassing whiff, missed ultimate, failed jump, or anticlimactic death",
+      "pair_with": "FreezeCue + sarcastic editorial caption",
+      "duration_sec": 3.211,
+      "peak_sec": 1.406
+    },
+    "shocked_crowd_gasp": {
+      "filename": "shocked_crowd_gasp.wav",
+      "sounds_like": "Crisp comedic medium audience shocked gasp reaction",
+      "use_when": "Unexpected jaw-drop reveal, awkward walk-in, or scandalous visual twist (e.g., Speed & Jason bathroom reveal)",
+      "pair_with": "FreezeCue + SpotlightCue + editorial callout caption",
+      "duration_sec": 2.611,
+      "peak_sec": 0.875
+    },
+    "slapstick_slip_crash": {
+      "filename": "slapstick_slip_crash.wav",
+      "sounds_like": "Crisp cartoon slapstick banana-peel slip into comical body crash foley",
+      "use_when": "Absurd wipeout, grandma scooter crash, or hilarious ragdoll tumble",
+      "pair_with": "ShakeCue + ImpactSlowMo replay",
+      "duration_sec": 2.473,
+      "peak_sec": 0.737
+    },
+    "slide_whistle_fall": {
+      "filename": "slide_whistle_fall.wav",
+      "sounds_like": "Classic cartoon descending slide whistle fall",
+      "use_when": "Characters falling off cliffs, failed parachutes, or airborne vehicle drops",
+      "pair_with": "Tracking editorial caption over falling subject",
+      "duration_sec": 1.904,
+      "peak_sec": 0.088
+    },
+    "sub_drop_bass": {
+      "filename": "sub_drop_bass.wav",
+      "sounds_like": "Deep 50Hz cinematic sub-bass drop and heavy 808 low boom",
+      "use_when": "Fatal damage ticks, boss wipes, vehicle collisions, or death hits on Frame 0",
+      "pair_with": "SilenceCue (-0.35s AudioVacuum) + ShakeCue + SnapZoomBox on impact",
+      "duration_sec": 3.605,
+      "peak_sec": 0.813
+    },
+    "superhero_epic_fanfare": {
+      "filename": "superhero_epic_fanfare.wav",
+      "sounds_like": "Blockbuster superhero movie orchestral brass horns heroic entrance sting",
+      "use_when": "Dramatic heroic character reveal or over-the-top entrance (e.g., IShowSpeed spotting the Hulk)",
+      "pair_with": "ImpactSlowMo + ZoomCue (mode: snap) + editorial hero caption",
+      "duration_sec": 4.466,
+      "peak_sec": 1.746
+    },
+    "tada_meme": {
+      "filename": "tada_meme.wav",
+      "sounds_like": "Classic celebratory 'Ta-da!' reveal chime (Meme Redesign)",
+      "use_when": "Sarcastic reveal of a terrible outcome or unexpected stunt landing",
+      "pair_with": "ZoomCue or FreezeCue",
+      "duration_sec": 1.498,
+      "peak_sec": 0.568
+    },
+    "tape_stop_slowdown": {
+      "filename": "tape_stop_slowdown.wav",
+      "sounds_like": "Analog cassette motor rewind-stop pitch slowdown",
+      "use_when": "Cut-to-silence transition right as a massive mechanical mistake or self-sabotage begins",
+      "pair_with": "SilenceCue (AudioVacuum) + FreezeCue",
+      "duration_sec": 4.593,
+      "peak_sec": 4.448
+    },
+    "upbeat_grandma_chase": {
+      "filename": "upbeat_grandma_chase.wav",
+      "sounds_like": "Playful, quirky 130 BPM instrumental comedy chase groove ('The Tightrope', 25s trimmed)",
+      "use_when": "High-energy comedic chase or absurd vehicle/scooter pursuit (e.g., GTA 6 grandma scooter chase) to replace unfitting music",
+      "pair_with": "Audio ducking (-14dB under dialogue) + slapstick_slip_crash on wipeout",
+      "duration_sec": 25.0,
+      "peak_sec": 13.82
+    },
+    "vice_city_synth_bed": {
+      "filename": "vice_city_synth_bed.wav",
+      "sounds_like": "Sleek 120 BPM 1980s Vice City retro synthwave instrumental groove ('Anticipation', 25s trimmed)",
+      "use_when": "Continuous GTA 6 montage background bed at -22dB for neon Miami / Vice City atmosphere",
+      "pair_with": "Hard-ducked SilenceCue before climax hits + whip_swoosh transitions",
+      "duration_sec": 25.0,
+      "peak_sec": 14.059
+    },
+    "vine_boom": {
+      "filename": "vine_boom.wav",
+      "sounds_like": "Massive studio cinematic low boom hit (Epidemic Sound #1 top boom)",
+      "use_when": "Deadpan comedic stare, ironic text reveal, eyebrow raise, or sudden realization",
+      "pair_with": "ZoomCue (mode: snap) on facecam or HUD",
+      "duration_sec": 3.55,
+      "peak_sec": 0.228
+    },
+    "vinyl_scratch_stop": {
+      "filename": "vinyl_scratch_stop.wav",
+      "sounds_like": "Crisp vinyl record spin-stop scratch",
+      "use_when": "Hubris is instantly interrupted (e.g., player boasts then gets stunned, ragdolled, or dies)",
+      "pair_with": "FreezeCue + editorial callout caption",
+      "duration_sec": 1.252,
+      "peak_sec": 0.131
+    },
+    "whip_swoosh": {
+      "filename": "whip_swoosh.wav",
+      "sounds_like": "Short high-speed whip whoosh transition",
+      "use_when": "Camera snap-zooms (150%-300%) and fast 4-frame directional scene cuts",
+      "pair_with": "ZoomCue (mode: snap) or hard clip transition",
+      "duration_sec": 2.001,
+      "peak_sec": 0.864
+    },
+    "windows_error_meme": {
+      "filename": "windows_error_meme.wav",
+      "sounds_like": "Viral Windows critical error fail chime (Meme Redesign)",
+      "use_when": "Player brain freezes, stands in fire, disconnects, or forgets to press Petri/Bubble",
+      "pair_with": "FreezeCue + ZoomCue on facecam",
+      "duration_sec": 0.883,
+      "peak_sec": 0.117
+    },
+    "wrong_buzzer": {
+      "filename": "wrong_buzzer.wav",
+      "sounds_like": "Mainstream viral game-show wrong answer buzzer (Meme Redesign)",
+      "use_when": "Streamer makes a confidently wrong callout or presses the wrong button",
+      "pair_with": "SpotlightCue on misplay + editorial caption",
+      "duration_sec": 0.923,
+      "peak_sec": 0.376
+    },
+    "yay_cheer_meme": {
+      "filename": "yay_cheer_meme.wav",
+      "sounds_like": "Viral 'Yaaay!' group cheer celebration (Meme Redesign)",
+      "use_when": "Ironic celebration after a wipe/crash or genuine hyped victory",
+      "pair_with": "Editorial callout caption",
+      "duration_sec": 3.487,
+      "peak_sec": 0.931
+    },
+    "meme_avengers_sting_2s": {
+      "filename": "meme_avengers_sting_2s.mp3",
+      "sounds_like": "Iconic 2.35s orchestral Avengers brass horn hero sting",
+      "use_when": "[MAINSTREAM VOICE BLIP] Superhero chaos, Hulk smash reveal, over-the-top dramatic arrival",
+      "pair_with": "Punchline cut / ZoomCue",
+      "duration_sec": 2.35,
+      "peak_sec": 0.385
+    },
+    "meme_what_the_hell_2s": {
+      "filename": "meme_what_the_hell_2s.mp3",
+      "sounds_like": "Iconic viral voice 'What the hell, oh my gawd!'",
+      "use_when": "[MAINSTREAM VOICE BLIP] Absurd shock, incredulous double-take (Speed seeing Jason in shower, glitchy NPC)",
+      "pair_with": "Punchline cut / ZoomCue",
+      "duration_sec": 2.25,
+      "peak_sec": 0.118
+    },
+    "meme_why_are_you_running_2s": {
+      "filename": "meme_why_are_you_running_2s.mp3",
+      "sounds_like": "Iconic meme voice screaming 'Why are you running?! Why are you running?!'",
+      "use_when": "[MAINSTREAM VOICE BLIP] Chasing someone down, NPC/streamer fleeing in panic, grandma scooter chase",
+      "pair_with": "Punchline cut / ZoomCue",
+      "duration_sec": 2.35,
+      "peak_sec": 1.683
+    },
+    "meme_cj_ah_shit_2s": {
+      "filename": "meme_cj_ah_shit_2s.mp3",
+      "sounds_like": "CJ from GTA San Andreas saying 'Ah shit, here we go again'",
+      "use_when": "[MAINSTREAM VOICE BLIP] Instant regret repeating, stepping back into trouble or GTA NPC confrontation",
+      "pair_with": "Punchline cut / ZoomCue",
+      "duration_sec": 2.35,
+      "peak_sec": 1.974
+    },
+    "meme_at_this_moment_2s": {
+      "filename": "meme_at_this_moment_2s.mp3",
+      "sounds_like": "Narrator saying 'It was at this moment he knew... he fucked up'",
+      "use_when": "[MAINSTREAM VOICE BLIP] Instant regret frame, opening the bear cage, hitting the wrong NPC",
+      "pair_with": "Punchline cut / ZoomCue",
+      "duration_sec": 2.486,
+      "peak_sec": 0.594
+    },
+    "meme_wait_a_minute_2s": {
+      "filename": "meme_wait_a_minute_2s.mp3",
+      "sounds_like": "Kid meme voice saying 'Wait a minute!'",
+      "use_when": "[MAINSTREAM VOICE BLIP] Sudden confusion, bizarre NPC encounter, unexpected interruption",
+      "pair_with": "Punchline cut / ZoomCue",
+      "duration_sec": 2.0,
+      "peak_sec": 1.181
+    },
+    "meme_oh_hell_no_2s": {
+      "filename": "meme_oh_hell_no_2s.mp3",
+      "sounds_like": "Man yelling 'Oh my god bro, hell no man!'",
+      "use_when": "[MAINSTREAM VOICE BLIP] Gross/awkward reveal, incredulous disgust or nope-out moment",
+      "pair_with": "Punchline cut / ZoomCue",
+      "duration_sec": 2.4,
+      "peak_sec": 2.211
+    },
+    "meme_fbi_open_up": {
+      "filename": "meme_fbi_open_up.mp3",
+      "sounds_like": "Voice yelling 'FBI open up!' followed by door breach",
+      "use_when": "[MAINSTREAM VOICE BLIP] Sudden ambush, police busting in, breaking open a door/cage",
+      "pair_with": "Punchline cut / ZoomCue",
+      "duration_sec": 2.011,
+      "peak_sec": 0.203
+    },
+    "meme_mission_failed_2s": {
+      "filename": "meme_mission_failed_2s.mp3",
+      "sounds_like": "Call of Duty announcer saying 'Mission failed, we'll get em next time'",
+      "use_when": "[MAINSTREAM VOICE BLIP] Botched heist, clumsy wipeout, accidentally pushing a bystander",
+      "pair_with": "Punchline cut / ZoomCue",
+      "duration_sec": 2.35,
+      "peak_sec": 1.422
+    },
+    "meme_he_need_some_milk": {
+      "filename": "meme_he_need_some_milk.mp3",
+      "sounds_like": "Viral woman yelling 'He need some milk!'",
+      "use_when": "[MAINSTREAM VOICE BLIP] Heavy ragdoll knockout, mauling, brutal fall or grandma wipeout",
+      "pair_with": "Punchline cut / ZoomCue",
+      "duration_sec": 1.045,
+      "peak_sec": 0.203
+    },
+    "meme_nani": {
+      "filename": "meme_nani.mp3",
+      "sounds_like": "Anime Kenshiro 'Nani?!' + high-pitch shock sting",
+      "use_when": "[MAINSTREAM VOICE BLIP] Impossible physics glitch, sudden betrayal or shock turn",
+      "pair_with": "Punchline cut / ZoomCue",
+      "duration_sec": 1.463,
+      "peak_sec": 0.349
+    },
+    "meme_no_god_please_no_2s": {
+      "filename": "meme_no_god_please_no_2s.mp3",
+      "sounds_like": "Michael Scott screaming 'NO! GOD! PLEASE NO!'",
+      "use_when": "[MAINSTREAM VOICE BLIP] Catastrophic fail, helplessly watching disaster unfold (bear attack, robbery)",
+      "pair_with": "Punchline cut / ZoomCue",
+      "duration_sec": 2.35,
+      "peak_sec": 1.74
+    },
+    "meme_look_at_this_dude_2s": {
+      "filename": "meme_look_at_this_dude_2s.mp3",
+      "sounds_like": "Viral laugh voice 'Look at this dude!'",
+      "use_when": "[MAINSTREAM VOICE BLIP] Mocking weird NPC appearance, absurd outfit or clumsy wipeout",
+      "pair_with": "Punchline cut / ZoomCue",
+      "duration_sec": 1.65,
+      "peak_sec": 0.752
+    },
+    "meme_directed_by_2s": {
+      "filename": "meme_directed_by_2s.mp3",
+      "sounds_like": "Iconic Curb Your Enthusiasm 'Directed by Robert B. Weide' ironic punchline stinger",
+      "use_when": "[MAINSTREAM VOICE BLIP] Self-inflicted irony, confident boast followed immediately by failure",
+      "pair_with": "Punchline cut / ZoomCue",
+      "duration_sec": 2.35,
+      "peak_sec": 1.362
+    }
+  },
+  "memes": {}
+}

@@ -1,0 +1,30 @@
+{
+  "id": "yt_pirFyByXyww",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=pirFyByXyww",
+  "title": "Kai Cenat Forgot Tota's From Brazil 😳🔥",
+  "author": "Blessed",
+  "views": 115660531,
+  "duration_sec": 25.0,
+  "query": "kai cenat funny moments edit shorts",
+  "audit": {
+    "masterpiece_score": 8,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "Kai Cenat, Tota / Mafiathon Stream",
+    "editing_archetype": "Fast Multi-Clip Montage / Chaos Music Swap",
+    "framing_9x16": "Dynamic full vertical crop of security and stream camera footage, switching between close-ups and overhead house angles to track fast-paced movement across rooms.",
+    "subtitle_craft": "Bold yellow and white sans-serif subtitles centered in the frame, capitalizing key action words and asterisks for comedic narrative beats (*RAKAI'S PS5*, *PRE-THROWS*, *LOST*), keeping text on screen for short, readable durations.",
+    "zoom_and_camera_work": "Rapid punch-ins on facial expressions and directional arrows pointing out hallway turns (*GOES LEFT*, *GOES RIGHT*) to guide viewer attention instantly through chaotic movement.",
+    "sfx_and_music_craft": "Upbeat comedic chase music paired with GTA-style 'Mission Passed' audio stingers and sound effects on punchlines to enhance the comedic timing without cluttering the audio.",
+    "comedic_timing_and_cuts": "Fast escalation of a house prank where a PS5 is stolen, building tension through rapid hallway tracking shots and cutting right when the chase ends with a satisfying narrative conclusion.",
+    "standout_techniques": [
+      "Using red directional arrows to track characters during split-second hallway turns",
+      "Asterisk narrative action text (*TOTA STEALS*, *LOST*) for quick situational context",
+      "GTA 'Mission Passed' meme overlay at the climax for instant comedic punctuation",
+      "Dynamic camera tracking zooms on security footage to maintain visual clarity in vertical format"
+    ],
+    "anti_patterns_to_avoid": [
+      "Cuts that are occasionally too fast during chaotic running sequences making spatial awareness difficult"
+    ]
+  }
+}

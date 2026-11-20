@@ -1,0 +1,31 @@
+{
+  "id": "yt_9RZQ9wvxVQY",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=9RZQ9wvxVQY",
+  "title": "Kai Cenat Gets Forced To Take Care Of A Baby On Stream 😂",
+  "author": "DaPlug",
+  "views": 109097880,
+  "duration_sec": 32.0,
+  "query": "kai cenat funny moments edit shorts",
+  "audit": {
+    "masterpiece_score": 9,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "Kai Cenat & Agent 00",
+    "editing_archetype": "Reaction Chaos & Comedic Narrative",
+    "framing_9x16": "Dynamic vertical crop alternating between Kai holding the baby in the room and Agent 00 reacting live on stream with active chat overlay, utilizing quick scene switches to maintain high engagement.",
+    "subtitle_craft": "Big, bold, center-screen white/pink/yellow sans-serif subtitles that pop word-by-word with color highlights on key punchwords ('KAI!', 'BABY!', 'COCOMELON') and bracketed action cues (*PANICKING*, *CRYING*) that sync precisely with audio cues.",
+    "zoom_and_camera_work": "Punch-in zooms on Kai's panicked facial expressions and the baby's reactions, intensifying the comedic chaos without causing visual clutter.",
+    "sfx_and_music_craft": "Comedic Cocomelon nursery rhyme integration used as an instant audio cheat code to stop the baby's crying, matched with tight audio ducking and dramatic sound pauses for comedic timing.",
+    "comedic_timing_and_cuts": "Flawless escalation structure: setup (dropping off the baby) -> rising panic -> punchline (Cocomelon magic trick) -> immediate comedic twist (stopping it makes her cry again), ending on a clean viral loop point.",
+    "standout_techniques": [
+      "Dynamic word-by-word caption pop with contrasting highlight colors for high-energy dialogue",
+      "Bracketed action and sound effect descriptor subtitles (*CRYING*, *COCOMELON* (*PAUSE*))",
+      "Split perspective narrative cutting between the physical room event and the streamer/chat reaction",
+      "Audio-driven comedic punchline timing where music cuts instantly to change the scene's emotional state"
+    ],
+    "anti_patterns_to_avoid": [
+      "Over-cluttering the screen with too many chat elements simultaneously during high-action dialogue",
+      "Letting emotional beats drag out too long without a visual or audio shift"
+    ]
+  }
+}

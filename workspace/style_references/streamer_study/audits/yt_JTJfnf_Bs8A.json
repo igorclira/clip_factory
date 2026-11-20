@@ -1,0 +1,31 @@
+{
+  "id": "yt_JTJfnf_Bs8A",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=JTJfnf_Bs8A",
+  "title": "Kai Cenat Finally Got The FULL Iron Man Suit And Made A Movie With It! 😳😂",
+  "author": "Succesful Celebrity",
+  "views": 62115070,
+  "duration_sec": 31.0,
+  "query": "kai cenat funny moments edit shorts",
+  "audit": {
+    "masterpiece_score": 5,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "Kai Cenat / IRL Iron Man Suit skit",
+    "editing_archetype": "IRL Skit Comedy Montage",
+    "framing_9x16": "Full vertical framing of an IRL room setup, utilizing natural camera wide shots to keep physical action and costume movements fully visible without aggressive reframing.",
+    "subtitle_craft": "Large, bold white sans-serif captions with black strokes centered on screen. Toggles between uppercase lyric-style word reveals ('CHAT!', 'OPEN MASK!') and classic action descriptions with asterisks ('*POSES*', '*VILLAIN ATTACK*').",
+    "zoom_and_camera_work": "Static wide framing with occasional cut-ins to closeups of Kai's face when the Iron Man helmet opens, emphasizing high-energy comedic expressions.",
+    "sfx_and_music_craft": "Heavy reliance on live-action sound effects (heavy footsteps, punches, grunts) mixed with fast-paced comedic audio drops and action movie soundscapes to heighten the skit's humor.",
+    "comedic_timing_and_cuts": "Fast escalation of absurd physical comedy beats (putting on the suit, getting attacked by friends, fighting back), cutting sharply on the beat of impacts and comedic reactions.",
+    "standout_techniques": [
+      "Asterisk action captions (*VILLAIN ATTACK*, *RUNS*) for physical skit moments",
+      "Rapid scene cuts timed exactly to physical impacts and slaps",
+      "Bold center-screen word pop-ups during dramatic monologue lines",
+      "Close-up punch-in on facial expressions when suit helmet opens"
+    ],
+    "anti_patterns_to_avoid": [
+      "Slightly repetitive loop structure in the middle of the skit",
+      "Occasional visual clutter when multiple people are wrestling on screen in vertical crop"
+    ]
+  }
+}

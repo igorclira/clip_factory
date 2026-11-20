@@ -1,0 +1,31 @@
+{
+  "id": "yt_vr-uh6YFDgY",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=vr-uh6YFDgY",
+  "title": "Kai Cenat Marshmello Gifts Custom Burnt Marshmello! 🤔😂",
+  "author": "Date",
+  "views": 70676120,
+  "duration_sec": 23.0,
+  "query": "kai cenat funny moments edit shorts",
+  "audit": {
+    "masterpiece_score": 3,
+    "is_raw_reupload_or_slop": true,
+    "streamer_or_game": "Kai Cenat & Marshmello (IRL Stream)",
+    "editing_archetype": "IRL Stream Highlight Crop",
+    "framing_9x16": "Vertical center-crop following Kai Cenat and Marshmello, switching abruptly to a 16:9 horizontal crop with blurred top/bottom padding at 00:19 to accommodate the wider crew group reaction.",
+    "subtitle_craft": "Rapid single-word center-stacked captions in a bold white font with a heavy black outline; synchronized tightly to syllabic pacing but completely uniform with no color accents or dynamic scale hierarchy on screams.",
+    "zoom_and_camera_work": "Hand-adjusted cropping to track hands holding the mask, cutting into a tight 1.25x punch-in on Kai's wide-eyed reaction face at 00:07 before pulling back to a wide shot when the whole group reacts.",
+    "sfx_and_music_craft": "Zero added background music or comedic SFX; relies entirely on the raw chaotic room audio, vocal peaks, and natural group clamor.",
+    "comedic_timing_and_cuts": "Chronological clip flow that keeps setup brief (unboxing mask), moves quickly to the try-on, and ends abruptly after the hype chant when the helmet gets bumped.",
+    "standout_techniques": [
+      "Switching from 9:16 tight vertical crop to blurred-background horizontal framing when multi-person spatial comedy requires seeing everyone in the room",
+      "Tight 1-word text pacing that matches high-energy spoken cadences without lagging behind",
+      "Holding on the creator's extreme reaction face for a full second before cutting to the action of putting on the prop"
+    ],
+    "anti_patterns_to_avoid": [
+      "Placing captions directly dead-center where they obscure the primary subject (the custom helmet) being shown off",
+      "Switching aspect ratios (full bleed 9:16 to blurred-bar 16:9) midway through a short without a clean transition or graphic frame",
+      "Lack of audio cleanup or dynamic mixing during loud clipped group screams"
+    ]
+  }
+}

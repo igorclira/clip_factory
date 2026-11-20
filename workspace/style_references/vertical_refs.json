@@ -1,0 +1,58 @@
+[
+  {
+    "id": "chm_short_1",
+    "label": "Classic Hardcore Moments Short — Wait for it...",
+    "url": "https://www.youtube.com/watch?v=qfxIbG0O-es",
+    "verdict": "GOOD_VERTICAL_CRAFT",
+    "notes": "Love how he edits in 9:16 — use as craft reference, but NEVER spam/overuse any single gag like the MGS '!' alert."
+  },
+  {
+    "id": "chm_short_2",
+    "label": "Classic Hardcore Moments Short — Most Rogue thing ever",
+    "url": "https://www.youtube.com/watch?v=SqdfMpXgCzc",
+    "verdict": "GOOD_VERTICAL_CRAFT",
+    "notes": "9:16 WoW Classic Hardcore Moments pacing, framing, zooms, and SFX restraint."
+  },
+  {
+    "id": "darkviper_main",
+    "label": "DarkViperAU Short (User's Best GTA Example)",
+    "url": "https://www.youtube.com/watch?v=8U5SqyrMORU",
+    "verdict": "BEST_GTA_9X16_EXAMPLE",
+    "notes": "Best GTA Shorts editing example — understands 9:16 vertical framing, pacing, and comedic editing very well."
+  },
+  {
+    "id": "darkviper_gta6",
+    "label": "DarkViperAU GTA 6 Short — Family Guy Looking Different",
+    "url": "https://www.youtube.com/watch?v=tIcIZLIMdIQ",
+    "verdict": "BEST_GTA_9X16_EXAMPLE",
+    "notes": "DarkViperAU editing GTA 6 specifically in 9:16 vertical format."
+  },
+  {
+    "id": "gtaquix_good",
+    "label": "Gtaquix — GOOD Example",
+    "url": "https://www.youtube.com/watch?v=NZduDPLlCRE",
+    "verdict": "GOOD_EXAMPLE",
+    "notes": "User explicitly marked this Short as a GOOD example from @Gtaquix."
+  },
+  {
+    "id": "gtaquix_bad_ai",
+    "label": "Gtaquix — BAD Example (AI Slop)",
+    "url": "https://www.youtube.com/watch?v=rSDerB5TBWM",
+    "verdict": "BAD_AI_SLOP",
+    "notes": "User explicitly marked this as BAD — clearly AI spit-out / engine pumping out slop. Identify every visual & audio giveaway so we NEVER do this."
+  },
+  {
+    "id": "funny_good_edit_bad_vo",
+    "label": "Funny Tone / Awful Narration Example",
+    "url": "https://www.youtube.com/watch?v=BgtgsXbAKJY",
+    "verdict": "GOOD_EDIT_BAD_NARRATION",
+    "notes": "Editing and comedic tone are GOOD, but narration is AWFUL. Separate what works visually/rhythmically from why the narration ruins it."
+  },
+  {
+    "id": "mixed_bad_wrap_good_sfx",
+    "label": "Mixed Example (Bad Rankings/BlackBars/Oversat, Good Clips/Some SFX)",
+    "url": "https://www.youtube.com/watch?v=HJkkkrdVyQQ",
+    "verdict": "MIXED_EXAMPLE",
+    "notes": "HATE the rankings, oversaturation, and black bars. LOVE the clip choices and some SFX usage, though bass drop is overused."
+  }
+]

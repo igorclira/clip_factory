@@ -1,0 +1,20 @@
+[
+  {
+    "file": "upbeat_grandma_chase.wav",
+    "bpm": 124,
+    "energy": 4,
+    "mood": "upbeat_funny_chase",
+    "has_vocals": false,
+    "length_s": 25.0,
+    "loudness_lufs": -8.8
+  },
+  {
+    "file": "vice_city_synth_bed.wav",
+    "bpm": 112,
+    "energy": 3,
+    "mood": "vice_city_vaporwave_chill",
+    "has_vocals": false,
+    "length_s": 25.0,
+    "loudness_lufs": -8.3
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "id": "yt_7yk03CqAntk",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=7yk03CqAntk",
+  "title": "Is She into Tota??  ❤️1  #kaicenat  #tota  #mafiathon3  #edit",
+  "author": "Kaishowspeed",
+  "views": 103921993,
+  "duration_sec": 26.0,
+  "query": "kai cenat funny moments edit shorts",
+  "audit": {
+    "masterpiece_score": 6,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "Kai Cenat / MafiaThon 3 IRL Stream",
+    "editing_archetype": "IRL Stream Highlight Edit",
+    "framing_9x16": "Full vertical crop of a wide-angle room setup with multiple people, centering the main subjects interacting during the prank/setup.",
+    "subtitle_craft": "Centered horizontal white and green text with word-by-word highlighting and action asterisks (*TAKES OUT PHONE*), synchronized with the dialogue rhythm.",
+    "zoom_and_camera_work": "Subtle stabilization and overall framing lock on the main room action, relying on character movement rather than aggressive artificial zooms.",
+    "sfx_and_music_craft": "Upbeat romantic/comedic background music track running continuously to drive the narrative, with clean room audio preserved for the dialogue.",
+    "comedic_timing_and_cuts": "Well-paced setup showing the planning phase, leading into the face-to-face interaction payoff and wholesome resolution without cutting too abruptly.",
+    "standout_techniques": [
+      "Using action indicator captions in brackets (*TAKES OUT PHONE*, *HAPPY*) to explain silent context",
+      "Color-highlighting key words in subtitles to guide viewer attention",
+      "Maintaining stable vertical framing across a multi-person IRL room interaction"
+    ],
+    "anti_patterns_to_avoid": [
+      "Slightly repetitive background music looping",
+      "Slightly lower quality source video compression artifacts"
+    ]
+  }
+}

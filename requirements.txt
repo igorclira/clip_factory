@@ -1,0 +1,9 @@
+# Core Scout V1 (Twitch + Reddit + Apify TikTok + yt-dlp)
+requests>=2.32.0
+python-dotenv>=1.0.1
+pydantic>=2.9.0
+yt-dlp>=2025.1.1
+
+# Multimodal Analysis & Audio Alignment (Next stage)
+google-genai>=1.0.0
+faster-whisper>=1.1.0

@@ -1,0 +1,30 @@
+{
+  "id": "yt_8ipYkWfJBTE",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=8ipYkWfJBTE",
+  "title": "Kai Cenat Put On Nike Tech For Ice Spice😂",
+  "author": "Kai Cenat Live",
+  "views": 59012660,
+  "duration_sec": 15.0,
+  "query": "kai cenat funny moments edit shorts",
+  "audit": {
+    "masterpiece_score": 8,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "Kai Cenat ft. Ice Spice",
+    "editing_archetype": "Needle-Drop Entrance & Narrative Cutdown",
+    "framing_9x16": "Dynamic vertical crop with active pan-and-scan between Ice Spice's seated position and the wide studio door frame. Tracks Kai sprinting out of frame, holds suspense on the empty doorway, then pans to a wide 2-shot for the outfit reveal before snapping to a tight reaction punch-in.",
+    "subtitle_craft": "Centered, bold sans-serif with heavy black stroke. Rapid 1-2 word chunking perfectly synced to speech cadences and the lyrics of the needle drop. Uses bright magenta/pink highlights on key nouns and thematic accents ('TECH', 'COLOR', 'MHM'). Captions instantly clear out on visual beats.",
+    "zoom_and_camera_work": "Context-driven dynamic framing: uses wide coverage when Kai exits and re-enters down the corridor, then aggressively punches in on Kai's face (1.3x) right as he hits Ice Spice with the flirtatious 'Oh, you like red?' follow-up.",
+    "sfx_and_music_craft": "Iconic needle drop: cues Mike Jones' 'Back Then' right as the back door opens, perfectly matching Kai's confident runway strut in the red Nike Tech suit to the beat and lyrics, then lets room reaction audio naturally overtake the music.",
+    "comedic_timing_and_cuts": "Classic 4-beat structure: Complaint/Premise (Ice Spice wanting him in Nike Tech) -> Scurry/Commitment (Kai runs out) -> Climax/Entrance (Red suit strut to 'Back Then') -> Payoff/Coincidence ('That's my favorite color'). Cut tight at 15 seconds without redundant banter.",
+    "standout_techniques": [
+      "Lyric-synced entrance gag: introducing a recognizable hip-hop needle drop on an empty doorway right before the talent appears",
+      "Rapid pan-and-scan camera animation to simulate a multi-cam shoot out of a single wide room camera",
+      "Color-matched text highlighting corresponding to character motifs or tone (pink accents for Ice Spice moments)"
+    ],
+    "anti_patterns_to_avoid": [
+      "Leaving streamer chat overlays clipping through the frame when switching camera angles",
+      "Lingering after the punchline—ending right as Ice Spice validates the red color keeps replayability at peak"
+    ]
+  }
+}

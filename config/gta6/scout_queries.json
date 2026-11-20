@@ -1,0 +1,51 @@
+{
+  "channel_id": "gta6",
+  "lookback_hours": 24,
+  "outlier_rules": {
+    "twitch_max_followers": 25000,
+    "twitch_min_views": 2000,
+    "youtube_views_to_subs_ratio": 3.0,
+    "tiktok_max_author_fans": 250000
+  },
+  "twitch": {
+    "game_name": "Grand Theft Auto VI",
+    "title_keywords": ["gta 6", "gta vi", "vice city", "leonida", "npc", "physics", "glitch", "police"]
+  },
+  "reddit": {
+    "subreddits": ["GTA6", "GTA", "LivestreamFail", "gaming"],
+    "sort": "top",
+    "time_filter": "day",
+    "keywords": ["gta 6", "gta vi", "vice city", "leonida", "lucia", "jason"]
+  },
+  "tiktok_hashtags": {
+    "daily_core": [
+      "gta6",
+      "gtavi",
+      "gta6gameplay",
+      "gta6clips"
+    ],
+    "rotating_niche": [
+      "grandtheftauto6",
+      "grandtheftautovi",
+      "gta6release",
+      "rockstargames",
+      "vicecity",
+      "leonida",
+      "jasonandlucia",
+      "luciacaminos",
+      "leonidakeys",
+      "grassrivers",
+      "portgellhorn",
+      "mountkalaga"
+    ]
+  },
+  "search_queries": [
+    "gta 6 funny",
+    "gta 6 physics",
+    "gta 6 npc",
+    "gta 6 glitch",
+    "gta 6 police",
+    "gta 6 fail",
+    "gta 6 secret"
+  ]
+}

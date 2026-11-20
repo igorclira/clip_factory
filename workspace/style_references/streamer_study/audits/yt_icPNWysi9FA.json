@@ -1,0 +1,31 @@
+{
+  "id": "yt_icPNWysi9FA",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=icPNWysi9FA",
+  "title": "She left Speed speechless 😳 #shorts #ishowspeed #sideeffects #trending",
+  "author": "UziBeatz",
+  "views": 131707627,
+  "duration_sec": 36.0,
+  "query": "ishowspeed funny moments edit shorts",
+  "audit": {
+    "masterpiece_score": 9,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "IShowSpeed & Demi Bagby",
+    "editing_archetype": "Reaction & Flex Escalation Cutdown",
+    "framing_9x16": "Stacked 9:16 layout featuring a top/bottom split or dynamic reaction insertion. Main interview stage is vertically cropped with stable panning to follow physical stunts, combined with intermittent cuts to KSI and friends reacting on the couch.",
+    "subtitle_craft": "Minimal, clean white and red bold text with outline effects. Subtitles follow speech closely with strategic emojis embedded inside words (e.g., eyes and laughing emojis), popping instantly on comedic dialogue and fading out cleanly before speech ends to avoid lingering.",
+    "zoom_and_camera_work": "Subtle 1.1x to 1.3x punch-ins on facial expressions and sudden stunt reactions, paired with dynamic camera movements and flashes during high-impact moments like backflips.",
+    "sfx_and_music_craft": "Fast-paced comedic sound effects (whooshes, vinyl scratches, bass drops) hitting precisely on physical stunts and reaction moments. Cuts seamlessly between the live studio audio and reacting couch commentary with upbeat hype background music.",
+    "comedic_timing_and_cuts": "Masterclass in escalation: Speed boasts about his skills, the guest effortlessly outperforms him with crazy acrobatics, and the edit cuts instantly to KSI and the Sidemen losing their minds on the couch for maximum comedic payoff.",
+    "standout_techniques": [
+      "Integrating third-party reaction cuts (KSI & friends on a couch) timed perfectly to the main clip's punchlines",
+      "Dynamic emoji placement directly within subtitle strings to emphasize tone",
+      "Impact zooms and flash frames synced to fast-paced physical movement like backflips",
+      "Clean audio ducking when switching between studio dialogue and explosive couch laughter"
+    ],
+    "anti_patterns_to_avoid": [
+      "Over-cluttering the screen with too many moving elements during fast stunt sequences",
+      "Allowing subtitles to linger past the spoken audio cue"
+    ]
+  }
+}

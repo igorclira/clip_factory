@@ -1,0 +1,30 @@
+{
+  "id": "tt_7705539805286796557",
+  "platform": "tiktok",
+  "url": "",
+  "title": "TikTok Streamer Edit (tt_7705539805286796557)",
+  "author": "tiktok_creator",
+  "views": 100000,
+  "duration_sec": 35.0,
+  "local_file": "C:\\Users\\PC\\.gemini\\antigravity\\scratch\\clip_factory\\workspace\\style_references\\streamer_study\\tiktok_clips\\tt_7705539805286796557.mp4",
+  "audit": {
+    "masterpiece_score": 6,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "Fortnite",
+    "editing_archetype": "Facecam Punch-In Comedy",
+    "framing_9x16": "Standard vertical stack with gameplay on top and streamer facecam on bottom, maintaining both active in frame.",
+    "subtitle_craft": "White bold centered sans-serif captions with outline, featuring emojis like crying face and peace sign next to text, timed to speech chunks.",
+    "zoom_and_camera_work": "Static framing with no dramatic zoom-ins or heavy camera movement, relying entirely on the visual of the gameplay opening and streamer reaction.",
+    "sfx_and_music_craft": "Minimalist audio approach focusing primarily on raw streamer voice and game sound effects with natural comedic reactions.",
+    "comedic_timing_and_cuts": "Starts with the streamer attempting to communicate in-game, building up to opening a chest and reacting with a high-pitched scream of 'almost almost', ending right on the payoff.",
+    "standout_techniques": [
+      "Placing emoji reactions directly above or beside subtitle text for emotional emphasis",
+      "Stacking facecam directly beneath gameplay for a clean 9:16 layout",
+      "Keeping unedited raw voice audio during intense gaming moments"
+    ],
+    "anti_patterns_to_avoid": [
+      "Lack of dynamic zooms or camera reframing makes the edit feel slightly static",
+      "Simple static subtitle placement without word-by-word animation pop effects"
+    ]
+  }
+}

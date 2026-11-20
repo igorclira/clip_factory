@@ -1,0 +1,30 @@
+{
+  "id": "yt_yjvT6Tfg0IA",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=yjvT6Tfg0IA",
+  "title": "Amy was too good for him😭💔 #ishowspeed #amy #couple",
+  "author": "Speedy D. Luffy",
+  "views": 460072056,
+  "duration_sec": 45.0,
+  "query": "ishowspeed funny moments edit shorts",
+  "audit": {
+    "masterpiece_score": 6,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "IShowSpeed & Amy Flamy (IRL Stream)",
+    "editing_archetype": "Cinematic Romance / High-Stakes Narrative Edit",
+    "framing_9x16": "Full-bleed vertical crop (9:16) of horizontal IRL livestream footage. The editor pans dynamically to follow Speed's athletic throwing wind-ups, quickly reframing between the counter, the tin-can target shelf, and Amy's reactions to maintain spatial continuity without letterboxing.",
+    "subtitle_craft": "Centered 1-3 word punchy captions in bold uppercase sans-serif with strong drop shadows. Uses dual-tone color coding (white with bright green/yellow highlights for Speed's dialogue, lavender/cyan for Amy, and italicized asterisks like '*HITS*' and '*LOCKING IN*' for unspoken narrative beats). Subtitles snap cleanly per audio phrase without lingering.",
+    "zoom_and_camera_work": "Employs punch-in jump cuts (approx 1.1x to 1.3x) right before critical ball releases and during Speed's intense hyper-focused staring faces. Digital whip-pans follow the trajectory of throws and Speed's celebratory pacing.",
+    "sfx_and_music_craft": "Replaces ambient background noise with an emotional, slow-building romantic pop piano ballad ('Golden Hour' style), juxtaposing an epic melodrama track against Speed's absurd, high-energy carnival game intensity. Streamer audio is ducked and equalized cleanly over the swelling music, punctuated by raw audio clangs of the knocked-down cans and the bell ring.",
+    "comedic_timing_and_cuts": "Classic montage escalation: Quick setup ('Which one you want? / I'll win it for you') -> rapid-fire countdown jump cuts ('Come on', 'Hits', 'Two more', 'One more', 'Last ball') -> dramatic slow-motion suspension on the final throw -> explosion of celebration, ending on the romantic wholesome resolution with the bear gift.",
+    "standout_techniques": [
+      "Contextual Action Tags: Using bracketed subtitle tags (*LOCKING IN*, *HITS*, *RINGS BELL*) to inject humor and guide viewer focus during chaotic IRL moments.",
+      "Dramatic Score Subversion: Layering sentimental ballad music over erratic, high-energy streamer gameplay to fabricate an over-the-top cinematic underdog narrative.",
+      "Countdown Micro-Pacing: Cutting out the downtime between carnival throws to build escalating tension (3 more -> 2 more -> 1 ball left) within 30 seconds."
+    ],
+    "anti_patterns_to_avoid": [
+      "Green/Color tint transition artifacts: Abrupt single-frame green compression/color blips during cut points that look accidental or unpolished.",
+      "Heavy over-sharpening/contrast filters that degrade skin tones and blow out highlights in brightly lit outdoor stream footage."
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "channel_id": "wow_forever",
+  "lookback_hours": 168,
+  "outlier_rules": {
+    "twitch_max_followers": 15000,
+    "twitch_min_views": 1500,
+    "youtube_views_to_subs_ratio": 3.0,
+    "tiktok_max_author_fans": 250000
+  },
+  "twitch": {
+    "game_name": "World of Warcraft",
+    "title_keywords": ["forever", "barrow deeps", "hyjal", "skyborne", "zephras", "classic+", "wipe", "raid"]
+  },
+  "reddit": {
+    "subreddits": ["classicwow", "wow", "LivestreamFail"],
+    "sort": "top",
+    "time_filter": "week",
+    "keywords": ["forever", "barrow deeps", "hyjal", "skyborne", "classic+"]
+  },
+  "tiktok_hashtags": {
+    "daily_core": [
+      "wowforever",
+      "worldofwarcraftforever",
+      "wowclassicplus",
+      "wowclips"
+    ],
+    "rotating_niche": [
+      "classicplus",
+      "wowclassic",
+      "worldofwarcraft",
+      "wowpvp",
+      "wowraids",
+      "skyborne",
+      "zephrasisle",
+      "barrowdeeps",
+      "hyjalsummit",
+      "undeadpaladin",
+      "dwarfshaman",
+      "wowhardcore"
+    ]
+  },
+  "search_queries": [
+    "wow forever wipe",
+    "wow forever fail",
+    "wow forever pvp",
+    "wow forever bug",
+    "barrow deeps",
+    "skyborne wow"
+  ]
+}

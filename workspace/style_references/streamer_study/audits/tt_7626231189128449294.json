@@ -1,0 +1,30 @@
+{
+  "id": "tt_7626231189128449294",
+  "platform": "tiktok",
+  "url": "",
+  "title": "TikTok Streamer Edit (tt_7626231189128449294)",
+  "author": "tiktok_creator",
+  "views": 100000,
+  "duration_sec": 35.0,
+  "local_file": "C:\\Users\\PC\\.gemini\\antigravity\\scratch\\clip_factory\\workspace\\style_references\\streamer_study\\tiktok_clips\\tt_7626231189128449294.mp4",
+  "audit": {
+    "masterpiece_score": 8,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "Minecraft",
+    "editing_archetype": "Fast Multi-Clip Montage",
+    "framing_9x16": "Full vertical crop of high-action gameplay paired with perfectly synced beat drops and character movements.",
+    "subtitle_craft": "Minimalist textual elements centered around gameplay milestones, timed cleanly with fast rhythmic music.",
+    "zoom_and_camera_work": "Dynamic camera cuts and pans matched perfectly to the song beats, creating an energetic flow without losing visual clarity.",
+    "sfx_and_music_craft": "Heavy reliance on a trending phonk/rap audio track with sharp beat-sync cuts on every major action (crafting, mining, portal entry, boss fight).",
+    "comedic_timing_and_cuts": "Lightning-fast cuts that compress an entire Minecraft playthrough into a tight narrative progression from spawning to defeating the Ender Dragon.",
+    "standout_techniques": [
+      "Beat-synced transitions between different game stages",
+      "Seamless matching of player actions to rhythm spikes",
+      "Rapid progression pacing to maintain high retention"
+    ],
+    "anti_patterns_to_avoid": [
+      "Overuse of watermarks obscuring central actions",
+      "Extremely rapid flashing that can become disorienting"
+    ]
+  }
+}

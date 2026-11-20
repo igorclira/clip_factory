@@ -1,0 +1,29 @@
+{
+  "id": "tt_7693571025438608662",
+  "platform": "tiktok",
+  "url": "",
+  "title": "TikTok Streamer Edit (tt_7693571025438608662)",
+  "author": "tiktok_creator",
+  "views": 100000,
+  "duration_sec": 35.0,
+  "local_file": "C:\\Users\\PC\\.gemini\\antigravity\\scratch\\clip_factory\\workspace\\style_references\\streamer_study\\tiktok_clips\\tt_7693571025438608662.mp4",
+  "audit": {
+    "masterpiece_score": 3,
+    "is_raw_reupload_or_slop": true,
+    "streamer_or_game": "Call of Duty: Warzone / Fortnite mashup",
+    "editing_archetype": "Fast Multi-Clip Montage",
+    "framing_9x16": "Standard horizontal-to-vertical crop with heavy motion blur and continuous shake, causing visual fatigue.",
+    "subtitle_craft": "Minimalist static text overlays synced poorly to song lyrics rather than natural dialogue, lacking dynamic pop or word chunking.",
+    "zoom_and_camera_work": "Excessive fisheye and shaky-cam distortion applied across the entire clip with little contextual target framing.",
+    "sfx_and_music_craft": "Loud, unedited rap track overlay ('Sicko Mode' remix) slapped over raw gameplay audio with no dynamic volume ducking or comedic SFX spikes.",
+    "comedic_timing_and_cuts": "Disjointed cuts between unrelated game clips that prioritize flashy transitions over narrative buildup or punchline delivery.",
+    "standout_techniques": [
+      "Flashy white-out transitions between scene changes",
+      "Pulsing music-beat alignment for weapon inspections"
+    ],
+    "anti_patterns_to_avoid": [
+      "Overusing extreme motion blur and camera shake that obscures the gameplay action",
+      "Failing to balance music volume against in-game audio"
+    ]
+  }
+}

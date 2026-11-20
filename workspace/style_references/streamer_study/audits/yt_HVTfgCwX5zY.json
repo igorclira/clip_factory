@@ -1,0 +1,31 @@
+{
+  "id": "yt_HVTfgCwX5zY",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=HVTfgCwX5zY",
+  "title": "Speed tried to get KaiCenat permanently banned🤣",
+  "author": "SpeedKaiClip",
+  "views": 117855758,
+  "duration_sec": 50.0,
+  "query": "kai cenat funny moments edit shorts",
+  "audit": {
+    "masterpiece_score": 9,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "IShowSpeed & Kai Cenat",
+    "editing_archetype": "Chaos Multi-Cam Reaction & Facecam Punch-In Comedy",
+    "framing_9x16": "Stacked dual-facecam and browser layout with dynamic alternating split-screens. When one creator reacts, their box scales or punches into full vertical focus while keeping chat and browser context visible in the background layers.",
+    "subtitle_craft": "Bold, centered yellow and white sans-serif captions displaying 1-2 words at a time. Words expand dynamically with a scale pop on stressed syllables and screams, syncing directly with the audio peaks. Subtitles cut out immediately during pauses to prevent lingering clutter.",
+    "zoom_and_camera_work": "Aggressive, high-speed facecam push-ins (ranging from 1.3x to 1.8x) centered directly on the eyes/mouth during screaming outbursts and comedic shock reactions. Stabilized to prevent motion sickness while maximizing chaotic expression.",
+    "sfx_and_music_craft": "Heavy reliance on raw streamer audio mixed with high-impact comedic sound effects (*search* wooshes, laughter tracks, cartoon spring bounces). BGM is stripped out entirely during dialogue exchanges to let the raw screaming and banter carry the comedic timing.",
+    "comedic_timing_and_cuts": "Masterful escalation: opens with a slow build of browsing history search, ramps up through rapid back-and-forth cross-cuts between Speed and Kai's stunned reactions, and holds on the prolonged screaming outburst until the ultimate verbal climax.",
+    "standout_techniques": [
+      "Dynamic 1-to-2 word bold yellow subtitle pops synchronized to vocal inflection and screams",
+      "Stacked vertical multi-cam layout transitioning focus based on who is speaking or reacting",
+      "Rapid facecam zoom-ins tracking eye and mouth movement during peak emotional outbursts",
+      "Strategic use of text search and UI overlays (*search*, *laugh*, *text to voice*) to guide viewer attention"
+    ],
+    "anti_patterns_to_avoid": [
+      "Leaving subtitles lingering on screen past the end of a spoken word",
+      "Over-cluttering the 9:16 frame with too many simultaneous UI elements without dimming or blurring the background"
+    ]
+  }
+}

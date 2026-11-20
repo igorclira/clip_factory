@@ -1,0 +1,28 @@
+{
+  "id": "yt_VybLsEWuwQs",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=VybLsEWuwQs",
+  "title": "Idk what to say about this 😭 #shorts #feature #featureme #comedy #fail #mom #wow",
+  "author": "Mackenzie Sol",
+  "views": 120926415,
+  "duration_sec": 18.0,
+  "query": "twitch fails compilation shorts",
+  "audit": {
+    "masterpiece_score": 3,
+    "is_raw_reupload_or_slop": true,
+    "streamer_or_game": "Mackenzie Sol IRL comedy skit",
+    "editing_archetype": "Raw Reupload / Staged Skit",
+    "framing_9x16": "Static wide single-camera phone shot capturing kitchen counter and background; no active reframing or 9:16 dynamic cropping applied.",
+    "subtitle_craft": "No dynamic subtitles or captions used in this raw video file.",
+    "zoom_and_camera_work": "Completely static camera placement on a kitchen counter with zero zoom cuts, pans, or dynamic camera work.",
+    "sfx_and_music_craft": "No background music or added comedic sound effects; entirely raw physical audio of slamming doors and shouting.",
+    "comedic_timing_and_cuts": "Single continuous take with a sudden physical escalation and abrupt cutoff at the very end.",
+    "standout_techniques": [
+      "Abrupt cut ending on a high-energy action beat"
+    ],
+    "anti_patterns_to_avoid": [
+      "Uploading completely unedited raw video footage with zero post-production, captions, or audio sweetening",
+      "Static wide framing that lacks vertical optimization"
+    ]
+  }
+}

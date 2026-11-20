@@ -1,0 +1,31 @@
+{
+  "id": "tt_7699935771859422486",
+  "platform": "tiktok",
+  "url": "",
+  "title": "TikTok Streamer Edit (tt_7699935771859422486)",
+  "author": "tiktok_creator",
+  "views": 100000,
+  "duration_sec": 35.0,
+  "local_file": "C:\\Users\\PC\\.gemini\\antigravity\\scratch\\clip_factory\\workspace\\style_references\\streamer_study\\tiktok_clips\\tt_7699935771859422486.mp4",
+  "audit": {
+    "masterpiece_score": 5,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "CaseOh with various games (Fall Guys, Slither.io, Rust, Roblox, Minecraft, Horror games)",
+    "editing_archetype": "Fast Multi-Clip Montage",
+    "framing_9x16": "Standard top-bottom stacked layout with CaseOh's facecam locked on the top half and gameplay footage on the bottom half. Both frames maintain a fixed 9:16 vertical crop without dynamic camera framing or zooms on the facecam.",
+    "subtitle_craft": "A single static caption box anchored in the middle with black outline text reading 'His Timing Must Be Studied 😭' that remains on screen for the entire duration of the video. Individual streamer speech is not captioned.",
+    "zoom_and_camera_work": "Static layout throughout with no dynamic zooms, punch-ins, or camera tracking. Relies entirely on rapid multi-game cuts to maintain viewer engagement.",
+    "sfx_and_music_craft": "Minimal sound design relying entirely on the raw audio and comedic timing of CaseOh's reactions, screams, and sudden jumpscares. No added BGM or comedic SFX overlays.",
+    "comedic_timing_and_cuts": "Fast-paced montage cutting rapidly between various game clips where CaseOh instantly suffers bad luck or jumpscares immediately after speaking boastfully. The comedic contrast relies on instant karma setups and quick cutaways.",
+    "standout_techniques": [
+      "Rapid-fire thematic montage grouping similar comedic beats (instant karma/bad timing across different games)",
+      "Consistent top-bottom facecam and gameplay stacking for high-energy streamer compilations",
+      "Hook title overlay ('His Timing Must Be Studied 😭') that frames the entire comedic premise from frame zero"
+    ],
+    "anti_patterns_to_avoid": [
+      "Lacking individual word-by-word animated subtitles for the streamer's spoken dialogue",
+      "Static facecam and gameplay frames with zero dynamic zoom-ins or visual punch-ups during high-intensity scream moments",
+      "Relying solely on a single static caption across the entire video instead of dynamic captioning"
+    ]
+  }
+}

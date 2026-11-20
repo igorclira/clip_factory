@@ -1,0 +1,15 @@
+{
+  "channel_id": "wow_forever",
+  "display_name": "WoW Forever Clips",
+  "language": "en",
+  "target_audience": "US / Tier-1 English",
+  "target_duration_sec": [62, 70],
+  "clips_per_montage": [3, 4],
+  "resolution": "1080x1920",
+  "fps": 30,
+  "platforms": ["tiktok", "youtube_shorts"],
+  "posting_slots_est": ["13:00", "19:00"],
+  "posting_slots_brt": ["15:00", "21:00"],
+  "audio_ducking_db": -14,
+  "copyright_audio_policy": "flag_streamer_background_music"
+}

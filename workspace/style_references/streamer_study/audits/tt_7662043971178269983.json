@@ -1,0 +1,30 @@
+{
+  "id": "tt_7662043971178269983",
+  "platform": "tiktok",
+  "url": "",
+  "title": "TikTok Streamer Edit (tt_7662043971178269983)",
+  "author": "tiktok_creator",
+  "views": 100000,
+  "duration_sec": 35.0,
+  "local_file": "C:\\Users\\PC\\.gemini\\antigravity\\scratch\\clip_factory\\workspace\\style_references\\streamer_study\\tiktok_clips\\tt_7662043971178269983.mp4",
+  "audit": {
+    "masterpiece_score": 7,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "CaseOh (Various Games)",
+    "editing_archetype": "Fast Multi-Clip Montage",
+    "framing_9x16": "Top half facecam, bottom half gameplay. Clean vertical split with occasional full facecam takeovers for punchlines.",
+    "subtitle_craft": "Minimalist white bold font centered on screen, updating dynamically word by word with simple black stroke for high readability.",
+    "zoom_and_camera_work": "Subtle push-ins on CaseOh's face during intense rants and comedic realization moments to emphasize expressions.",
+    "sfx_and_music_craft": "Comedic sound effects (*fork noise*, *rumbling*) inserted at exact punchline timestamps to amplify the joke.",
+    "comedic_timing_and_cuts": "Rapid-fire montage ranking 5 distinct moments, each cut precisely after the punchline lands without lingering.",
+    "standout_techniques": [
+      "Dynamic numbered vertical ranking list on the left side of the screen",
+      "Precise SFX punctuation on comedic moments (*fork noise*, *rumbling*)",
+      "Split-screen layout pairing facecam reactions directly with corresponding gameplay",
+      "Quick-cut pacing between entirely different game clips"
+    ],
+    "anti_patterns_to_avoid": [
+      "Slightly generic top banner title that stays static throughout the whole video"
+    ]
+  }
+}

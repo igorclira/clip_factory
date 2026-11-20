@@ -1,0 +1,31 @@
+{
+  "id": "yt_x5FR9hCMTPM",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=x5FR9hCMTPM",
+  "title": "1 In A BILLION Streamers Moments! 🥶",
+  "author": "Rayfist",
+  "views": 32653470,
+  "duration_sec": 44.0,
+  "query": "twitch fails compilation shorts",
+  "audit": {
+    "masterpiece_score": 8,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "Kai Cenat, IShowSpeed, Caseoh",
+    "editing_archetype": "Fast Multi-Clip Montage",
+    "framing_9x16": "Dynamic vertical split screen with top facecam and bottom gameplay or live camera feed, scaling dynamically based on active speakers and action context.",
+    "subtitle_craft": "High-contrast centered captions with vibrant green/red coloring per word chunk, popping dynamically in size during high-energy moments like screams or disbelief.",
+    "zoom_and_camera_work": "Subtle 1.1x-1.3x punch-ins on facial expressions and reaction moments, synchronized with comedic pauses to heighten dramatic effect.",
+    "sfx_and_music_craft": "Energetic background track paired with sharp, percussive impact SFX underlining sudden streamer outbursts and unexpected comedic turns.",
+    "comedic_timing_and_cuts": "Tight rhythm building from setup to escalation, holding on reactions just long enough for the punchline to land naturally before immediately cutting to the next segment.",
+    "standout_techniques": [
+      "Dynamic word-by-word color-coded captioning with scale-pop animation on emphasis words",
+      "Split-screen 9:16 framing keeping both reaction cam and corresponding gameplay/footage perfectly readable",
+      "Precise punch-in zoom timing synchronized with audio peaks for maximum comedic impact",
+      "Clean out-point selection holding just past the punchline before hard cutting to the next clip"
+    ],
+    "anti_patterns_to_avoid": [
+      "Over-cluttering the vertical screen with too many overlapping chat widgets and UI elements",
+      "Extraneous lingering on dead air before the comedic payoff"
+    ]
+  }
+}

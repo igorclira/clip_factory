@@ -1,0 +1,30 @@
+{
+  "id": "tt_7000723309239241985",
+  "platform": "tiktok",
+  "url": "",
+  "title": "TikTok Streamer Edit (tt_7000723309239241985)",
+  "author": "tiktok_creator",
+  "views": 100000,
+  "duration_sec": 35.0,
+  "local_file": "C:\\Users\\PC\\.gemini\\antigravity\\scratch\\clip_factory\\workspace\\style_references\\streamer_study\\tiktok_clips\\tt_7000723309239241985.mp4",
+  "audit": {
+    "masterpiece_score": 7,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "Streamer Pun/Riddle Bit",
+    "editing_archetype": "Deadpan Subtitles + Audio Cut",
+    "framing_9x16": "Centered vertical crop on the streamer's facecam with balanced upper and lower headroom, keeping facial expressions and reactions fully visible throughout the bit.",
+    "subtitle_craft": "Bold yellow rounded sans-serif font centered on screen, displaying chunked words one-by-one with highlight changes on key comedic words like 'VERY ANGRY'.",
+    "zoom_and_camera_work": "Subtle push-in on the streamer's face during her confused guessing phase, followed by a sudden wide hold for the realization beat.",
+    "sfx_and_music_craft": "Comedic thinking music (math equations overlay visual effect) during the puzzle phase, followed by the classic SpongeBob 'One Eternity Later' card transition, and a satisfying audio drop on the punchline realization.",
+    "comedic_timing_and_cuts": "The setup outlines the riddle, holds on her genuine over-thinking awkward silence and wrong guesses, cuts to the meme transition, and lands right on her delayed comprehension facepalm.",
+    "standout_techniques": [
+      "Floating math equations doodle overlay during deep thought moments",
+      "SpongeBob 'One Eternity Later' time-card transition for comedic pacing",
+      "Dynamic italicized action text (*reads chat*, *dies inside*) for emotional beat staging",
+      "Word-by-word bold caption chunking with highlight color shifts"
+    ],
+    "anti_patterns_to_avoid": [
+      "Leaving dead air unedited during long thinking pauses without visual or audio gags"
+    ]
+  }
+}

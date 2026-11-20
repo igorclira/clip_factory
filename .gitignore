@@ -1,0 +1,38 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node / Remotion
+node_modules/
+dist/
+build/
+
+# Local databases & caches
+*.sqlite
+*.db
+.cache/
+
+# Heavy media & generated workspace files
+workspace/*/01_inbox_raw/*
+workspace/*/02_curated/*
+workspace/*/03_analysis/*
+workspace/*/04_rough_cuts/*
+workspace/*/05_ready_to_post/*
+!workspace/**/.gitkeep
+*.mp4
+*.mov
+*.mkv
+*.wav
+*.mp3
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Embedded external skill repos
+skills/

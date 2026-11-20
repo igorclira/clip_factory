@@ -1,0 +1,15 @@
+{
+  "channel_id": "gta6",
+  "display_name": "GTA 6 Chaos & Moments",
+  "language": "en",
+  "target_audience": "US / Tier-1 English",
+  "target_duration_sec": [62, 70],
+  "clips_per_montage": [4, 5],
+  "resolution": "1080x1920",
+  "fps": 30,
+  "platforms": ["tiktok", "youtube_shorts"],
+  "posting_slots_est": ["14:00", "20:00"],
+  "posting_slots_brt": ["16:00", "22:00"],
+  "audio_ducking_db": -14,
+  "copyright_audio_policy": "strict_no_car_radio_music"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "yt_ciA4UE0Qo60",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=ciA4UE0Qo60",
+  "title": "Top 5 Davey moments in GTA 5 #shorts",
+  "author": "Leonida Stunts",
+  "views": 42615815,
+  "duration_sec": 52.0,
+  "query": "gta funny moments edited shorts",
+  "audit": {
+    "masterpiece_score": 8,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "Leonida Stunts / GTA V",
+    "editing_archetype": "Fast Multi-Clip Montage / Progression Ranking",
+    "framing_9x16": "Full vertical gameplay crop with a persistent top ranking overlay and clean transition cuts matching action beats.",
+    "subtitle_craft": "Minimalist, clean black and white dialogue subtitles anchored near the bottom third, featuring bold text highlights on punchlines and exact sync with character dialogue.",
+    "zoom_and_camera_work": "Dynamic camera tracking following high-speed stunt vehicles, cutting to cinematic reaction angles at the exact moment of comedic impact.",
+    "sfx_and_music_craft": "Heavy reliance on iconic in-game audio dialogue ('Davey, how you doing?') looping as a comedic motif, paired with crunchy vehicle crashes and explosions.",
+    "comedic_timing_and_cuts": "Escalating progression structure from simple stunt fails to increasingly chaotic skydiving and jet maneuvers, holding on ragdoll aftermaths for maximum comedic timing.",
+    "standout_techniques": [
+      "Persistent on-screen ranking list (Top 5) that dynamically updates as clips progress",
+      "Looping dialogue soundbites timed precisely to character actions and crashes",
+      "Escalating comedic structure where each clip out-scales the previous one",
+      "Clean audio ducking allowing in-game dialogue to cut through background chaos"
+    ],
+    "anti_patterns_to_avoid": [
+      "Cluttered or overlapping subtitle text during high-speed action sequences"
+    ]
+  }
+}

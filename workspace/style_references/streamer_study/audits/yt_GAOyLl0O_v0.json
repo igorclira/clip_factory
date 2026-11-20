@@ -1,0 +1,31 @@
+{
+  "id": "yt_GAOyLl0O_v0",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=GAOyLl0O_v0",
+  "title": "Caseoh does Which Marshmallow are you choosing 😭 #caseoh #meme #marshmello",
+  "author": "More CaseOh Moment",
+  "views": 60669807,
+  "duration_sec": 59.0,
+  "query": "caseoh funny moments edit shorts",
+  "audit": {
+    "masterpiece_score": 8,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "CaseOh reacting to 'Which marshmallow are you eating?' TikTok",
+    "editing_archetype": "Split-Screen Reaction & Progressive Escalation",
+    "framing_9x16": "Classic top-bottom split layout with CaseOh's facecam locked in the upper 40% and the vertical marshmallow TikTok video occupying the lower 60%. The bottom video fills the standard 9:16 frame cleanly with minimal letterboxing, maintaining full visibility of the hands and marshmallow progression.",
+    "subtitle_craft": "Big, bold white Impact-style font centered right in the middle-top portion of the bottom frame (or overlaying the boundary). Displays one to three words at a time in sync with CaseOh's speech rhythm, ensuring immediate readability during rapid-fire dialogue.",
+    "zoom_and_camera_work": "Static framing on both the facecam and the reaction clip, relying entirely on the underlying TikTok's natural progression from raw marshmallow to charred brick to create visual escalation without disorienting digital punch-ins.",
+    "sfx_and_music_craft": "Original audio from CaseOh's live stream combined with the looping, escalating sound design of the marshmallow TikTok. Natural comedic pauses in CaseOh's voice create perfect comedic beats as he repeatedly demands a more crispy marshmallow.",
+    "comedic_timing_and_cuts": "The edit mirrors CaseOh's escalating disbelief. Each clip advances the marshmallow's 'crispiness' level while CaseOh progressively rejects it, culminating in the absurdity of a massive burnt loaf where he finally approves. The timing holds on his bewildered facial expressions just long enough for the joke to land.",
+    "standout_techniques": [
+      "Stacked top-bottom split-screen keeping both streamer reaction and source content fully legible",
+      "High-contrast, centered word-by-word captioning synced to rapid comedic dialogue",
+      "Leveraging an inherently escalating source video (raw to crispy marshmallow) to drive the narrative arc naturally",
+      "Holding on deadpan facial expressions post-punchline for comedic weight"
+    ],
+    "anti_patterns_to_avoid": [
+      "Over-editing with excessive random zoom-ins when the source video already has built-in visual progression",
+      "Placing subtitles too low where platform UI elements (like like buttons and usernames) obscure them"
+    ]
+  }
+}

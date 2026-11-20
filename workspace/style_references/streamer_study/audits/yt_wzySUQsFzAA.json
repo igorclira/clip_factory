@@ -1,0 +1,30 @@
+{
+  "id": "yt_wzySUQsFzAA",
+  "platform": "youtube",
+  "url": "https://www.youtube.com/watch?v=wzySUQsFzAA",
+  "title": "How the Cops Are in GTA 5... 8",
+  "author": "ReidBoehm",
+  "views": 34763458,
+  "duration_sec": 30.0,
+  "query": "gta funny moments edited shorts",
+  "audit": {
+    "masterpiece_score": 8,
+    "is_raw_reupload_or_slop": false,
+    "streamer_or_game": "ReidBoehm / GTA 5 skit",
+    "editing_archetype": "Live-action green screen sketch comedy with in-world phone integration",
+    "framing_9x16": "Clean vertical 9:16 green screen composition with high-fidelity background replacement matching GTA 5 Los Santos street environments.",
+    "subtitle_craft": "Minimalist on-screen text for the title hook at the beginning; clean performance-driven dialogue with exact sync to actor mouths and actions.",
+    "zoom_and_camera_work": "Creative in-world phone perspective shifts where the camera physically zooms into and out of a smartphone screen displaying the previous footage loop.",
+    "sfx_and_music_craft": "Sharp sound effect triggers on punches, slaps, taser draws, and dramatic whines, paired with precise comedic timing on audio cuts.",
+    "comedic_timing_and_cuts": "Tight escalation structure featuring character confusion, absurd cop logic, video-evidence playback, and a chaotic dance finale payoff.",
+    "standout_techniques": [
+      "Green screen character cloning for multi-role interactions",
+      "In-scene smartphone display playback looping prior joke frames",
+      "GTA wanted star UI overlay appearing on cue over the actor's head",
+      "Precise match-cuts between live-action acting and recorded phone playback"
+    ],
+    "anti_patterns_to_avoid": [
+      "Over-cluttering the screen with unnecessary floating emojis during dialogue"
+    ]
+  }
+}
