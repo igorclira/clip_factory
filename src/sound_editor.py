@@ -368,6 +368,16 @@ def enforce_rules_and_align(
     # Sort candidate events chronologically
     sorted_events = sorted(raw_plan.events, key=lambda e: e.t)
 
+    # Build case-insensitive alias lookup (preferring curated_semantic entries on stem collisions)
+    sound_by_alias: dict[str, dict[str, Any]] = {}
+    for m in sorted(sound_by_file.values(), key=lambda x: bool(x.get("curated_semantic"))):
+        keys = [m["file"], Path(m["file"]).stem]
+        if m.get("id"):
+            sid = str(m["id"])
+            keys.extend([sid, f"{sid}.mp3", f"{sid}.wav"])
+        for k in keys:
+            sound_by_alias[k.strip().lower()] = m
+
     accepted: list[dict[str, Any]] = []
     used_memes_in_video: set[str] = set()
     used_dedupe_groups: set[str] = set()
@@ -376,27 +386,30 @@ def enforce_rules_and_align(
     high_copyright_count = 0
 
     for ev in sorted_events:
-        meta = sound_by_file.get(ev.file)
+        meta = sound_by_file.get(ev.file) or sound_by_alias.get(ev.file.strip().lower())
         if not meta:
             print(f"  [Guardrail] Dropped unknown sound '{ev.file}'")
             continue
+        resolved_file = meta["file"]
+        if resolved_file != ev.file:
+            print(f"  [Alias] Resolved '{ev.file}' -> '{resolved_file}'")
 
-        sound_id = meta.get("id", Path(ev.file).stem)
+        sound_id = meta.get("id", Path(resolved_file).stem)
         trigger = (ev.trigger or "").strip().lower()
         copyright_risk = meta.get("copyright_risk", "medium")
         dedupe_group = meta.get("dedupe_group", "")
 
         if meta.get("gta_native") and not allow_gta_native:
-            print(f"  [Guardrail GTA] Skipped GTA-native stinger '{ev.file}'")
+            print(f"  [Guardrail GTA] Skipped GTA-native stinger '{resolved_file}'")
             continue
-        if sound_id in disabled_sounds or ev.file in disabled_sounds:
+        if sound_id in disabled_sounds or resolved_file in disabled_sounds:
             print(f"  [Guardrail Feedback] Skipped disabled sound '{sound_id}' (3+ low ratings)")
             continue
         if trigger and (sound_id, trigger) in banned_pairs:
             print(f"  [Guardrail Feedback] Skipped banned pair ({sound_id}, {trigger})")
             continue
         if copyright_risk == "high" and high_copyright_count >= 2:
-            print(f"  [Guardrail Copyright] Skipped '{ev.file}' (already hit max 2 high-risk sounds)")
+            print(f"  [Guardrail Copyright] Skipped '{resolved_file}' (already hit max 2 high-risk sounds)")
             continue
 
         t = round(max(0.0, min(total_duration - 0.1, float(ev.t))), 3)
@@ -404,29 +417,29 @@ def enforce_rules_and_align(
 
         # Rule #8 & #3: Meme variety, dedupe_group, and mode-aware density
         if cat == "meme":
-            if ev.file in recently_used_memes:
-                print(f"  [Guardrail R8] Skipped '{ev.file}' (used in last 3 videos)")
+            if resolved_file in recently_used_memes:
+                print(f"  [Guardrail R8] Skipped '{resolved_file}' (used in last 3 videos)")
                 continue
-            if ev.file in used_memes_in_video:
-                print(f"  [Guardrail R8] Skipped duplicate meme '{ev.file}' in same video")
+            if resolved_file in used_memes_in_video:
+                print(f"  [Guardrail R8] Skipped duplicate meme '{resolved_file}' in same video")
                 continue
             if dedupe_group and dedupe_group in used_dedupe_groups:
-                print(f"  [Guardrail Dedupe] Skipped '{ev.file}' (near-duplicate group '{dedupe_group}' already used)")
+                print(f"  [Guardrail Dedupe] Skipped '{resolved_file}' (near-duplicate group '{dedupe_group}' already used)")
                 continue
             if meme_count >= max_memes:
-                print(f"  [Guardrail R3] Skipped '{ev.file}' (already hit max {max_memes} memes for mode={montage_mode})")
+                print(f"  [Guardrail R3] Skipped '{resolved_file}' (already hit max {max_memes} memes for mode={montage_mode})")
                 continue
             if t - last_meme_t < 5.0:
-                print(f"  [Guardrail R3] Skipped '{ev.file}' at {t}s (<5s since previous meme at {last_meme_t}s)")
+                print(f"  [Guardrail R3] Skipped '{resolved_file}' at {t}s (<5s since previous meme at {last_meme_t}s)")
                 continue
 
         # Rule #7: No stacking (no 2 memes or >2 SFX within 0.5s)
         nearby = [a for a in accepted if abs(a["t"] - t) < 0.5]
         if cat == "meme" and any(a["category"] == "meme" for a in nearby):
-            print(f"  [Guardrail R7] Skipped stacked meme '{ev.file}' at {t}s")
+            print(f"  [Guardrail R7] Skipped stacked meme '{resolved_file}' at {t}s")
             continue
         if len(nearby) >= 2:
-            print(f"  [Guardrail R7] Skipped '{ev.file}' at {t}s (>2 SFX within 0.5s)")
+            print(f"  [Guardrail R7] Skipped '{resolved_file}' at {t}s (>2 SFX within 0.5s)")
             continue
 
         # Rule #2 + Semantic placement: combine placement intent with acoustic onset/peak alignment
@@ -454,11 +467,15 @@ def enforce_rules_and_align(
             play_at_s = 0.0
             trim_start_s = round(min(max(0.0, -raw_play), max(0.0, length_s - 0.25)), 3)
 
+        if cat == "meme" and (total_duration - play_at_s) < min(0.9, length_s * 0.55):
+            print(f"  [Guardrail Tail] Skipped meme '{resolved_file}' at {play_at_s}s (only {total_duration - play_at_s:.2f}s left before video end)")
+            continue
+
         accepted.append({
             "t": t,
             "play_at_s": play_at_s,
             "trim_start_s": trim_start_s,
-            "file": ev.file,
+            "file": resolved_file,
             "sound_id": sound_id,
             "category": cat,
             "placement": placement,
@@ -470,7 +487,7 @@ def enforce_rules_and_align(
         if copyright_risk == "high":
             high_copyright_count += 1
         if cat == "meme":
-            used_memes_in_video.add(ev.file)
+            used_memes_in_video.add(resolved_file)
             if dedupe_group:
                 used_dedupe_groups.add(dedupe_group)
             last_meme_t = t
@@ -632,15 +649,15 @@ You are the Sound Editor for `{channel_id}` (9:16 TikTok & YouTube Shorts). Vide
 - For `events`, specify `t` as the exact visual/comedic beat timestamp and set `placement` accurately (`on_impact`, `after_impact`, `before_moment`, `under_freeze_frame`, `end_card`, `bed`) plus `trigger`. Our engine automatically combines your `placement` intent with each file's measured `onset_sec` / `peak_sec`.
   1. Hook boom/impact on `t=0.05` (Rule #1)
   2. Whooshes on clip `cut` transitions (Rule #2)
-  3. Earned, hilarious memes on real `beat_tags` / `punchline` / `impact` payoffs (respecting `montage_mode` density, >=5s apart, zero stacking, zero duplicate `dedupe_group`)
-  4. A crisp ending hit on `ending` (Rule #9) — never leave a meme ringing into black.
+  3. Earned, hilarious memes on real `beat_tags` / `punchline` payoffs (in `funny` mode on a 60–85s montage, aim for 3 to 4 distinct segments' comedic `beat_tags` spread >=5s apart across the video; zero stacking, zero duplicate `dedupe_group`)
+  4. A crisp short impact hit (NOT a 2s spoken/music meme) on `ending` (Rule #9) — never start a meme with <1.0s left before video end.
 - Each event's `reason` must tie the chosen sound's `meaning` to a specific `beat_tag`, `clip_event`, or `segment_summaries` moment.
 """
 
     client = genai.Client(api_key=api_key)
     avail = {m.name.replace("models/", "") for m in client.models.list()}
     models = ([args.model] if args.model else []) + [
-        m for m in ("gemini-3.8-flash", "gemini-3.5-flash-lite") if m in avail and m != args.model
+        m for m in ("gemini-3.8-flash", "gemini-3.1-pro-preview", "gemini-3.5-flash-lite") if m in avail and m != args.model
     ]
 
     raw_plan = call_gemini_resilient(client, models, prompt)
