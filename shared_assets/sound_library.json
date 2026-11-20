@@ -122,6 +122,33 @@
     "curated_semantic": true
   },
   {
+    "file": "csgo_awp_14800.mp3",
+    "category": "impact",
+    "mood": "punchy",
+    "length_s": 4.129,
+    "peak_sec": 0.022,
+    "onset_sec": 0.0,
+    "align_mode": "peak",
+    "loudness_lufs": -14.0,
+    "use_when": "[CURATED] csgo awp 14800",
+    "id": "csgo_awp_14800",
+    "meaning": "Iconic CS:GO AWP sniper crack for an instant one-hit knockout, slap, or brutal punch.",
+    "trigger_moments": [
+      "kill",
+      "crash",
+      "overkill",
+      "flex"
+    ],
+    "humor_type": "absurd",
+    "montage_mode": "both",
+    "energy": 5,
+    "placement": "on_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "sniper_delete",
+    "curated_semantic": true
+  },
+  {
     "file": "discord_boom.mp3",
     "category": "impact",
     "mood": "dramatic",
@@ -859,6 +886,32 @@
     "align_mode": "onset",
     "loudness_lufs": -11.3,
     "use_when": "asian meme huh? (trending)"
+  },
+  {
+    "file": "avengers_taca_o_pau.mp3",
+    "category": "meme",
+    "mood": "heroic_hype",
+    "length_s": 6.884,
+    "peak_sec": 3.881,
+    "onset_sec": 0.031,
+    "align_mode": "onset",
+    "loudness_lufs": -15.7,
+    "use_when": "[CURATED] avengers taca o pau",
+    "id": "avengers_taca_o_pau",
+    "meaning": "Chaotic Brazilian meme remix of the Avengers theme ('taca o pau doido') for absurd superhero reveals or giant chaos.",
+    "trigger_moments": [
+      "flex",
+      "overkill",
+      "chase"
+    ],
+    "humor_type": "absurd",
+    "montage_mode": "funny",
+    "energy": 5,
+    "placement": "on_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "hero_reveal",
+    "curated_semantic": true
   },
   {
     "file": "awkward_cricket.mp3",

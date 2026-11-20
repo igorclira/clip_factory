@@ -2081,5 +2081,38 @@
     "copyright_risk": "medium",
     "freshness": "trending_2025_2026",
     "dedupe_group": "villain_entrance"
+  },
+  "avengers_taca_o_pau.mp3": {
+    "id": "avengers_taca_o_pau",
+    "meaning": "Chaotic Brazilian meme remix of the Avengers theme ('taca o pau doido') for absurd superhero reveals or giant chaos.",
+    "trigger_moments": [
+      "flex",
+      "overkill",
+      "chase"
+    ],
+    "humor_type": "absurd",
+    "montage_mode": "funny",
+    "energy": 5,
+    "placement": "on_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "hero_reveal"
+  },
+  "csgo_awp_14800.mp3": {
+    "id": "csgo_awp_14800",
+    "meaning": "Iconic CS:GO AWP sniper crack for an instant one-hit knockout, slap, or brutal punch.",
+    "trigger_moments": [
+      "kill",
+      "crash",
+      "overkill",
+      "flex"
+    ],
+    "humor_type": "absurd",
+    "montage_mode": "both",
+    "energy": 5,
+    "placement": "on_impact",
+    "copyright_risk": "medium",
+    "freshness": "evergreen",
+    "dedupe_group": "sniper_delete"
   }
 }

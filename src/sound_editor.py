@@ -545,11 +545,12 @@ def enforce_rules_and_align(
         placement = ev.placement or meta.get("placement", "on_impact")
         align_mode = meta.get("align_mode", "peak")
         length_s = float(meta.get("length_s") or 1.0)
+        onset_sec = float(meta.get("onset_sec") or 0.0)
 
         if placement in ("bed", "end_card", "before_moment"):
             max_duration_s = round(min(length_s, 10.0), 3)
         elif cat == "meme":
-            max_duration_s = round(min(length_s, 2.4), 3)
+            max_duration_s = round(min(length_s, max(2.4, min(3.8, onset_sec + 2.85))), 3)
         else:
             max_duration_s = round(min(length_s, 4.0), 3)
 
@@ -561,7 +562,6 @@ def enforce_rules_and_align(
             effective_t = max(0.0, t - lead)
 
         if align_mode == "onset":
-            onset_sec = float(meta.get("onset_sec") or 0.0)
             raw_play = effective_t - onset_sec
         else:
             peak_sec = float(meta.get("peak_sec") or 0.0)

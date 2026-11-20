@@ -48,7 +48,7 @@ MUSIC_META_OVERRIDES: dict[str, dict[str, Any]] = {
 }
 
 TRANSITION_KEYWORDS = ("whoosh", "swoosh", "riser", "swell", "rewind", "glitch", "tape_stop", "scratch", "transition")
-IMPACT_KEYWORDS = ("boom", "bass", "slam", "hit", "impact", "thud", "crash", "gun", "pistol", "shot", "explosion", "bang", "punch", "slap", "bonk", "pipe")
+IMPACT_KEYWORDS = ("boom", "bass", "slam", "hit", "impact", "thud", "crash", "gun", "pistol", "shot", "awp", "explosion", "bang", "punch", "slap", "bonk", "pipe")
 MEME_HINT_WORDS = (
     "meme", "bruh", "vine", "fah", "faaah", "uwu", "rizz", "among", "gta", "wasted", "spongebob",
     "taco", "windows", "violin", "trombone", "buzzer", "quack", "huh", "wow", "avengers", "hl_",

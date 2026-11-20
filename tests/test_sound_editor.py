@@ -236,9 +236,9 @@ def test_after_impact_before_moment_and_duck_windows(sample_sound_by_file):
     riser_ev, meme_ev = res["events"]
     # Riser (length_s=2.0, peak_sec=0.1) leads in ~2.0s before t=10.0
     assert riser_ev["play_at_s"] == pytest.approx(10.0 - 2.0 - 0.1 - 0.033, abs=0.01)
-    # after_impact shifts +0.25s then subtracts onset_sec=0.5 -> 11.75s, capped at 2.4s
+    # after_impact shifts +0.25s then subtracts onset_sec=0.5 -> 11.75s, onset-aware cap preserves full 3.32s
     assert meme_ev["play_at_s"] == pytest.approx(12.0 + 0.25 - 0.5, abs=0.01)
-    assert meme_ev["max_duration_s"] == 2.4
+    assert meme_ev["max_duration_s"] == 3.32
     # Game duck window covers the meme bite and auto-adds a 0.35s pre-meme music cut point
     assert len(res["game_duck_windows"]) == 1
     assert res["game_duck_windows"][0]["start_s"] == meme_ev["play_at_s"]
