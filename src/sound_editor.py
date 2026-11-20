@@ -36,6 +36,7 @@ SHARED_DIR = CORE_ROOT / "shared_assets"
 SOUND_LIB_PATH = SHARED_DIR / "sound_library.json"
 MUSIC_LIB_PATH = SHARED_DIR / "music_library.json"
 TRANSITION_FRAMES = 8
+FADE_TRANSITION_FRAMES = 12
 
 
 class CutPoint(BaseModel):
@@ -142,7 +143,6 @@ def load_feedback_constraints(project_dir: Path) -> tuple[set[tuple[str, str]], 
 def extract_clip_events(props: dict[str, Any]) -> tuple[float, list[dict[str, Any]], list[dict[str, Any]]]:
     """Map per-segment cues onto global composition seconds (matching TransitionSeries timing)."""
     fps = float(props.get("fps") or 30)
-    trans_sec = TRANSITION_FRAMES / fps
     segs = props.get("segments") or []
 
     events: list[dict[str, Any]] = []
@@ -153,15 +153,17 @@ def extract_clip_events(props: dict[str, Any]) -> tuple[float, list[dict[str, An
         rate = float(seg.get("playbackRate") or 1.0)
         dur = max(0.5, (float(seg["endSec"]) - float(seg["startSec"])) / rate)
         prev = segs[idx - 1] if idx > 0 else None
-        is_jump = bool(prev and prev.get("author") == seg.get("author"))
+        is_jump = bool(prev and prev.get("author") and prev.get("author") == seg.get("author"))
         trans_kind = seg.get("transitionIn") or ("none" if is_jump else "slide")
 
         if idx > 0 and trans_kind != "none":
-            cursor = max(0.0, cursor - trans_sec)
+            trans_frames = FADE_TRANSITION_FRAMES if trans_kind == "fade" else TRANSITION_FRAMES
+            cursor = max(0.0, cursor - (trans_frames / fps))
+            target_label = seg.get("id") if seg.get("kind") == "cta" else f"@{seg.get('author', 'creator')}"
             events.append({
                 "t": round(cursor, 2),
                 "type": "cut",
-                "detail": f"Transition ({trans_kind}) into @{seg.get('author', 'creator')}",
+                "detail": f"Transition ({trans_kind}) into {target_label}",
             })
         elif idx > 0:
             events.append({
@@ -176,6 +178,10 @@ def extract_clip_events(props: dict[str, Any]) -> tuple[float, list[dict[str, An
                 "type": "hook",
                 "detail": f"Opening frame hook (@{seg.get('author', 'creator')})",
             })
+
+        if seg.get("kind") == "cta":
+            cursor += dur
+            continue
 
         for z in seg.get("zooms") or []:
             events.append({
@@ -256,7 +262,6 @@ def extract_clip_events(props: dict[str, Any]) -> tuple[float, list[dict[str, An
 def extract_segment_summaries(props: dict[str, Any]) -> list[dict[str, Any]]:
     """Build per-segment comedy & dialogue summaries across ALL segments (global timeline seconds)."""
     fps = float(props.get("fps") or 30)
-    trans_sec = TRANSITION_FRAMES / fps
     segs = props.get("segments") or []
 
     summaries: list[dict[str, Any]] = []
@@ -266,14 +271,33 @@ def extract_segment_summaries(props: dict[str, Any]) -> list[dict[str, Any]]:
         rate = float(seg.get("playbackRate") or 1.0)
         dur = max(0.5, (float(seg["endSec"]) - float(seg["startSec"])) / rate)
         prev = segs[idx - 1] if idx > 0 else None
-        is_jump = bool(prev and prev.get("author") == seg.get("author"))
+        is_jump = bool(prev and prev.get("author") and prev.get("author") == seg.get("author"))
         trans_kind = seg.get("transitionIn") or ("none" if is_jump else "slide")
 
         if idx > 0 and trans_kind != "none":
-            cursor = max(0.0, cursor - trans_sec)
+            trans_frames = FADE_TRANSITION_FRAMES if trans_kind == "fade" else TRANSITION_FRAMES
+            cursor = max(0.0, cursor - (trans_frames / fps))
 
         seg_start = round(cursor, 2)
         seg_end = round(cursor + dur, 2)
+
+        if seg.get("kind") == "cta":
+            summaries.append({
+                "id": seg.get("id", f"seg_{idx+1}"),
+                "kind": "cta",
+                "author": "cta",
+                "start_s": seg_start,
+                "end_s": seg_end,
+                "playbackRate": 1.0,
+                "has_bgm_override": False,
+                "comedy_beat_summary": f"CTA interstitial card: {(seg.get('cta') or {}).get('headline', '')}",
+                "beat_tags": [],
+                "zoom_modes": [],
+                "editorial_popups": [],
+                "dialogue_lines": [],
+            })
+            cursor += dur
+            continue
 
         # Group consecutive same-speaker caption chunks into readable dialogue turns
         turns: list[dict[str, Any]] = []

@@ -11,14 +11,17 @@ import {
   useVideoConfig,
 } from 'remotion';
 import { TransitionSeries, linearTiming } from '@remotion/transitions';
+import { fade } from '@remotion/transitions/fade';
 import { slide } from '@remotion/transitions/slide';
 import { wipe } from '@remotion/transitions/wipe';
 import { CreatorCredit } from './components/CreatorCredit';
+import { CtaCard } from './components/CtaCard';
 import { SmartCaptions } from './components/SmartCaptions';
 import { DespairOverlay, TargetSpotlights } from './components/VisualShenanigans';
-import { GameDuckWindow, MontageProps, SegmentProps, ThemeType } from './types';
+import { GameDuckWindow, MontageProps, SegmentProps, ThemeType, ZoomCue } from './types';
 
 export const TRANSITION_FRAMES = 8;
+export const FADE_TRANSITION_FRAMES = 12;
 
 const dbToLinear = (db: number): number => Math.min(1.5, Math.max(0, Math.pow(10, db / 20)));
 
@@ -33,24 +36,17 @@ const PIPELINE_LIMITS = {
   MAX_SFX_PER_CLIP: 2,
 };
 
-const SegmentView: React.FC<{
-  seg: SegmentProps;
-  theme: ThemeType;
-  isFirst: boolean;
-  segGlobalStartSec: number;
-  gameDuckWindows?: GameDuckWindow[];
-}> = ({ seg, theme, isFirst, segGlobalStartSec, gameDuckWindows }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const nowSec = frame / fps;
-
-  // 1. Situation-specific 9:16 Camera Choreography (aggressive_punch / slow_creep / snap_hold / smooth)
-  const baseCrop = Math.min(Math.max(1.0, seg.cropZoom ?? 1.0), PIPELINE_LIMITS.MAX_CROP_ZOOM);
-  let zoomScale = baseCrop;
+const computeZoomState = (
+  zooms: ZoomCue[],
+  baseCrop: number,
+  nowSec: number,
+  fps: number,
+): { scale: number; originX: number; originY: number } => {
+  let scale = baseCrop;
   let originX = 50;
   let originY = 50;
 
-  for (const z of (seg.zooms || []).slice(0, PIPELINE_LIMITS.MAX_ZOOMS_PER_CLIP)) {
+  for (const z of zooms) {
     const dur = Math.max(0.2, z.durationSec ?? 1.0);
     const zStart = z.atSec;
     const zEnd = zStart + dur;
@@ -65,16 +61,16 @@ const SegmentView: React.FC<{
           extrapolateLeft: 'clamp',
           extrapolateRight: 'clamp',
         });
-        zoomScale *= 1.0 + (targetScale - 1.0) * Math.min(inPop, outRamp);
+        scale *= 1.0 + (targetScale - 1.0) * Math.min(inPop, outRamp);
       } else if (mode === 'slow_creep') {
         const targetScale = Math.min(z.scale ?? 1.55, PIPELINE_LIMITS.MAX_CREEP_ZOOM_SCALE);
         const progress = Math.min(1, Math.max(0, (nowSec - zStart) / dur));
         const easeOut = 1 - Math.pow(1 - progress, 2.2);
-        zoomScale *= 1.0 + (targetScale - 1.0) * easeOut;
+        scale *= 1.0 + (targetScale - 1.0) * easeOut;
       } else if (mode === 'smooth') {
         const targetScale = Math.min(z.scale ?? 1.25, PIPELINE_LIMITS.MAX_SMOOTH_ZOOM_SCALE);
         const progress = (nowSec - zStart) / dur;
-        zoomScale *= 1.0 + (targetScale - 1.0) * Math.sin(Math.PI * progress);
+        scale *= 1.0 + (targetScale - 1.0) * Math.sin(Math.PI * progress);
       } else {
         // 'snap_hold' or legacy 'snap'
         const targetScale = Math.min(z.scale ?? 1.55, PIPELINE_LIMITS.MAX_SNAP_ZOOM_SCALE);
@@ -85,12 +81,42 @@ const SegmentView: React.FC<{
           extrapolateLeft: 'clamp',
           extrapolateRight: 'clamp',
         });
-        zoomScale *= 1.0 + (targetScale - 1.0) * Math.min(inPop, outRamp);
+        scale *= 1.0 + (targetScale - 1.0) * Math.min(inPop, outRamp);
       }
       originX = z.originX ?? 50;
       originY = z.originY ?? 50;
     }
   }
+  return { scale, originX, originY };
+};
+
+const SegmentView: React.FC<{
+  seg: SegmentProps;
+  theme: ThemeType;
+  isFirst: boolean;
+  segGlobalStartSec: number;
+  gameDuckWindows?: GameDuckWindow[];
+}> = ({ seg, theme, isFirst, segGlobalStartSec, gameDuckWindows }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const nowSec = frame / fps;
+
+  // 1. Situation-specific 9:16 Camera Choreography (split-screen isolates game vs facecam when splitY is set)
+  const baseCrop = Math.min(Math.max(1.0, seg.cropZoom ?? 1.0), PIPELINE_LIMITS.MAX_CROP_ZOOM);
+  const cappedZooms = (seg.zooms || []).slice(0, PIPELINE_LIMITS.MAX_ZOOMS_PER_CLIP);
+  const isSplit = seg.splitY !== undefined && seg.splitY > 0 && seg.splitY < 95;
+  const gameZoom = computeZoomState(
+    isSplit ? cappedZooms.filter((z) => z.target !== 'facecam') : cappedZooms,
+    baseCrop,
+    nowSec,
+    fps,
+  );
+  const faceZoom = computeZoomState(
+    cappedZooms.filter((z) => z.target === 'facecam'),
+    baseCrop,
+    nowSec,
+    fps,
+  );
 
   // 2. ImpactShake (dampened micro-rumble on hits/crashes/wipes)
   let shakeX = 0;
@@ -139,26 +165,76 @@ const SegmentView: React.FC<{
 
   return (
     <AbsoluteFill style={{ backgroundColor: '#000', overflow: 'hidden' }}>
-      {/* Full-bleed video canvas (ZERO black bars) */}
-      <AbsoluteFill
-        style={{
-          transform: `translate(${shakeX}px, ${shakeY}px) scale(${zoomScale}) translateY(${offsetY}%)`,
-          transformOrigin: `${originX}% ${originY}%`,
-          filter: combinedFilter,
-        }}
-      >
-        <OffthreadVideo
-          src={staticFile(`clips/${seg.videoFile}`)}
-          startFrom={startFrame}
-          endAt={endFrame}
-          volume={() => (inSilence ? 0 : baseVol * duckLin)}
+      {isSplit ? (
+        <>
+          {/* Layer 1: Bottom gameplay region (keeps video audio; game-only zooms never crop out top streamer) */}
+          <AbsoluteFill style={{ clipPath: `inset(${seg.splitY}% 0 0 0)` }}>
+            <AbsoluteFill
+              style={{
+                transform: `translate(${shakeX}px, ${shakeY}px) scale(${gameZoom.scale}) translateY(${offsetY}%)`,
+                transformOrigin: `${gameZoom.originX}% ${gameZoom.originY}%`,
+                filter: combinedFilter,
+              }}
+            >
+              <OffthreadVideo
+                src={staticFile(`clips/${seg.videoFile}`)}
+                startFrom={startFrame}
+                endAt={endFrame}
+                volume={() => (inSilence ? 0 : baseVol * duckLin)}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
+              />
+            </AbsoluteFill>
+          </AbsoluteFill>
+
+          {/* Layer 2: Top streamer facecam region (muted so audio never doubles; independent facecam zooms) */}
+          <AbsoluteFill style={{ clipPath: `inset(0 0 ${100 - (seg.splitY ?? 32)}% 0)` }}>
+            <AbsoluteFill
+              style={{
+                transform: `scale(${faceZoom.scale}) translateY(${offsetY}%)`,
+                transformOrigin: `${faceZoom.originX}% ${faceZoom.originY}%`,
+                filter: combinedFilter,
+              }}
+            >
+              <OffthreadVideo
+                src={staticFile(`clips/${seg.videoFile}`)}
+                startFrom={startFrame}
+                endAt={endFrame}
+                muted
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
+              />
+            </AbsoluteFill>
+          </AbsoluteFill>
+        </>
+      ) : (
+        /* Full-bleed single-layer video canvas */
+        <AbsoluteFill
           style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
+            transform: `translate(${shakeX}px, ${shakeY}px) scale(${gameZoom.scale}) translateY(${offsetY}%)`,
+            transformOrigin: `${gameZoom.originX}% ${gameZoom.originY}%`,
+            filter: combinedFilter,
           }}
-        />
-      </AbsoluteFill>
+        >
+          <OffthreadVideo
+            src={staticFile(`clips/${seg.videoFile}`)}
+            startFrom={startFrame}
+            endAt={endFrame}
+            volume={() => (inSilence ? 0 : baseVol * duckLin)}
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+            }}
+          />
+        </AbsoluteFill>
+      )}
 
       {/* DespairFreeze radial vignette */}
       <DespairOverlay freezes={freezes} />
@@ -181,7 +257,9 @@ const SegmentView: React.FC<{
       />
 
       {/* CHM / GTA 6 Vaporwave Creator Credit Badge */}
-      <CreatorCredit platform={seg.platform} author={seg.author} theme={theme} />
+      {seg.platform && seg.author ? (
+        <CreatorCredit platform={seg.platform} author={seg.author} theme={theme} />
+      ) : null}
 
       {/* Dual-Zone Karaoke Streamer (top) / NPC (bottom) / Editorial Smart Captions */}
       <SmartCaptions
@@ -216,10 +294,11 @@ export const MontageVideo: React.FC<MontageProps> = ({ theme, fps, segments, sou
     const effDur = Math.max(0.5, (seg.endSec - seg.startSec) / (seg.playbackRate ?? 1.0));
     const durF = Math.max(1, Math.round(effDur * fps));
     const prev = idx > 0 ? segments[idx - 1] : null;
-    const isJump = Boolean(prev && prev.author === seg.author);
+    const isJump = Boolean(prev && prev.author && prev.author === seg.author);
     const transKind = seg.transitionIn ?? (isJump ? 'none' : 'slide');
     if (idx > 0 && transKind !== 'none') {
-      cursorF = Math.max(0, cursorF - TRANSITION_FRAMES);
+      const transF = transKind === 'fade' ? FADE_TRANSITION_FRAMES : TRANSITION_FRAMES;
+      cursorF = Math.max(0, cursorF - transF);
     }
     const startF = cursorF;
     const endF = startF + durF;
@@ -228,7 +307,7 @@ export const MontageVideo: React.FC<MontageProps> = ({ theme, fps, segments, sou
       startSec: startF / fps,
       endSec: endF / fps,
       hasBgmOverride: Boolean(seg.bgmFile),
-      hasGameAudio: (seg.videoVolume ?? 1.0) > 0,
+      hasGameAudio: seg.kind !== 'cta' && (seg.videoVolume ?? 1.0) > 0,
     };
   });
 
@@ -242,12 +321,17 @@ export const MontageVideo: React.FC<MontageProps> = ({ theme, fps, segments, sou
           const effDur = Math.max(0.5, (seg.endSec - seg.startSec) / (seg.playbackRate ?? 1.0));
           const frames = Math.max(1, Math.round(effDur * fps));
           const prev = idx > 0 ? segments[idx - 1] : null;
-          const isSameCreatorJumpCut = prev && prev.author === seg.author;
+          const isSameCreatorJumpCut = Boolean(prev && prev.author && prev.author === seg.author);
           const transKind = seg.transitionIn ?? (isSameCreatorJumpCut ? 'none' : 'slide');
 
           return (
             <React.Fragment key={seg.id}>
-              {idx > 0 && transKind === 'wipe' ? (
+              {idx > 0 && transKind === 'fade' ? (
+                <TransitionSeries.Transition
+                  presentation={fade()}
+                  timing={linearTiming({ durationInFrames: FADE_TRANSITION_FRAMES })}
+                />
+              ) : idx > 0 && transKind === 'wipe' ? (
                 <TransitionSeries.Transition
                   presentation={wipe({ direction: 'from-left' })}
                   timing={linearTiming({ durationInFrames: TRANSITION_FRAMES })}
@@ -259,13 +343,17 @@ export const MontageVideo: React.FC<MontageProps> = ({ theme, fps, segments, sou
                 />
               ) : null}
               <TransitionSeries.Sequence durationInFrames={frames}>
-                <SegmentView
-                  seg={seg}
-                  theme={theme}
-                  isFirst={idx === 0}
-                  segGlobalStartSec={segWindows[idx]?.startSec ?? 0}
-                  gameDuckWindows={soundPlan?.game_duck_windows}
-                />
+                {seg.kind === 'cta' && seg.cta ? (
+                  <CtaCard cta={seg.cta} theme={theme} />
+                ) : (
+                  <SegmentView
+                    seg={seg}
+                    theme={theme}
+                    isFirst={idx === 0}
+                    segGlobalStartSec={segWindows[idx]?.startSec ?? 0}
+                    gameDuckWindows={soundPlan?.game_duck_windows}
+                  />
+                )}
               </TransitionSeries.Sequence>
             </React.Fragment>
           );

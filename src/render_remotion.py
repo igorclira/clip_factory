@@ -67,6 +67,15 @@ def main() -> None:
     # never hits VFR/deep-seek compositor errors and renders 2x faster!
     staged_segments = []
     for seg in props.get("segments", []):
+        if seg.get("kind") == "cta":
+            dur_s = max(0.5, round(float(seg["endSec"]) - float(seg["startSec"]), 3))
+            new_seg = dict(seg)
+            new_seg["startSec"] = 0.0
+            new_seg["endSec"] = dur_s
+            staged_segments.append(new_seg)
+            print(f"[Prep] Staged CTA interstitial {seg['id']} ({dur_s}s)...")
+            continue
+
         src = inbox_dir / seg["videoFile"]
         if not src.exists():
             raise FileNotFoundError(f"Clip not found in inbox: {src}")
@@ -145,7 +154,7 @@ def main() -> None:
     staged_props_path.write_text(json.dumps(staged_props, indent=2, ensure_ascii=False), encoding="utf-8")
 
     # Clean out unreferenced bulky raw clips from public/clips so bundle copy stays fast
-    keep_names = {s["videoFile"] for s in staged_segments}
+    keep_names = {s["videoFile"] for s in staged_segments if s.get("videoFile")}
     for old in pub_clips.iterdir():
         if old.is_file() and old.name not in keep_names:
             old.unlink(missing_ok=True)

@@ -9,6 +9,7 @@ export interface ZoomCue {
   originX: number;           // 0..100 (% horizontal subject coordinate)
   originY: number;           // 0..100 (% vertical subject coordinate)
   mode?: 'aggressive_punch' | 'slow_creep' | 'snap_hold' | 'snap' | 'smooth';
+  target?: 'full' | 'game' | 'facecam'; // isolate zoom to gameplay or facecam when splitY is set
 }
 
 export interface ShakeCue {
@@ -66,11 +67,22 @@ export interface LetterboxCrop {
   hPct: number;              // vertical height fraction (0..1) of gameplay region
 }
 
+export interface CtaConfig {
+  variant: 'mid' | 'outro' | 'sponsor';
+  headline: string;
+  subline: string;
+  badges?: string[];
+  sponsorText?: string;
+}
+
 export interface SegmentProps {
   id: string;
-  videoFile: string;         // relative filename inside public/clips/
-  platform: PlatformType;
-  author: string;
+  kind?: 'clip' | 'cta';
+  cta?: CtaConfig;
+  splitY?: number;           // horizontal seam % (0..100) separating top streamer facecam from bottom gameplay
+  videoFile?: string;        // relative filename inside public/clips/
+  platform?: PlatformType;
+  author?: string;
   startSec: number;
   endSec: number;
   playbackRate?: number;     // e.g. 0.62 for dramatic slow-motion (pre-baked in render_remotion.py)
@@ -80,16 +92,16 @@ export interface SegmentProps {
   cropOffsetY?: number;      // % vertical shift if needed
   videoVolume?: number;      // 0..1
   isolateVocals?: boolean;   // if true, render_remotion.py isolates speech band so voice stays audible over bgmFile
-  transitionIn?: 'slide' | 'wipe' | 'none'; // clip-to-clip transition style (default 'slide' for new creators)
+  transitionIn?: 'slide' | 'wipe' | 'fade' | 'none'; // clip-to-clip transition style (default 'slide' for new creators)
   bgmFile?: string;          // optional per-clip BGM swap inside public/sfx/ (e.g. upbeat track over muted weird audio)
   bgmVolume?: number;        // default 0.35 (or 0.65 if videoVolume is 0)
-  zooms: ZoomCue[];
+  zooms?: ZoomCue[];
   shakes?: ShakeCue[];
   silences?: SilenceCue[];
   freezes?: FreezeCue[];
   spotlights?: SpotlightCue[];
-  sfx: SfxCue[];
-  captions: CaptionCue[];
+  sfx?: SfxCue[];
+  captions?: CaptionCue[];
 }
 
 export interface SoundCutPoint {
