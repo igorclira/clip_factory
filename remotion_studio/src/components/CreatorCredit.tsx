@@ -94,7 +94,7 @@ export const CreatorCredit: React.FC<Props> = ({ platform, author, theme }) => {
             borderRadius: '0 6px 0 0',
           }}
         >
-          GTA 6 FEED
+          VICE CITY CHAOS
         </div>
         {/* Flush-left obsidian body + razor-thin cyan->pink underline */}
         <div

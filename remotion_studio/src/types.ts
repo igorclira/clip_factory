@@ -73,6 +73,8 @@ export interface CtaConfig {
   subline: string;
   badges?: string[];
   sponsorText?: string;
+  logoFile?: string;
+  brandHandle?: string;
 }
 
 export interface SegmentProps {

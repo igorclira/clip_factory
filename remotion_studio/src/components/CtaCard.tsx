@@ -1,5 +1,5 @@
 import React from 'react';
-import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
+import { AbsoluteFill, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
 import { CtaConfig, ThemeType } from '../types';
 
 interface Props {
@@ -23,8 +23,9 @@ export const CtaCard: React.FC<Props> = ({ cta, theme }) => {
   const isSponsor = cta.variant === 'sponsor';
   const accentPrimary = theme === 'gta6_vaporwave' ? '#FF5CD6' : '#F59E0B';
   const accentSecondary = theme === 'gta6_vaporwave' ? '#00F0FF' : '#38BDF8';
-  const topTag = isSponsor ? 'SPONSORED SPOTLIGHT' : isOutro ? 'GTA 6 FEED' : 'QUICK CHECK';
+  const topTag = isSponsor ? 'SPONSORED SPOTLIGHT' : 'VICE CITY CHAOS';
   const badges = cta.badges || [];
+  const logoSize = isOutro ? 156 : 108;
 
   return (
     <AbsoluteFill
@@ -91,6 +92,34 @@ export const CtaCard: React.FC<Props> = ({ cta, theme }) => {
           gap: isOutro ? 30 : 24,
         }}
       >
+        {cta.logoFile ? (
+          <div
+            style={{
+              width: logoSize,
+              height: logoSize,
+              borderRadius: '50%',
+              padding: 4,
+              background: `linear-gradient(135deg, ${accentSecondary} 0%, ${accentPrimary} 100%)`,
+              boxShadow: `0 0 36px rgba(255, 92, 214, ${0.5 * glowPulse}), 0 0 20px rgba(0, 240, 255, 0.35)`,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexShrink: 0,
+            }}
+          >
+            <Img
+              src={staticFile(cta.logoFile)}
+              style={{
+                width: '100%',
+                height: '100%',
+                borderRadius: '50%',
+                objectFit: 'cover',
+                backgroundColor: '#0B0618',
+              }}
+            />
+          </div>
+        ) : null}
+
         <div
           style={{
             padding: '8px 22px',
@@ -107,6 +136,22 @@ export const CtaCard: React.FC<Props> = ({ cta, theme }) => {
         >
           {topTag}
         </div>
+
+        {cta.brandHandle ? (
+          <div
+            style={{
+              marginTop: -12,
+              fontFamily: "'Montserrat', 'Segoe UI', sans-serif",
+              fontSize: isOutro ? 28 : 24,
+              fontWeight: 800,
+              color: '#FFFFFF',
+              letterSpacing: '0.08em',
+              textShadow: `0 0 16px rgba(0, 240, 255, 0.55)`,
+            }}
+          >
+            {cta.brandHandle}
+          </div>
+        ) : null}
 
         <div
           style={{
